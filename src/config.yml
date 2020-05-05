@@ -1,0 +1,11 @@
+development:
+  password: ${SHOPIFY_PASSWORD}
+  theme_id: ${SHOPIFY_DEV_THEMEID}
+  store: ${SHOPIFY_STORE}
+  directory: src
+production:
+  password: ${SHOPIFY_PASSWORD}
+  theme_id: ${SHOPIFY_PROD_THEMEID}
+  store: ${SHOPIFY_STORE}
+  directory: src
+  timeout: 600s
