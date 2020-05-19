@@ -127,7 +127,9 @@
 }
 
 .Drawer {
-  width: 100%;
+  @include av-mq('phone') {
+    width: 100%;
+  }
 }
 
 .Drawer--fromLeft {

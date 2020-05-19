@@ -81,6 +81,9 @@
     .policy-links {
       a {
         margin-left: 16px;
+        &:hover {
+          color: #7ECBB7;
+        }
       }
     }
   }

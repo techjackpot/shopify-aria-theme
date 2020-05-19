@@ -1,10 +1,12 @@
 .Button--outline {
   padding: 17px 45px 13px;
-  border: solid 2px #9AB5C6;
+  border: solid 2px;
   border-radius: 100px;
-  color: #9AB5C6;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 0;
   text-transform: none;
+  transition: color, border-color 0.25s ease;
+  &:hover {
+  }
 }

@@ -1,12 +1,12 @@
 .Button--outline {
   padding: 17px 45px 13px;
-  border: solid 2px #9AB5C6;
+  border: solid 2px;
   border-radius: 100px;
-  color: #9AB5C6;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 0;
-  text-transform: none; }
+  text-transform: none;
+  transition: color, border-color 0.25s ease; }
 
 .Header:not(.Header--sidebar) .Header__Wrapper {
   padding-left: 25px;
@@ -87,8 +87,9 @@
             color: #000000;
             background: #E5F5F1; }
 
-.Drawer {
-  width: 100%; }
+@media screen and (max-width: 640px) {
+  .Drawer {
+    width: 100%; } }
 
 .Drawer--fromLeft {
   transform: translateX(calc(-100vw)); }
@@ -242,6 +243,8 @@
       margin-bottom: 24px; }
     .Footer .Footer__Block--logo .policy-links a {
       margin-left: 16px; }
+      .Footer .Footer__Block--logo .policy-links a:hover {
+        color: #7ECBB7; }
   .Footer .Footer__Social {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
