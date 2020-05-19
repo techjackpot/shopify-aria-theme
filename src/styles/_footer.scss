@@ -1,0 +1,115 @@
+.Footer {
+  background: #525364;
+  color: #9AB5C6;
+  padding: 64px 0 64px 0;
+  @include av-mq('tablet-and-up') {
+    padding: 64px 0 14px 0;
+  }
+
+  .Heading {
+    color: #F0EFF1;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  .Link--primary {
+    &:hover {
+      color: #7ECBB7;
+    }
+  }
+
+  .Footer__Title {
+    @include av-mq('phone') {
+      max-width: 190px;
+      text-align: center;
+    }
+  }
+
+  .Footer__Block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    @include av-mq('tablet-and-up') {
+      flex: 1 1 100%;
+      margin-top: 0;
+    }
+    @include av-mq('desk') {
+      flex: 1 0 auto;
+      align-items: flex-start;
+    }
+  }
+
+  .Footer__Block--links {
+    .Linklist {
+      .Linklist__Item {
+        margin-bottom: 12px;
+        text-align: center;
+        @include av-mq('desk') {
+          text-align: left;
+        }
+        .Link {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+
+  .Footer__Block--text {
+    @include av-mq('widescreen') {
+      flex-basis: 240px;
+    }
+  }
+
+  .Footer__Block--logo {
+    font-size: 12px;
+    line-height: 24px;
+    @include av-mq('desk') {
+      align-items: flex-end;
+    }
+    .Footer__LogoImage {
+      margin-bottom: 24px;
+    }
+    .policy-links {
+      a {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .Footer__Social {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include av-mq('phone') {
+      justify-content: center;
+    }
+    .HorizontalList__Item {
+      margin: 0 16px;
+      & > .Link {
+        display: block;
+      }
+      &--Block {
+        @include av-mq('phone') {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 64px;
+        }
+      }
+    }
+    [class*="fa-"] {
+      font-size: 32px;
+      display: block;
+    }
+  }
+}

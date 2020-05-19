@@ -1,0 +1,45 @@
+
+$phone:            "screen and (max-width: 640px)";
+$tablet:           "screen and (min-width: 641px) and (max-width: 1007px)";
+$tablet-and-up:    "screen and (min-width: 641px)";
+$pocket:           "screen and (max-width: 1007px)";
+$lap:              "screen and (min-width: 1008px) and (max-width: 1239px)";
+$lap-and-up:       "screen and (min-width: 1008px)";
+$desk:             "screen and (min-width: 1240px)";
+$widescreen:       "screen and (min-width: 1500px)";
+
+@mixin av-mq($alias) {
+  @if $alias == "phone" {
+    @media #{$phone} {
+      @content;
+    }
+  } @else if $alias == "tablet" {
+    @media #{$tablet} {
+      @content;
+    }
+  } @else if $alias == "tablet-and-up" {
+    @media #{$tablet-and-up} {
+      @content;
+    }
+  } @else if $alias == "pocket" {
+    @media #{$pocket} {
+      @content;
+    }
+  } @else if $alias == "lap" {
+    @media #{$lap} {
+      @content;
+    }
+  } @else if $alias == "lap-and-up" {
+    @media #{$lap-and-up} {
+      @content;
+    }
+  } @else if $alias == "desk" {
+    @media #{$desk} {
+      @content;
+    }
+  } @else if $alias == "widescreen" {
+    @media #{$widescreen} {
+      @content;
+    }
+  }
+}

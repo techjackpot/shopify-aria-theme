@@ -1,0 +1,232 @@
+.Button--outline {
+  padding: 17px 45px 13px;
+  border: solid 2px #9AB5C6;
+  border-radius: 100px;
+  color: #9AB5C6;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none; }
+
+.Header:not(.Header--sidebar) .Header__Wrapper {
+  padding-left: 25px;
+  padding-right: 25px; }
+  @media screen and (min-width: 641px) {
+    .Header:not(.Header--sidebar) .Header__Wrapper {
+      padding-left: 32px;
+      padding-right: 32px; } }
+  @media screen and (min-width: 1240px) {
+    .Header:not(.Header--sidebar) .Header__Wrapper {
+      padding-left: 68px;
+      padding-right: 68px; } }
+
+.Header .Header__Wrapper {
+  padding-top: 16px;
+  padding-bottom: 16px; }
+
+.Header .Header__LogoImage {
+  width: 80px;
+  height: 40px; }
+  @media screen and (max-width: 640px) {
+    .Header .Header__LogoImage {
+      height: 32px; } }
+
+.Header .Header__Icon svg {
+  font-size: 21px; }
+
+.Header .HorizontalList {
+  margin-left: -25px;
+  margin-right: -25px; }
+  @media screen and (min-width: 641px) {
+    .Header .HorizontalList {
+      margin-left: -32px;
+      margin-right: -32px; } }
+  @media screen and (min-width: 1240px) {
+    .Header .HorizontalList {
+      margin-left: -68px;
+      margin-right: -68px; } }
+  .Header .HorizontalList .HorizontalList__Item {
+    position: relative;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 0;
+    margin-bottom: 0; }
+    @media screen and (min-width: 641px) {
+      .Header .HorizontalList .HorizontalList__Item {
+        margin-left: 32px;
+        margin-right: 32px; } }
+    @media screen and (min-width: 1240px) {
+      .Header .HorizontalList .HorizontalList__Item {
+        margin-left: 68px;
+        margin-right: 68px; } }
+    .Header .HorizontalList .HorizontalList__Item .Heading {
+      font-size: 21px; }
+    .Header .HorizontalList .HorizontalList__Item.Separator--Left {
+      position: relative; }
+      .Header .HorizontalList .HorizontalList__Item.Separator--Left:before {
+        content: '';
+        display: block;
+        height: 40px;
+        width: 0px;
+        border: solid 1px #9AB5C6;
+        position: absolute;
+        left: -32px;
+        top: 50%;
+        transform: translateY(-50%); }
+    .Header .HorizontalList .HorizontalList__Item .Header__LinkSpacer:after {
+      border-bottom-color: #43AD92;
+      top: calc(100% + 16px); }
+    .Header .HorizontalList .HorizontalList__Item:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #43AD92;
+      position: absolute;
+      top: calc(100% + 16px);
+      opacity: 0;
+      transition: opacity 0.25s ease; }
+    .Header .HorizontalList .HorizontalList__Item.is-expanded:after {
+      opacity: 1; }
+    .Header .HorizontalList .HorizontalList__Item .DropdownMenu {
+      top: calc(100% + 16px);
+      padding: 0;
+      background: #ffffff;
+      border: solid 2px #CEE9E2;
+      border-top-color: transparent; }
+      .Header .HorizontalList .HorizontalList__Item .DropdownMenu:before {
+        background: #CEE9E2;
+        width: calc(100% + 2px);
+        left: -1px; }
+      .Header .HorizontalList .HorizontalList__Item .DropdownMenu .Linklist .Linklist__Item {
+        margin-bottom: 0; }
+        .Header .HorizontalList .HorizontalList__Item .DropdownMenu .Linklist .Linklist__Item .Heading {
+          font-size: 19px;
+          white-space: nowrap;
+          line-height: 56px;
+          color: #000000;
+          transition: background 0.25s ease; }
+          .Header .HorizontalList .HorizontalList__Item .DropdownMenu .Linklist .Linklist__Item .Heading:hover {
+            color: #000000;
+            background: #E5F5F1; }
+
+.Footer {
+  background: #525364;
+  color: #9AB5C6;
+  padding: 64px 0 64px 0; }
+  @media screen and (min-width: 641px) {
+    .Footer {
+      padding: 64px 0 14px 0; } }
+  .Footer .Heading {
+    color: #F0EFF1;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    margin-bottom: 24px; }
+  .Footer .Link--primary:hover {
+    color: #7ECBB7; }
+  @media screen and (max-width: 640px) {
+    .Footer .Footer__Title {
+      max-width: 190px;
+      text-align: center; } }
+  .Footer .Footer__Block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px; }
+    .Footer .Footer__Block:first-of-type {
+      margin-top: 0; }
+    @media screen and (min-width: 641px) {
+      .Footer .Footer__Block {
+        flex: 1 1 100%;
+        margin-top: 0; } }
+    @media screen and (min-width: 1240px) {
+      .Footer .Footer__Block {
+        flex: 1 0 auto;
+        align-items: flex-start; } }
+  .Footer .Footer__Block--links .Linklist .Linklist__Item {
+    margin-bottom: 12px;
+    text-align: center; }
+    @media screen and (min-width: 1240px) {
+      .Footer .Footer__Block--links .Linklist .Linklist__Item {
+        text-align: left; } }
+    .Footer .Footer__Block--links .Linklist .Linklist__Item .Link {
+      font-size: 16px;
+      line-height: 19px; }
+  @media screen and (min-width: 1500px) {
+    .Footer .Footer__Block--text {
+      flex-basis: 240px; } }
+  .Footer .Footer__Block--logo {
+    font-size: 12px;
+    line-height: 24px; }
+    @media screen and (min-width: 1240px) {
+      .Footer .Footer__Block--logo {
+        align-items: flex-end; } }
+    .Footer .Footer__Block--logo .Footer__LogoImage {
+      margin-bottom: 24px; }
+    .Footer .Footer__Block--logo .policy-links a {
+      margin-left: 16px; }
+  .Footer .Footer__Social {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
+    @media screen and (max-width: 640px) {
+      .Footer .Footer__Social {
+        justify-content: center; } }
+    .Footer .Footer__Social .HorizontalList__Item {
+      margin: 0 16px; }
+      .Footer .Footer__Social .HorizontalList__Item > .Link {
+        display: block; }
+      @media screen and (max-width: 640px) {
+        .Footer .Footer__Social .HorizontalList__Item--Block {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 64px; } }
+    .Footer .Footer__Social [class*="fa-"] {
+      font-size: 32px;
+      display: block; }
+
+.Section--Shop-Offers {
+  background: transparent linear-gradient(180deg, #F0EFF1 0%, #FAFAFB 21%, #FAFAFB 100%) 0% 0% no-repeat padding-box;
+  padding: 12px 0;
+  overflow: auto; }
+  @media screen and (min-width: 641px) {
+    .Section--Shop-Offers {
+      padding: 16px 0; } }
+  .Section--Shop-Offers .ShopOffersList {
+    padding: 0 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content; }
+    @media screen and (min-width: 641px) {
+      .Section--Shop-Offers .ShopOffersList {
+        padding: 0 40px; } }
+    .Section--Shop-Offers .ShopOffersList .Offer {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      line-height: 1;
+      font-size: 14px;
+      margin-right: 32px; }
+      @media screen and (min-width: 641px) {
+        .Section--Shop-Offers .ShopOffersList .Offer {
+          font-size: 16px;
+          margin-right: 72px; } }
+      .Section--Shop-Offers .ShopOffersList .Offer:last-of-type {
+        margin-right: 0; }
+      .Section--Shop-Offers .ShopOffersList .Offer svg {
+        color: #43AD92; }
+      .Section--Shop-Offers .ShopOffersList .Offer span {
+        margin-left: 10px;
+        color: #525364;
+        white-space: nowrap; }
+        @media screen and (min-width: 641px) {
+          .Section--Shop-Offers .ShopOffersList .Offer span {
+            margin-left: 12px; } }

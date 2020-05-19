@@ -1,0 +1,55 @@
+{%- if section.settings.show_offers -%}
+<section id="section-{{ section.id }}" class="Section Section--Shop-Offers">
+  <div class="ShopOffersList">
+    {%- for block in section.blocks -%}
+      <div id="block-{{ block.id }}" class="Offer">
+        {%- if block.settings.icon_class -%}
+          <i class="fal {{ block.settings.icon_class }}"></i>
+        {%- endif -%}
+        <span>{{ block.settings.title }}</span>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Shop Offers",
+  "class": "shopify-section--bordered",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_offers",
+      "label": "Show Offers",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "offer",
+      "name": "Offer",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon_class",
+          "label": "FA Icon Class",
+          "info": "e.g. 'fa-cart'"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Header",
+      "name": "Shop Offers",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

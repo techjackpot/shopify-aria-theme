@@ -1,0 +1,135 @@
+.Header {
+  &:not(.Header--sidebar) {
+    .Header__Wrapper {
+      padding-left: 25px;
+      padding-right: 25px;
+      @include av-mq('tablet-and-up') {
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+      @include av-mq('desk') {
+        padding-left: 68px;
+        padding-right: 68px;
+      }
+    }
+  }
+
+  .Header__Wrapper {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .Header__LogoImage {
+    width: 80px;
+    height: 40px;
+    @include av-mq('phone') {
+      height: 32px;
+    }
+  }
+
+  .Header__Icon {
+    svg {
+      font-size: 21px;
+    }
+  }
+
+  .HorizontalList {
+    margin-left: -25px;
+    margin-right: -25px;
+    @include av-mq('tablet-and-up') {
+      margin-left: -32px;
+      margin-right: -32px;
+    }
+    @include av-mq('desk') {
+      margin-left: -68px;
+      margin-right: -68px;
+    }
+    .HorizontalList__Item {
+      position: relative;
+
+      margin-left: 25px;
+      margin-right: 25px;
+      @include av-mq('tablet-and-up') {
+        margin-left: 32px;
+        margin-right: 32px;
+      }
+      @include av-mq('desk') {
+        margin-left: 68px;
+        margin-right: 68px;
+      }
+      margin-top: 0;
+      margin-bottom: 0;
+      .Heading {
+        font-size: 21px;
+      }
+      &.Separator--Left {
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          height: 40px;
+          width: 0px;
+          border: solid 1px #9AB5C6;
+          position: absolute;
+          left: -32px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .Header__LinkSpacer {
+        &:after {
+          border-bottom-color: #43AD92;
+          top: calc(100% + 16px);
+        }
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #43AD92;
+        position: absolute;
+        top: calc(100% + 16px);
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+
+      &.is-expanded {
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      .DropdownMenu {
+        top: calc(100% + 16px);
+        padding: 0;
+        background: #ffffff;
+        border: solid 2px #CEE9E2;
+        border-top-color: transparent;
+        &:before {
+          background: #CEE9E2;
+          width: calc(100% + 2px);
+          left: -1px;
+        }
+        .Linklist {
+          .Linklist__Item {
+            margin-bottom: 0;
+            .Heading {
+              font-size: 19px;
+              white-space: nowrap;
+              line-height: 56px;
+              color: #000000;
+              transition: background 0.25s ease;
+              &:hover {
+                color: #000000;
+                background: #E5F5F1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

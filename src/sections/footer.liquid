@@ -27,8 +27,24 @@
                 {%- endif -%}
 
                 {%- if block.settings.show_social_media -%}
-                  {% render 'social-media', class: 'Footer__Social', spacing: 'loose' %}
+                  {% render 'social-media', class: 'Footer__Social', spacing: 'loose', subscribe_url: '#' %}
                 {%- endif -%}
+
+              {%- when 'logo' -%}
+                <img class="Footer__LogoImage"
+                     src="{{ 'aria-logo-reverse.svg' | asset_url }}"
+                     alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
+
+                {%- if block.settings.content != blank -%}
+                  <div class="Footer__Content Rte">
+                    {{ block.settings.content }}
+                  </div>
+                {%- endif -%}
+
+                <div class="policy-links">
+                  <a href="{{ section.setings.privacy_policy_url }}">Privacy Policy</a>
+                  <a href="{{ section.settings.terms_of_use_url }}">Terms of Use</a>
+                </div>
 
               {%- when 'links' -%}
                 {%- assign linklist = linklists[block.settings.menu] -%}
@@ -75,6 +91,7 @@
       </div>
     {%- endif -%}
 
+    {%- comment -%}
     <div class="Footer__Aside">
       <div class="Footer__Copyright">
         <a href="{{ routes.root_url }}" class="Footer__StoreName Heading u-h7 Link Link--secondary">© {{ shop.name }}</a>
@@ -95,6 +112,7 @@
         {%- endif -%}
       {%- endif -%}
     </div>
+    {%- endcomment -%}
   </div>
 </footer>
 
@@ -169,6 +187,32 @@
           "id": "content",
           "label": "Text",
           "default": "<p>A short sentence describing what someone will receive by subscribing</p>"
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Text",
+          "default": "<p>©2020 by <strong>Aria Health</strong>™ a ResMed Company.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Links"
+        },
+        {
+          "type": "url",
+          "id": "privacy_policy_url",
+          "label": "Link to Privay Policy"
+        },
+        {
+          "type": "url",
+          "id": "terms_of_use_url",
+          "label": "Link to Terms of Use"
         }
       ]
     }

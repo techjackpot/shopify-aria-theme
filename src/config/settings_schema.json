@@ -1,11 +1,11 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Prestige",
-    "theme_author": "Maestrooo",
-    "theme_version": "4.6.5",
-    "theme_documentation_url": "http:\/\/support.maestrooo.com\/",
-    "theme_support_url": "https:\/\/support.maestrooo.com\/article\/203-contact-us"
+    "theme_name": "Aria",
+    "theme_author": "techjackpot",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "https://github.com/techjackpot/shopify-aria-theme/blob/master/README.md",
+    "theme_support_email": "lance032017@gmail.com"
   },
   {
     "name": "Colors",
@@ -222,7 +222,7 @@
         "id": "base_text_font_size",
         "label": "Base size",
         "min": 13,
-        "max": 17,
+        "max": 22,
         "unit": "px",
         "default": 14
       }

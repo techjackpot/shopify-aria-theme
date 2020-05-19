@@ -1,0 +1,44 @@
+.Section--Shop-Offers {
+  background: transparent linear-gradient(180deg, #F0EFF1 0%, #FAFAFB 21%, #FAFAFB 100%) 0% 0% no-repeat padding-box;
+  padding: 12px 0;
+  @include av-mq('tablet-and-up') {
+    padding: 16px 0;
+  }
+  overflow: auto;
+  .ShopOffersList {
+    padding: 0 25px;
+    @include av-mq('tablet-and-up') {
+      padding: 0 40px;
+    }
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    max-width: max-content;
+    .Offer {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      line-height: 1;
+      font-size: 14px;
+      margin-right: 32px;
+      @include av-mq('tablet-and-up') {
+        font-size: 16px;
+        margin-right: 72px;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+      svg {
+        color: #43AD92;
+      }
+      span {
+        margin-left: 10px;
+        @include av-mq('tablet-and-up') {
+          margin-left: 12px;
+        }
+        color: #525364;
+        white-space: nowrap;
+      }
+    }
+  }
+}
