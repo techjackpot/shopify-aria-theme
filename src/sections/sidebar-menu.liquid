@@ -6,6 +6,13 @@
       <button class="Drawer__Close Icon-Wrapper--clickable" data-action="close-drawer" data-drawer-id="sidebar-menu" aria-label="{{ 'header.navigation.close_sidebar' | t }}">
         {%- render 'icon' with 'close' -%}
       </button>
+      <img class="Header__LogoImage Header__LogoImage--primary"
+           src="{{ 'aria-logo.svg' | asset_url }}"
+           alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
+      <a href="{{ routes.cart_url }}" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable Drawer__CartIcon">
+        <span>{%- render 'icon' with 'cart' -%}</span>
+        <span class="Header__CartDot {% if cart.item_count > 0 %}is-visible{% endif %}"></span>
+      </a>
     </header>
 
     <div class="Drawer__Content">
@@ -65,11 +72,17 @@
 
               {%- comment -%}We automatically add some links to the secondary menu{%- endcomment -%}
 
+              {%- comment -%}
               {%- if shop.customer_accounts_enabled -%}
                 <li class="Linklist__Item">
                   <a href="{{ routes.account_url }}" class="Text--subdued Link Link--primary">{{ 'header.navigation.account' | t }}</a>
                 </li>
               {%- endif -%}
+              {%- endcomment -%}
+
+              <li class="Linklist__Item">
+                <a href="#" class="Heading Link Link--primary u-h6">Get Started</a>
+              </li>
             </ul>
           </nav>
         </div>

@@ -41,12 +41,7 @@
     .Header .HorizontalList {
       margin-left: -32px;
       margin-right: -32px; } }
-  @media screen and (min-width: 1240px) {
-    .Header .HorizontalList {
-      margin-left: -68px;
-      margin-right: -68px; } }
   .Header .HorizontalList .HorizontalList__Item {
-    position: relative;
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 0;
@@ -55,10 +50,6 @@
       .Header .HorizontalList .HorizontalList__Item {
         margin-left: 32px;
         margin-right: 32px; } }
-    @media screen and (min-width: 1240px) {
-      .Header .HorizontalList .HorizontalList__Item {
-        margin-left: 68px;
-        margin-right: 68px; } }
     .Header .HorizontalList .HorizontalList__Item .Heading {
       font-size: 21px; }
     .Header .HorizontalList .HorizontalList__Item.Separator--Left {
@@ -74,26 +65,12 @@
         top: 50%;
         transform: translateY(-50%); }
     .Header .HorizontalList .HorizontalList__Item .Header__LinkSpacer:after {
-      border-bottom-color: #43AD92;
-      top: calc(100% + 16px); }
-    .Header .HorizontalList .HorizontalList__Item:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 2px;
-      background: #43AD92;
-      position: absolute;
-      top: calc(100% + 16px);
-      opacity: 0;
-      transition: opacity 0.25s ease; }
-    .Header .HorizontalList .HorizontalList__Item.is-expanded:after {
-      opacity: 1; }
+      border-bottom-color: #43AD92; }
     .Header .HorizontalList .HorizontalList__Item .DropdownMenu {
-      top: calc(100% + 16px);
+      top: 100%;
       padding: 0;
       background: #ffffff;
-      border: solid 2px #CEE9E2;
-      border-top-color: transparent; }
+      border: solid 2px #CEE9E2; }
       .Header .HorizontalList .HorizontalList__Item .DropdownMenu:before {
         background: #CEE9E2;
         width: calc(100% + 2px);
@@ -109,6 +86,103 @@
           .Header .HorizontalList .HorizontalList__Item .DropdownMenu .Linklist .Linklist__Item .Heading:hover {
             color: #000000;
             background: #E5F5F1; }
+
+.Drawer {
+  width: 100%; }
+
+.Drawer--fromLeft {
+  transform: translateX(calc(-100vw)); }
+
+.Drawer--fromRight {
+  right: 0;
+  left: auto;
+  transform: translateX(calc(100vw)); }
+
+.SidebarMenu {
+  background: #ffffff;
+  color: #231F20; }
+  .SidebarMenu .Collapsible, .SidebarMenu .Linklist {
+    border-color: #F0EFF1; }
+  .SidebarMenu .Collapsible__Button {
+    color: #231F20;
+    font-size: 21px;
+    line-height: 56px;
+    padding: 0 25px; }
+    .SidebarMenu .Collapsible__Button:hover, .SidebarMenu .Collapsible__Button[aria-expanded="true"] {
+      color: #231F20;
+      background: #E5F5F1; }
+  .SidebarMenu .Collapsible .Collapsible {
+    margin-left: 0px; }
+    .SidebarMenu .Collapsible .Collapsible .Collapsible__Button {
+      padding: 0 25px;
+      font-size: 19px;
+      line-height: 64px; }
+  .SidebarMenu .Collapsible__Plus {
+    right: 25px; }
+  .SidebarMenu .Collapsible__Content {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .SidebarMenu .Drawer__Header {
+    max-height: 64px; }
+    .SidebarMenu .Drawer__Header .Drawer__Close {
+      color: #ffffff;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 27.5px; }
+      .SidebarMenu .Drawer__Header .Drawer__Close:before {
+        background: #43AD92;
+        z-index: -1;
+        left: 50%;
+        top: 50%;
+        bottom: 0;
+        right: 0;
+        width: 28px;
+        height: 28px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%; }
+      .SidebarMenu .Drawer__Header .Drawer__Close svg {
+        display: block;
+        height: 1em;
+        width: 14px; }
+    .SidebarMenu .Drawer__Header .Header__LogoImage {
+      height: 32px; }
+    .SidebarMenu .Drawer__Header .Drawer__CartIcon {
+      position: absolute;
+      margin-left: 0;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 0; }
+    .SidebarMenu .Drawer__Header svg {
+      font-size: 21px; }
+  .SidebarMenu .Drawer__Content {
+    color: #231F20; }
+    .SidebarMenu .Drawer__Content:before {
+      background: transparent linear-gradient(180deg, #F0EFF1 0%, transparent 21%, transparent 100%) 0% 0% no-repeat padding-box;
+      pointer-events: none; }
+    .SidebarMenu .Drawer__Content .Drawer__Main:after {
+      display: none; }
+    .SidebarMenu .Drawer__Content .Drawer__Main .Drawer__Container {
+      height: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column; }
+      .SidebarMenu .Drawer__Content .Drawer__Main .Drawer__Container .SidebarMenu__Nav.SidebarMenu__Nav--primary {
+        flex: 1; }
+      .SidebarMenu .Drawer__Content .Drawer__Main .Drawer__Container .SidebarMenu__Nav.SidebarMenu__Nav--secondary {
+        flex: 0;
+        margin-top: 0; }
+        .SidebarMenu .Drawer__Content .Drawer__Main .Drawer__Container .SidebarMenu__Nav.SidebarMenu__Nav--secondary .Linklist .Linklist__Item .Link {
+          background: #43AD92;
+          color: #ffffff;
+          font-size: 21px;
+          line-height: 56px;
+          text-align: center; }
+          .SidebarMenu .Drawer__Content .Drawer__Main .Drawer__Container .SidebarMenu__Nav.SidebarMenu__Nav--secondary .Linklist .Linklist__Item .Link:hover {
+            color: #ffffff; }
+
+.supports-hover .SidebarMenu .Link--primary:hover {
+  color: #231F20; }
 
 .Footer {
   background: #525364;
