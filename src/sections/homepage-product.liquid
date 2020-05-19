@@ -1,0 +1,74 @@
+<section class="Section Section--spacingNormal Section-Homepage-Product" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="homepage-product">
+  <div class="Container Container--narrow">
+    <div class="Section-Homepage-Product--Header">
+      <div class="section-title">
+        <span>{{ section.settings.title }}</span>
+      </div>
+      <img src="{{ 'icon-swoop.svg' | asset_url }}">
+    </div>
+    <div class="Section-Homepage-Product--Content">
+      <div class="product-content">
+        <div class="product-label">
+          <span>{{ section.settings.product_label }}</span>
+        </div>
+        <div class="product-title">
+          <span>{{ section.settings.product_title }}</span>
+        </div>
+        <div class="product-description">
+          <span>{{ section.settings.product_description }}</span>
+        </div>
+        <div class="product-price">
+        </div>
+        <div class="product-actions">
+          <a href="#" class="Link Link--primary Button Button--fill Button--round">Buy now</a>
+          <a href="#" class="Link Link--primary Button Button--outline Button--round">Shop</a> 
+        </div>
+      </div>
+      <div class="product-image">
+        {%- if section.settings.image != blank -%}
+          <img src="{{ section.settings.image | img_url: 'master' }}">
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Homepage - Product",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "product_label",
+      "label": "Label"
+    },
+    {
+      "type": "text",
+      "id": "product_title",
+      "label": "Title"
+    },
+    {
+      "type": "html",
+      "id": "product_description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Homepage",
+      "name": "Product",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

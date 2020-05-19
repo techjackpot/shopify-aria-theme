@@ -44,8 +44,10 @@ $product-sale-price-color: {{settings.product_on_sale_color}};
 
 /* Typography */
 
+{%- comment -%}
 {{ settings.heading_font | font_face: font_display: 'fallback' }}
 {{ settings.text_font | font_face: font_display: 'fallback' }}
+{%- endcomment -%}
 
 {%- assign text_font_bold = settings.text_font | font_modify: 'weight', 'bolder' -%}
 {%- assign text_font_italic = settings.text_font | font_modify: 'style', 'italic' -%}
@@ -55,12 +57,12 @@ $product-sale-price-color: {{settings.product_on_sale_color}};
 {{ text_font_italic | font_face: font_display: 'fallback' }}
 {{ text_font_bold_italic | font_face: font_display: 'fallback' }}
 
-$heading-font-family : {{settings.heading_font.family}}, {{ settings.heading_font.fallback_families }};
+$heading-font-family : "century-gothic", sans-serif;
 $heading-font-weight : {{settings.heading_font.weight}};
 $heading-font-style  : {{settings.heading_font.style}};
 $heading-font-size   : {{settings.heading_size}};
 
-$text-font-family : Arial, {{settings.text_font.family}}, {{ settings.text_font.fallback_families }};
+$text-font-family : Arial, sans-serif;
 $text-font-weight : {{settings.text_font.weight}};
 $text-font-style  : {{settings.text_font.style}};
 
@@ -1498,7 +1500,7 @@ body:not(.is-tabbing) textarea:focus {
 
 .Container {
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 25px;
 }
 
 .Container--narrow {
@@ -1521,7 +1523,7 @@ body:not(.is-tabbing) textarea:focus {
 
 @include av-mq('tablet-and-up') {
   .Container {
-    padding: 0 50px;
+    padding: 0 32px;
   }
 }
 

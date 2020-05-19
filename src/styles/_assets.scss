@@ -1,12 +1,33 @@
-.Button--outline {
-  padding: 17px 45px 13px;
-  border: solid 2px;
-  border-radius: 100px;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0;
-  text-transform: none;
-  transition: color, border-color 0.25s ease;
+.Button {
+}
+.Button--fill {
+  background: #43AD92;
+  color: #ffffff;
   &:hover {
+    color: #ffffff;
   }
+  &.Button--second {
+    background: #ffffff;
+    color: #000000;
+    &:hover {
+      color: #000000;
+    }
+  }
+}
+.Button--outline {
+  border: solid 2px #43AD92;
+  color: #43AD92;
+  &:hover {
+    color: #43AD92;
+  }
+  &.Button--second {
+    border: solid 2px #ffffff;
+    color: #ffffff;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+.Button--round {
+  border-radius: 100px;
 }

@@ -1,0 +1,57 @@
+<section class="Section Section--spacingNormal Section-Homepage-Form" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="homepage-form">
+  <div class="Container Container--narrow">
+    <div class="Section-Homepage-Form--Content">
+      <div class="form-content">
+        <div class="form-label">
+          <span>{{ section.settings.form_label }}</span>
+        </div>
+        <div class="form-title">
+          <span>{{ section.settings.form_title }}</span>
+        </div>
+        <div class="form-description">
+          <span>{{ section.settings.form_description }}</span>
+        </div>
+        <div class="form-contacts">
+          <p><i class="fal fa-envelope"></i> hello@aria-therapy.com</p>
+          <p><i class="fal fa-comments"></i> (866) 647-0691</p>
+          <p><i class="fal fa-share"></i> facebook | instagram | linkedin</p>
+        </div>
+      </div>
+      <div class="form-container">
+        {%- if section.settings.image != blank -%}
+          <img src="{{ section.settings.image | img_url: 'master' }}">
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Homepage - Form",
+  "settings": [
+    {
+      "type": "text",
+      "id": "form_label",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Title"
+    },
+    {
+      "type": "html",
+      "id": "form_description",
+      "label": "Content"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Homepage",
+      "name": "Form",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

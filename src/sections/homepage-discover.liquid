@@ -1,0 +1,56 @@
+<section class="Section Section--spacingNormal Section-Homepage-Discover" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="homepage-discover">
+  <div class="Container Container--narrow">
+    <div class="Section-Homepage-Discover--Content">
+      <div class="discover-content-wrapper">
+        <div class="discover-content-container">
+          <div class="discover-content">
+            <div class="discover-title">
+              <span>{{ section.settings.title }}</span>
+            </div>
+            <div class="discover-text">
+              <span>{{ section.settings.text }}</span>
+            </div>
+            <div class="discover-actions">
+              <a href="#" class="Link Link--primary Button Button--fill Button--round">Discover Aria Free</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {%- if section.settings.image != blank -%}
+      <div class="discover-image">
+        <img src="{{ section.settings.image | img_url: 'master' }}">
+      </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Homepage - Discover",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "html",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Homepage",
+      "name": "Discover",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

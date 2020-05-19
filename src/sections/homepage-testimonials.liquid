@@ -1,0 +1,90 @@
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "wrapAround": true,
+  "dragThreshold": 16,
+  "cellAlign": "left",
+  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
+}
+{%- endcapture -%}
+
+<section class="Section Section--spacingNormal Section-Homepage-Testimonials" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="homepage-testimonials">
+  <div class="Container Container--narrow">
+    <div class="Section-Homepage-Testimonials--Header">
+      <div class="section-title">
+        <span>{{ section.settings.title }}</span>
+      </div>
+    </div>
+    <div class="Section-Homepage-Testimonials--Content">
+      <div class="Testimonials  Carousel" data-flickity='{{ flickity_options }}'>
+        {%- for block in section.blocks -%}
+          <div id="block-{{ block.id }}" class="Carousel__Cell TestimonialItem {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }} data-slide-index="{{ forloop.index0 }}">
+            <div class="TestimonialItem__Container">
+              <i class="fas fa-quote-left"></i>
+              <div class="TestimonialItem__Container__Content">
+                {%- if block.settings.quote != blank -%}
+                  <div class="TestimonialItem__Container__Quote">
+                    {{ block.settings.quote }}
+                  </div>
+                {%- endif -%}
+
+                {%- if block.settings.title != blank -%}
+                  <div class="TestimonialItem__Container__Name">
+                    - {{ block.settings.title}}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+            <div class="TestimonialItem__Footer">
+              <div class="TestimonialItem__Footer__Arrow"></div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style type="text/css">
+  #section-{{ section.id }} {
+    background-image: url({{ 'bg-testimonials.svg' | asset_url }});
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Homepage - Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name"
+        },
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "Quote"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Homepage",
+      "name": "Testimonials",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

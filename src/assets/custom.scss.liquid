@@ -1,12 +1,36 @@
+.Button--fill {
+  background: #43AD92;
+  color: #ffffff; }
+  .Button--fill:hover {
+    color: #ffffff; }
+  .Button--fill.Button--second {
+    background: #ffffff;
+    color: #000000; }
+    .Button--fill.Button--second:hover {
+      color: #000000; }
+
 .Button--outline {
-  padding: 17px 45px 13px;
-  border: solid 2px;
-  border-radius: 100px;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0;
-  text-transform: none;
-  transition: color, border-color 0.25s ease; }
+  border: solid 2px #43AD92;
+  color: #43AD92; }
+  .Button--outline:hover {
+    color: #43AD92; }
+  .Button--outline.Button--second {
+    border: solid 2px #ffffff;
+    color: #ffffff; }
+    .Button--outline.Button--second:hover {
+      color: #ffffff; }
+
+.Button--round {
+  border-radius: 100px; }
+
+body {
+  background: #ffffff; }
+
+.Section:first-of-type {
+  margin-top: 0; }
+
+.Section:last-of-type {
+  margin-bottom: 0; }
 
 .Header:not(.Header--sidebar) .Header__Wrapper {
   padding-left: 25px;
@@ -266,6 +290,15 @@
     .Footer .Footer__Social [class*="fa-"] {
       font-size: 32px;
       display: block; }
+    .Footer .Footer__Social .Button__SocialSubscriber {
+      padding: 0 43px;
+      line-height: 44px;
+      border: solid 2px;
+      border-radius: 100px;
+      font-size: 18px;
+      letter-spacing: 0;
+      text-transform: none;
+      transition: color, border-color 0.25s ease; }
 
 .Section--Shop-Offers {
   background: transparent linear-gradient(180deg, #F0EFF1 0%, #FAFAFB 21%, #FAFAFB 100%) 0% 0% no-repeat padding-box;
@@ -307,3 +340,428 @@
         @media screen and (min-width: 641px) {
           .Section--Shop-Offers .ShopOffersList .Offer span {
             margin-left: 12px; } }
+
+.Section-Homepage-Hero {
+  background: transparent linear-gradient(303deg, #43AD92 0%, #7ECBB7 100%) 0% 0% no-repeat padding-box; }
+  @media screen and (min-width: 1240px) {
+    .Section-Homepage-Hero {
+      height: calc(100vh - 76px); } }
+  .Section-Homepage-Hero .Container {
+    position: relative; }
+    @media screen and (min-width: 1240px) {
+      .Section-Homepage-Hero .Container {
+        height: 100%; } }
+  @media screen and (max-width: 640px) {
+    .Section-Homepage-Hero--Content {
+      margin-left: -25px;
+      margin-right: -25px; } }
+  @media screen and (min-width: 1240px) {
+    .Section-Homepage-Hero--Content {
+      height: 100%;
+      display: flex;
+      align-items: center; } }
+  @media screen and (max-width: 640px) {
+    .Section-Homepage-Hero--Content .hero-image {
+      padding-top: 51.2%;
+      height: 0;
+      position: relative;
+      margin-bottom: 40px;
+      -o-object-position: bottom;
+         object-position: bottom; } }
+  @media screen and (min-width: 641px) {
+    .Section-Homepage-Hero--Content .hero-image {
+      padding-top: 48px;
+      margin-right: -32px; } }
+  @media screen and (min-width: 1240px) {
+    .Section-Homepage-Hero--Content .hero-image {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 56.3%;
+      margin: 0;
+      padding: 0; } }
+  .Section-Homepage-Hero--Content .hero-image img {
+    display: block;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+    @media screen and (max-width: 640px) {
+      .Section-Homepage-Hero--Content .hero-image img {
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0; } }
+    @media screen and (min-width: 641px) {
+      .Section-Homepage-Hero--Content .hero-image img {
+        max-width: 70%;
+        margin-left: auto; } }
+    @media screen and (min-width: 1240px) {
+      .Section-Homepage-Hero--Content .hero-image img {
+        max-width: unset; } }
+  .Section-Homepage-Hero--Content .hero-content {
+    position: relative;
+    color: #ffffff; }
+    @media screen and (max-width: 640px) {
+      .Section-Homepage-Hero--Content .hero-content {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 64px; } }
+    @media screen and (min-width: 641px) {
+      .Section-Homepage-Hero--Content .hero-content {
+        margin-top: -28px;
+        padding-bottom: 158px; } }
+    @media screen and (min-width: 1240px) {
+      .Section-Homepage-Hero--Content .hero-content {
+        margin-top: 0;
+        padding-bottom: 0; } }
+    .Section-Homepage-Hero--Content .hero-content .hero-title {
+      font-family: "century-gothic", sans-serif;
+      line-height: 1;
+      font-size: 26px;
+      margin-bottom: 32px; }
+      @media screen and (min-width: 641px) {
+        .Section-Homepage-Hero--Content .hero-content .hero-title {
+          font-size: 28px;
+          margin-bottom: 40px; } }
+      @media screen and (min-width: 1240px) {
+        .Section-Homepage-Hero--Content .hero-content .hero-title {
+          font-size: 32px;
+          margin-bottom: 56px; } }
+    .Section-Homepage-Hero--Content .hero-content .hero-text {
+      font-family: "century-gothic", sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 32px; }
+      @media screen and (min-width: 641px) {
+        .Section-Homepage-Hero--Content .hero-content .hero-text {
+          font-size: 40px;
+          margin-bottom: 40px; } }
+      @media screen and (min-width: 1240px) {
+        .Section-Homepage-Hero--Content .hero-content .hero-text {
+          font-size: 56px;
+          line-height: 64px;
+          margin-bottom: 56px; } }
+    .Section-Homepage-Hero--Content .hero-content .hero-actions .Button {
+      min-width: 174px;
+      text-transform: none;
+      margin-right: 40px;
+      letter-spacing: 0;
+      font-size: 20px; }
+      @media screen and (max-width: 640px) {
+        .Section-Homepage-Hero--Content .hero-content .hero-actions .Button {
+          margin-bottom: 32px; } }
+      .Section-Homepage-Hero--Content .hero-content .hero-actions .Button:last-of-type {
+        margin-right: 0; }
+        @media screen and (max-width: 640px) {
+          .Section-Homepage-Hero--Content .hero-content .hero-actions .Button:last-of-type {
+            margin-bottom: 0; } }
+  .Section-Homepage-Hero--Content .has-content-more {
+    position: absolute;
+    bottom: 32px;
+    left: 32px; }
+    @media screen and (max-width: 640px) {
+      .Section-Homepage-Hero--Content .has-content-more {
+        display: none; } }
+    @media screen and (min-width: 1240px) {
+      .Section-Homepage-Hero--Content .has-content-more {
+        left: 68px;
+        bottom: 40px; } }
+    .Section-Homepage-Hero--Content .has-content-more svg {
+      font-size: 48px;
+      color: #fff; }
+
+.Section-Homepage-Product {
+  background: #ffffff;
+  min-height: 600px;
+  padding: 96px 0; }
+  .Section-Homepage-Product--Header {
+    text-align: center;
+    margin-bottom: 52px; }
+    .Section-Homepage-Product--Header .section-title {
+      font-family: "century-gothic", sans-serif;
+      font-size: 64px;
+      line-height: 72px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 24px; }
+  .Section-Homepage-Product--Content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center; }
+    @media screen and (min-width: 1240px) {
+      .Section-Homepage-Product--Content {
+        flex-direction: row; } }
+    .Section-Homepage-Product--Content .product-image {
+      flex: 1; }
+      .Section-Homepage-Product--Content .product-image img {
+        display: block; }
+    .Section-Homepage-Product--Content .product-content {
+      flex: 1;
+      max-width: 520px;
+      position: relative; }
+      .Section-Homepage-Product--Content .product-content .product-label {
+        font-family: "century-gothic", sans-serif;
+        font-size: 24px;
+        line-height: 1;
+        margin-bottom: 24px; }
+      .Section-Homepage-Product--Content .product-content .product-title {
+        font-family: "century-gothic", sans-serif;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 52px;
+        color: #43AD92;
+        margin-bottom: 32px; }
+      .Section-Homepage-Product--Content .product-content .product-description {
+        font-size: 18px;
+        line-height: 32px;
+        color: #525364;
+        margin-bottom: 48px; }
+      .Section-Homepage-Product--Content .product-content .product-price {
+        background: #E5F5F1; }
+      .Section-Homepage-Product--Content .product-content .product-actions .Button {
+        min-width: 174px;
+        text-transform: none;
+        margin-right: 40px;
+        letter-spacing: 0;
+        font-size: 20px; }
+        .Section-Homepage-Product--Content .product-content .product-actions .Button:last-of-type {
+          margin-right: 0; }
+
+.Section-Homepage-Testimonials {
+  position: relative;
+  padding-top: 80px;
+  min-height: 320px;
+  margin-bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media screen and (min-width: 641px) {
+    .Section-Homepage-Testimonials {
+      padding-top: 112px; } }
+  @media screen and (min-width: 1240px) {
+    .Section-Homepage-Testimonials {
+      padding-top: 144px; } }
+  .Section-Homepage-Testimonials .section-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none; }
+  .Section-Homepage-Testimonials .Container {
+    position: relative; }
+  .Section-Homepage-Testimonials--Header {
+    text-align: center;
+    margin-bottom: 48px; }
+    .Section-Homepage-Testimonials--Header .section-title {
+      font-family: "century-gothic", sans-serif;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 700;
+      color: #ffffff; }
+      @media screen and (min-width: 1240px) {
+        .Section-Homepage-Testimonials--Header .section-title {
+          font-size: 32px; } }
+    @media screen and (min-width: 1240px) {
+      .Section-Homepage-Testimonials--Header {
+        margin-bottom: 72px; } }
+  .Section-Homepage-Testimonials--Content .Testimonials {
+    padding-bottom: 32px; }
+    @media screen and (min-width: 1240px) {
+      .Section-Homepage-Testimonials--Content .Testimonials {
+        padding-bottom: 48px; } }
+    .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem {
+      width: 100%;
+      margin-right: 55px; }
+      @media screen and (min-width: 641px) {
+        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem {
+          width: calc((100% - 55px) / 2); } }
+      @media screen and (min-width: 1240px) {
+        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem {
+          width: calc((100% - 80px) / 3);
+          margin-right: 40px; } }
+      .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container {
+        background: #ffffff;
+        position: relative;
+        display: flex;
+        padding: 20px; }
+        @media screen and (min-width: 1240px) {
+          .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container {
+            padding: 32px; } }
+        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container svg {
+          color: #43AD92;
+          font-size: 24px;
+          width: 1em;
+          height: 1em;
+          display: block;
+          flex: 0; }
+        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
+          flex: 1;
+          padding: 6px 0 0 20px; }
+          @media screen and (min-width: 1240px) {
+            .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
+              padding: 6px 8px 0 24px; } }
+        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
+          font-family: "century-gothic", sans-serif;
+          font-size: 24px;
+          line-height: 36px;
+          margin-bottom: 1em; }
+          @media screen and (min-width: 1240px) {
+            .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
+              font-size: 28px;
+              line-height: 40px; } }
+        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
+          font-style: italic;
+          font-size: 14px;
+          line-height: 1;
+          color: #9AB5C6; }
+          @media screen and (min-width: 1240px) {
+            .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
+              font-size: 16px; } }
+      .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer {
+        height: 16px;
+        position: relative; }
+        @media screen and (min-width: 1240px) {
+          .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer {
+            height: 20px; } }
+        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-color: #ffffff transparent transparent transparent;
+          border-width: 16px;
+          margin-left: 26px; }
+          @media screen and (min-width: 1240px) {
+            .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
+              border-width: 20px;
+              margin-left: 32px; } }
+    .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots {
+      margin-top: 50px; }
+      @media screen and (min-width: 641px) {
+        .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots {
+          margin-top: 66px; } }
+      @media screen and (min-width: 1240px) {
+        .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots {
+          margin-top: 64px; } }
+      .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots .dot {
+        border-color: #ffffff;
+        border-width: 2px;
+        width: 16px;
+        height: 16px; }
+        .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots .dot.is-selected {
+          background: #FFFFFF80; }
+
+.Section-Homepage-Discover {
+  background: transparent linear-gradient(118deg, #E5F5F1 0%, #CEE9E2 100%) 0% 0% no-repeat padding-box;
+  margin: 0;
+  padding: 50px 0 64px; }
+  @media screen and (min-width: 1240px) {
+    .Section-Homepage-Discover {
+      padding: 96px 0; } }
+  .Section-Homepage-Discover .Container {
+    position: relative;
+    padding: 0; }
+  .Section-Homepage-Discover--Content .discover-image {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%; }
+    .Section-Homepage-Discover--Content .discover-image img {
+      display: block;
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .Section-Homepage-Discover--Content .discover-content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; }
+    .Section-Homepage-Discover--Content .discover-content-wrapper .discover-content-container {
+      background: #ffffff;
+      display: flex;
+      justify-content: flex-end;
+      padding: 64px 25px; }
+      @media screen and (min-width: 1240px) {
+        .Section-Homepage-Discover--Content .discover-content-wrapper .discover-content-container {
+          padding: 143px 90px;
+          width: calc(50% + 72px); } }
+    .Section-Homepage-Discover--Content .discover-content-wrapper .discover-content {
+      max-width: 520px; }
+      .Section-Homepage-Discover--Content .discover-content-wrapper .discover-content .discover-title {
+        font-family: "century-gothic", sans-serif;
+        font-weight: 700;
+        color: #43AD92;
+        font-size: 32px;
+        line-height: 44px;
+        margin-bottom: 24px; }
+        @media screen and (min-width: 1240px) {
+          .Section-Homepage-Discover--Content .discover-content-wrapper .discover-content .discover-title {
+            font-size: 44px;
+            line-height: 46px;
+            margin-bottom: 32px; } }
+      .Section-Homepage-Discover--Content .discover-content-wrapper .discover-content .discover-text {
+        color: #525364;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 32px; }
+        @media screen and (min-width: 1240px) {
+          .Section-Homepage-Discover--Content .discover-content-wrapper .discover-content .discover-text {
+            font-size: 18px;
+            line-height: 32px;
+            margin-bottom: 48px; } }
+      .Section-Homepage-Discover--Content .discover-content-wrapper .discover-content .discover-actions .Button {
+        text-transform: none;
+        margin-right: 40px;
+        letter-spacing: 0;
+        font-size: 20px; }
+        .Section-Homepage-Discover--Content .discover-content-wrapper .discover-content .discover-actions .Button:last-of-type {
+          margin-right: 0; }
+
+.Section-Homepage-Form {
+  background: transparent linear-gradient(300deg, #F0EFF1 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+  padding: 96px 0;
+  margin: 0; }
+  .Section-Homepage-Form--Content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center; }
+    @media screen and (min-width: 1240px) {
+      .Section-Homepage-Form--Content {
+        flex-direction: row; } }
+    .Section-Homepage-Form--Content .form-container {
+      flex: 1; }
+    .Section-Homepage-Form--Content .form-content {
+      flex: 1;
+      max-width: 520px;
+      position: relative; }
+      .Section-Homepage-Form--Content .form-content .form-label {
+        font-family: "century-gothic", sans-serif;
+        font-size: 24px;
+        line-height: 1;
+        margin-bottom: 24px; }
+      .Section-Homepage-Form--Content .form-content .form-title {
+        font-family: "century-gothic", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 46px;
+        color: #43AD92;
+        margin-bottom: 32px; }
+      .Section-Homepage-Form--Content .form-content .form-description {
+        font-size: 18px;
+        line-height: 32px;
+        color: #525364;
+        margin-bottom: 48px; }
+      .Section-Homepage-Form--Content .form-content .form-price {
+        background: #E5F5F1; }
+      .Section-Homepage-Form--Content .form-content .form-contacts p {
+        font-size: 18px;
+        line-height: 40px;
+        color: #000000;
+        margin-bottom: 0; }
+        .Section-Homepage-Form--Content .form-content .form-contacts p svg {
+          color: #43AD92;
+          margin-right: 16px; }

@@ -114,5 +114,17 @@
       font-size: 32px;
       display: block;
     }
+    .Button__SocialSubscriber {
+      padding: 0 43px;
+      line-height: 44px;
+      border: solid 2px;
+      border-radius: 100px;
+      font-size: 18px;
+      letter-spacing: 0;
+      text-transform: none;
+      transition: color, border-color 0.25s ease;
+      &:hover {
+      }
+    }
   }
 }
