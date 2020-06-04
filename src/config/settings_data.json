@@ -343,6 +343,188 @@
           "form_title": "We’re building a community.",
           "form_description": "Stay connected to all the Aria Health™ news. You’ll also receive updates, offers, and details about co-creation opportunities. We’re doing something different, together."
         }
+      },
+      "meet-aria-header": {
+        "type": "meet-aria-header",
+        "settings": {
+          "title": "Designed to be different.",
+          "text": "We’ve learned that you can’t just treat problems—you have to treat people. So we created a better therapy experience. While most pneumatic compression therapy equipment can be cumbersome, the compact Aria system is portable, targeting the burden and isolation of therapy.",
+          "image": "shopify:\/\/shop_images\/aria-free-boot_2x_07f8e29b-6703-452c-9af4-4544979e3c38.png"
+        }
+      },
+      "meet-aria-therapy": {
+        "type": "meet-aria-therapy",
+        "settings": {}
+      },
+      "meet-aria-components": {
+        "type": "meet-aria-components",
+        "settings": {}
+      },
+      "meet-aria-good": {
+        "type": "meet-aria-good",
+        "settings": {}
+      },
+      "meet-aria-testimonials": {
+        "type": "meet-aria-testimonials",
+        "blocks": {
+          "1591271522933": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+            }
+          },
+          "1591271537248": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+            }
+          },
+          "1591271541390": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+            }
+          },
+          "1591271543583": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1591271522933",
+          "1591271537248",
+          "1591271541390",
+          "1591271543583"
+        ],
+        "settings": {}
+      },
+      "meet-aria-footer": {
+        "type": "meet-aria-footer",
+        "settings": {
+          "title": "Great escapes.",
+          "text": "Aria is the perfect traveling companion. Get a portable pump for therapy on the go—without sacrificing performance.",
+          "image": "shopify:\/\/shop_images\/aria-free-outdoor-therapy.jpg"
+        }
+      },
+      "meet-aria-form": {
+        "type": "meet-aria-form",
+        "settings": {
+          "form_label": "Aria Free is for you",
+          "form_title": "We’re building a community.",
+          "form_description": "Stay connected to all the Aria Health™ news. You’ll also receive updates, offers, and details about co-creation opportunities. We’re doing something different, together."
+        }
+      },
+      "our-story-hero": {
+        "type": "our-story-hero",
+        "settings": {
+          "title": "We are Aria Health.",
+          "text": "Advancing technology,<br> building community, and<br> bringing a personal focus<br> to therapy.",
+          "desc": "We’re working to provide freedom and flexibility<br> to the millions of people facing the challenges<br> and burdens of treating lymphedema and other<br> chronic edema conditions.",
+          "image": "shopify:\/\/shop_images\/our-story.jpg"
+        }
+      },
+      "our-story-header": {
+        "type": "our-story-header",
+        "settings": {
+          "heading": "Big idea.<br>Little pump.",
+          "title": "How can technology transform healthcare?",
+          "text": "<strong>This was the question posed by our parent company, ResMed, at the outset of a 2017 innovation challenge.<\/strong> Among those who took on the task: Dinesh Ramanan, a biomedical engineer in ResMed’s clinical science and innovation department. Dinesh proposed the concept for what is now Aria Free. Since that time, the Aria team has grown, and we’ve had the occasion to meet so many inspiring people who’ve shared firsthand knowledge to help us develop a little device we think can change therapy in a big way.",
+          "image": "shopify:\/\/shop_images\/aria-free-app.jpg"
+        }
+      },
+      "our-story-people": {
+        "type": "our-story-people",
+        "blocks": {
+          "1591277952039": {
+            "type": "person",
+            "settings": {
+              "title": "Brooke Harding",
+              "position": "<p>General Manager, Aria<br>VP, Strategy and Ventures, ResMed<\/p>",
+              "image": "shopify:\/\/shop_images\/brooke-harding.jpg",
+              "bio": "<p>At ResMed, Brooke leads a team in corporate strategy development with emphasis on strategy planning through execution, new business innovation, new markets, market disruption, and competitor strategy. She also prepares business cases and communications to make recommendations to the executive team and board of directors. Brooke has contributed in many different departments during her sixteen years with ResMed, and we value her expertise at the helm of Aria Health. She holds a bachelor&rsquo;s degree in cultural anthropology from James Madison University.<\/p>\n<p><\/p>\n<p>She holds a Bachelor of Science in cultural anthropology from James Madison University.<\/p>"
+            }
+          },
+          "1591278036608": {
+            "type": "person",
+            "settings": {
+              "title": "Eric Saunders",
+              "position": "<p>Operations<\/p>",
+              "image": "shopify:\/\/shop_images\/eric-saunders.jpg",
+              "bio": ""
+            }
+          },
+          "1591278085748": {
+            "type": "person",
+            "settings": {
+              "title": "Dinesh Ramanan",
+              "position": "<p>Product and clinical<\/p>",
+              "image": "shopify:\/\/shop_images\/dinesh-ramanan.jpg",
+              "bio": ""
+            }
+          },
+          "1591278114942": {
+            "type": "person",
+            "settings": {
+              "title": "Jeannine Mar",
+              "position": "<p>Commercial<\/p>",
+              "image": "shopify:\/\/shop_images\/jeannine-mar.jpg",
+              "bio": ""
+            }
+          },
+          "1591278153305": {
+            "type": "person",
+            "settings": {
+              "title": "Kimm Ehlen",
+              "position": "<p>Community<\/p>",
+              "image": "shopify:\/\/shop_images\/kimm-ehlen.jpg",
+              "bio": ""
+            }
+          },
+          "1591278169742": {
+            "type": "person",
+            "settings": {
+              "title": "Amy Cook",
+              "position": "<p>Digital<\/p>",
+              "image": "shopify:\/\/shop_images\/amy-cook.jpg",
+              "bio": ""
+            }
+          },
+          "1591278190802": {
+            "type": "person",
+            "settings": {
+              "title": "Tommy Broski",
+              "position": "<p>Supply Chain<\/p>",
+              "image": "shopify:\/\/shop_images\/tommy-broski.jpg",
+              "bio": ""
+            }
+          }
+        },
+        "block_order": [
+          "1591277952039",
+          "1591278036608",
+          "1591278085748",
+          "1591278114942",
+          "1591278153305",
+          "1591278169742",
+          "1591278190802"
+        ],
+        "settings": {
+          "title": "The people behind the pump."
+        }
+      },
+      "our-story-footer": {
+        "type": "our-story-footer",
+        "settings": {
+          "title": "Backed by ResMed.",
+          "text": "Aria Free was developed in association with ResMed, our parent company. For thirty years, ResMed has been a leader in health technology, transforming care for people with sleep apnea, COPD, and other chronic diseases. The company continues to make an impact with cloud-connected medical devices and out-of-hospital software solutions that deliver quality outcomes and quality of life for healthcare providers and those they serve.",
+          "image": "shopify:\/\/shop_images\/backed-by-resmed.jpg"
+        }
       }
     },
     "content_for_index": [

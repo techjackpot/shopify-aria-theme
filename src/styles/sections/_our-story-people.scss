@@ -71,7 +71,7 @@
         &:last-of-type {
           // margin-bottom: 0;
         }
-        &__Container {
+        .Person-Item__Container {
           height: 100%;
           display: flex;
           flex-direction: column;
@@ -87,7 +87,7 @@
             }
           }
         }
-        &--Photo {
+        .Person-Item--Photo {
           position: relative;
           height: 0;
           padding-top: 100%;
@@ -102,14 +102,14 @@
             transition: transform 0.3s ease;
           }
         }
-        &--Meta {
+        .Person-Item--Meta {
           flex: 1;
           padding: 24px 0;
           text-align: center;
           background: #FAFAFB;
           transition: background 0.3s ease;
         }
-        &--Name {
+        .Person-Item--Name {
           font-family: $heading-font-family;
           font-weight: 700;
           color: $primary-color;
@@ -117,12 +117,100 @@
           font-size: 24px;
           margin-bottom: 16px;
         }
-        &--Position {
+        .Person-Item--Position {
           color: $secondary-color;
           font-size: 16px;
           line-height: 24px;
         }
       }
+    }
+  }
+}
+
+.Modal--personContent {
+  width: 712px;
+  padding: 32px 25px;
+
+  @include av-mq('tablet-and-up') {
+    padding: 40px 40px 64px;
+    .Person-Item--Photo {
+      float: left;
+      max-width: 296px;
+    }
+  }
+  .Person-Item--Name {
+    font-family: $heading-font-family;
+    font-weight: 700;
+    color: $primary-color;
+    line-height: 1;
+    font-size: 24px;
+    margin-bottom: 16px;
+    @include av-mq('tablet-and-up') {
+      margin-top: 24px;
+    }
+  }
+  .Person-Item--Position {
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    @include av-mq('tablet-and-up') {
+      margin-bottom: 40px;
+    }
+  }
+  .Person-Item--Photo {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    margin-bottom: 32px;
+    @include av-mq('tablet-and-up') {
+      margin-top: -24px;
+      margin-right: 40px;
+      margin-bottom: 1rem;
+    }
+  }
+  .Person-Item--Bio {
+    font-size: 16px;
+    line-height: 26px;
+    color: $secondary-color;
+    @include av-mq('tablet-and-up') {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+  .Modal__Content {
+    .Container {
+      padding: 0 !important;
+      @include av-mq('phone') {
+        display: flex;
+        flex-direction: column;
+        .Person-Item--Photo {
+          order: 3;
+        }
+        .Person-Item--Bio {
+          order: 4;
+        }
+      }
+    }
+  }
+  .Modal__Close {
+    margin: 0;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $primary-color;
+    svg {
+      font-size: 24px;
+      width: 16px;
+      height: 1em;
+      display: block;
+      color: #ffffff;
     }
   }
 }

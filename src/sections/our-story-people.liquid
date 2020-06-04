@@ -9,7 +9,7 @@
       <div class="Person-List">
         {%- for block in section.blocks -%}
           <div id="block-{{ block.id }}" class="Person-Item" {{ block.shopify_attributes }}>
-            <div class="Person-Item__Container">
+            <div class="Person-Item__Container" data-action="open-modal" aria-controls="modal-{{ section.id }}-{{ block.id }}">
               <div class="Person-Item--Photo">
                 {%- if block.settings.image != blank -%}
                   <img src="{{ block.settings.image | img_url: 'master' }}">
@@ -25,6 +25,30 @@
               </div>
             </div>
           </div>
+
+          <div id="modal-{{ section.id }}-{{ block.id }}" class="Modal Modal--personContent" aria-hidden="true" role="dialog" data-scrollable>
+            <div class="Modal__Content">
+              <div class="Container Container--narrow">
+                <div class="Person-Item--Photo">
+                  {%- if block.settings.image != blank -%}
+                    <img src="{{ block.settings.image | img_url: 'master' }}">
+                  {%- endif -%}
+                </div>
+                <div class="Person-Item--Name">
+                  <span>{{ block.settings.title }}</span>
+                </div>
+                <div class="Person-Item--Position">
+                  <span>{{ block.settings.position }}</span>
+                </div>
+                <div class="Person-Item--Bio">
+                  <span>{{ block.settings.bio }}</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="Modal__Close Modal__Close--outside" data-animate-bottom data-action="close-modal">{% render 'icon' with 'close' %}</button>
+          </div>
+
         {%- endfor -%}
       </div>
     </div>
