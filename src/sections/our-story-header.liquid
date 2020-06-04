@@ -1,0 +1,64 @@
+<section class="Section Section--spacingNormal Section-Our-Story-Header" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="our-story-header">
+  <div class="Container Container--narrow">
+    <div class="Section-Our-Story-Header--Header">
+      <div class="section-title">
+        <span>{{ section.settings.heading }}</span>
+      </div>
+      <img src="{{ 'icon-swoop.svg' | asset_url }}">
+    </div>
+    <div class="Section-Our-Story-Header--Content">
+      <div class="header-content-wrapper">
+        <div class="header-content-container">
+          {%- if section.settings.image != blank -%}
+          <div class="header-image">
+            <img src="{{ section.settings.image | img_url: 'master' }}">
+          </div>
+          {%- endif -%}
+          <div class="header-content">
+            <div class="header-title">
+              <span>{{ section.settings.title }}</span>
+            </div>
+            <div class="header-text">
+              <span>{{ section.settings.text }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Our Story - Header",
+  "settings": [
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "html",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Our Story",
+      "name": "Header",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

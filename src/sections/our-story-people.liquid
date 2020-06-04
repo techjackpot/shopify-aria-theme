@@ -1,0 +1,80 @@
+<section class="Section Section--spacingNormal Section-Our-Story-People" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="our-story-people">
+  <div class="Container Container--narrow">
+    <div class="Section-Our-Story-People--Header">
+      <div class="section-title">
+        <span>{{ section.settings.title }}</span>
+      </div>
+    </div>
+    <div class="Section-Our-Story-People--Content">
+      <div class="Person-List">
+        {%- for block in section.blocks -%}
+          <div id="block-{{ block.id }}" class="Person-Item" {{ block.shopify_attributes }}>
+            <div class="Person-Item__Container">
+              <div class="Person-Item--Photo">
+                {%- if block.settings.image != blank -%}
+                  <img src="{{ block.settings.image | img_url: 'master' }}">
+                {%- endif -%}
+              </div>
+              <div class="Person-Item--Meta">
+                <div class="Person-Item--Name">
+                  <span>{{ block.settings.title }}</span>
+                </div>
+                <div class="Person-Item--Position">
+                  <span>{{ block.settings.position }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Our Story - People",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "person",
+      "name": "Person",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name"
+        },
+        {
+          "type": "richtext",
+          "id": "position",
+          "label": "Position"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo"
+        },
+        {
+          "type": "richtext",
+          "id": "bio",
+          "label": "Bio"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Our Story",
+      "name": "People",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

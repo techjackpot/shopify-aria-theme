@@ -1,0 +1,60 @@
+<section class="Section Section--spacingNormal Section-Our-Story-Hero" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="our-story-hero">
+  <div class="Container Container--narrow">
+    <div class="Section-Our-Story-Hero--Content">
+      {%- if section.settings.image != blank -%}
+      <div class="hero-image">
+        <img src="{{ section.settings.image | img_url: 'master' }}">
+      </div>
+      {%- endif -%}
+      <div class="hero-content">
+        <div class="hero-title">
+          <span>{{ section.settings.title }}</span>
+        </div>
+        <div class="hero-text">
+          <span>{{ section.settings.text }}</span>
+        </div>
+        <div class="hero-desc">
+          <span>{{ section.settings.desc }}</span>
+        </div>
+      </div>
+      <div class="has-content-more">
+        <i class="fal fa-angle-double-down"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Our Story - Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "html",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "html",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Our Story",
+      "name": "Hero",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

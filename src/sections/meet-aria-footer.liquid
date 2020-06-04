@@ -1,0 +1,56 @@
+<section class="Section Section--spacingNormal Section-Meet-Aria-Footer" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="meet-aria-footer">
+  <div class="Container Container--narrow">
+    <div class="Section-Meet-Aria-Footer--Content">
+      <div class="footer-content-wrapper">
+        <div class="footer-content-container">
+          <div class="footer-content">
+            <div class="footer-title">
+              <span>{{ section.settings.title }}</span>
+            </div>
+            <div class="footer-text">
+              <span>{{ section.settings.text }}</span>
+            </div>
+            <div class="footer-actions">
+              <a href="#" class="Link Link--primary Button Button--fill Button--round">Get started</a>
+            </div>
+          </div>
+          {%- if section.settings.image != blank -%}
+          <div class="footer-image">
+            <img src="{{ section.settings.image | img_url: 'master' }}">
+          </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Meet Aria - Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "html",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Meet Aria",
+      "name": "Footer",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

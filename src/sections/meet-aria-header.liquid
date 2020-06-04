@@ -1,0 +1,65 @@
+<section class="Section Section--spacingNormal Section-Meet-Aria-Header" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="meet-aria-header">
+  <div class="Container Container--narrow">
+    <div class="Section-Meet-Aria-Header--Header">
+      <div class="section-title">
+        <span>Aria Free</span>
+      </div>
+      <div class="section-subtitle">
+        <span>A real solution for real life.</span>
+      </div>
+      <img src="{{ 'icon-swoop.svg' | asset_url }}">
+    </div>
+    <div class="Section-Meet-Aria-Header--Content">
+      <div class="header-content-wrapper">
+        <div class="header-content-container">
+          {%- if section.settings.image != blank -%}
+          <div class="header-image">
+            <img src="{{ section.settings.image | img_url: 'master' }}">
+          </div>
+          {%- endif -%}
+          <div class="header-content">
+            <div class="header-title">
+              <span>{{ section.settings.title }}</span>
+            </div>
+            <div class="header-text">
+              <span>{{ section.settings.text }}</span>
+            </div>
+            <div class="header-actions">
+              <a href="#" class="Link Link--primary Button Button--fill Button--round">Get started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Meet Aria - Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "html",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Meet Aria",
+      "name": "Header",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

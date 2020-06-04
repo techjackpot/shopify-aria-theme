@@ -1,0 +1,128 @@
+.Section-Our-Story-People {
+  background: #fff;
+  margin: 0;
+  padding: 64px 0;
+  @include av-mq('tablet') {
+    padding: 80px 0;
+  }
+  @include av-mq('desk') {
+    padding: 96px 0;
+  }
+
+  .Container {
+    position: relative;
+    padding: 0 25px;
+    @include av-mq('tablet-and-up') {
+      padding: 0 36px;
+    }
+    @include av-mq('desk') {
+      padding: 0 48px;
+    }
+  }
+
+  &--Header {
+    text-align: center;
+    .section-title {
+      font-family: $heading-font-family;
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 700;
+      color: #000000;
+      @include av-mq('tablet-and-up') {
+        font-size: 56px;
+        line-height: 64px;
+      }
+      @include av-mq('desk') {
+        font-size: 64px;
+        line-height: 72px;
+      }
+    }
+    margin-bottom: 56px;
+    @include av-mq('desk') {
+      margin-bottom: 64px;
+    }
+  }
+
+  &--Content {
+    .Person-List {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -40px;
+      @include av-mq('tablet') {
+        margin-bottom: -48px;
+      }
+      .Person-Item {
+        flex: 1 0 100%;
+        padding: 0 15px;
+        margin-bottom: 40px;
+        @include av-mq('tablet-and-up') {
+          flex: 1 0 50%;
+          padding: 0 24px;
+          max-width: 50%;
+        }
+        @include av-mq('tablet') {
+          margin-bottom: 48px;
+        }
+        @include av-mq('desk') {
+          flex: 1 0 25%;
+          padding: 0 20px;
+          max-width: 25%;
+        }
+        &:last-of-type {
+          // margin-bottom: 0;
+        }
+        &__Container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+          &:hover {
+            .Person-Item--Meta {
+              background: #E5F5F1;
+            }
+            .Person-Item--Photo {
+              img {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+        &--Photo {
+          position: relative;
+          height: 0;
+          padding-top: 100%;
+          overflow: hidden;
+          img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+          }
+        }
+        &--Meta {
+          flex: 1;
+          padding: 24px 0;
+          text-align: center;
+          background: #FAFAFB;
+          transition: background 0.3s ease;
+        }
+        &--Name {
+          font-family: $heading-font-family;
+          font-weight: 700;
+          color: $primary-color;
+          line-height: 1;
+          font-size: 24px;
+          margin-bottom: 16px;
+        }
+        &--Position {
+          color: $secondary-color;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

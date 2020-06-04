@@ -1,0 +1,150 @@
+.Section-Meet-Aria-Testimonials {
+  position: relative;
+  padding-top: 80px;
+  @include av-mq('tablet-and-up') {
+    padding-top: 112px;
+  }
+  @include av-mq('desk') {
+    padding-top: 144px;
+  }
+  min-height: 320px;
+  margin-bottom: 0;
+
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  .section-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+  }
+
+  .Container {
+    position: relative;
+    background: transparent linear-gradient(180deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box;
+  }
+
+  &--Header {
+    text-align: center;
+    .section-title {
+      font-family: $heading-font-family;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 700;
+      color: #ffffff;
+      @include av-mq('desk') {
+        font-size: 32px;
+      }
+    }
+    margin-bottom: 48px;
+    @include av-mq('desk') {
+      margin-bottom: 72px;
+    }
+  }
+
+  &--Content {
+    .Testimonials {
+      padding-bottom: 32px;
+      @include av-mq('desk') {
+        padding-bottom: 48px;
+      }
+      .TestimonialItem {
+        width: 100%;
+        margin-right: 55px;
+        @include av-mq('tablet-and-up') {
+          width: calc((100% - 55px) / 2);
+        }
+        @include av-mq('desk') {
+          width: calc((100% - 80px) / 3);
+          margin-right: 40px;
+        }
+        &__Container {
+          background: #ffffff;
+          position: relative;
+          display: flex;
+          padding: 20px;
+          @include av-mq('desk') {
+            padding: 32px;
+          }
+          svg {
+            color: $primary-color;
+            font-size: 24px;
+            width: 1em;
+            height: 1em;
+            display: block;
+            flex: 0;
+          }
+          &__Content {
+            flex: 1;
+            padding: 6px 0 0 20px;
+            @include av-mq('desk') {
+              padding: 6px 8px 0 24px;
+            }
+          }
+          &__Quote {
+            font-family: $heading-font-family;
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 1em;
+            @include av-mq('desk') {
+              font-size: 28px;
+              line-height: 40px;
+            }
+          }
+          &__Name {
+            font-style: italic;
+            font-size: 14px;
+            line-height: 1;
+            color: #9AB5C6;
+            @include av-mq('desk') {
+              font-size: 16px;
+            }
+          }
+          &:last-of-type {
+          }
+        }
+        &__Footer {
+          height: 16px;
+          @include av-mq('desk') {
+            height: 20px;
+          }
+          position: relative;
+          &__Arrow {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: #ffffff transparent transparent transparent;
+            border-width: 16px;
+            margin-left: 26px;
+            @include av-mq('desk') {
+              border-width: 20px;
+              margin-left: 32px;
+            }
+          }
+        }
+      }
+      .flickity-page-dots {
+        margin-top: 50px;
+        @include av-mq('tablet-and-up') {
+          margin-top: 66px;
+        }
+        @include av-mq('desk') {
+          margin-top: 64px;
+        }
+        .dot {
+          border-color: #ffffff;
+          border-width: 2px;
+          width: 16px;
+          height: 16px;
+          &.is-selected {
+            background: #FFFFFF80;
+          }
+        }
+      }
+    }
+  }
+}

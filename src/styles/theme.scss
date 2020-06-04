@@ -4,9 +4,27 @@
 @import "header";
 @import "footer";
 
+
+/* sections */
+
 @import "sections/offers";
+
 @import "sections/homepage-hero";
 @import "sections/homepage-product";
 @import "sections/homepage-testimonials";
 @import "sections/homepage-discover";
 @import "sections/homepage-form";
+
+@import "sections/meet-aria-header";
+@import "sections/meet-aria-therapy";
+@import "sections/meet-aria-components";
+@import "sections/meet-aria-good";
+@import "sections/meet-aria-testimonials";
+@import "sections/meet-aria-footer";
+@import "sections/meet-aria-form";
+
+@import "sections/our-story-hero";
+@import "sections/our-story-header";
+@import "sections/our-story-people";
+@import "sections/our-story-footer";
+
