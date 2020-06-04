@@ -1,0 +1,123 @@
+.Section-Meet-Aria-Therapy {
+  background: transparent linear-gradient(124deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box;
+  margin: 0;
+  padding: 64px 0;
+  @include av-mq('tablet') {
+    padding: 80px 0;
+  }
+  @include av-mq('desk') {
+    padding: 96px 0;
+  }
+
+  .Container {
+    position: relative;
+    padding: 0 25px;
+    @include av-mq('tablet-and-up') {
+      padding: 0 32px;
+    }
+    @include av-mq('desk') {
+      padding: 0 68px;
+    }
+  }
+
+
+  &--Content {
+    display: flex;
+    align-items: center;
+    .Therapy--Content--Info {
+      &--Title {
+        font-family: $heading-font-family;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 50px;
+        margin-bottom: 32px;
+        text-align: center;
+        color: #ffffff;
+        @include av-mq('tablet-and-up') {
+          text-align: left;
+          font-size: 48px;
+          line-height: 56px;
+        }
+        @include av-mq('desk') {
+          font-size: 56px;
+          line-height: 88px;
+        }
+      }
+      .Therapy--Content--Info--Steps {
+
+      }
+      .Therapy--Content--Info--Step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include av-mq('tablet-and-up') {
+          flex-direction: row;
+          justify-content: flex-start;
+          margin-bottom: 68px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+        &--Number {
+          flex: 0 0 auto;
+          width: 56px;
+          height: 56px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #ffffff;
+          border-radius: 50%;
+          font-family: $heading-font-family;
+          font-size: 24px;
+          line-height: 40px;
+          color: $secondary-color;
+          margin-bottom: 26px;
+          @include av-mq('tablet-and-up') {
+            margin-bottom: 0;
+            margin-right: 25px;
+          }
+          @include av-mq('desk') {
+            width: 72px;
+            height: 72px;
+            font-size: 32px;
+            line-height: 40px;
+          }
+        }
+        &--Text {
+          color: #ffffff;
+          font-family: $heading-font-family;
+          font-size: 19px;
+          line-height: 30px;
+          text-align: center;
+          @include av-mq('tablet-and-up') {
+            text-align: left;
+          }
+          @include av-mq('desk') {
+            font-size: 21px;
+            line-height: 32px;
+          }
+        }
+        &--Image {
+          width: 160px;
+          @include av-mq('tablet-and-up') {
+            display: none;
+          }
+        }
+      }
+    }
+    .Therapy--Content--Image {
+      flex: 0 0 auto;
+      @include av-mq('phone') {
+        display: none;
+      }
+      @include av-mq('tablet-and-up') {
+        max-width: 32%;
+        margin-left: 30px;
+      }
+      @include av-mq('desk') {
+        max-width: 36%;
+        margin-left: 152px;
+      }
+    }
+  }
+}

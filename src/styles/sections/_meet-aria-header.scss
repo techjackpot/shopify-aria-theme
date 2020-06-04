@@ -1,20 +1,58 @@
 .Section-Meet-Aria-Header {
   background: transparent linear-gradient(118deg, #E5F5F1 0%, #CEE9E2 100%) 0% 0% no-repeat padding-box;
   margin: 0;
-  padding: 50px 0 64px;
-  @include av-mq('phone') {
-    padding-top: calc(50px + 28.46vw);
-  }
+  padding: 48px 0 64px;
   @include av-mq('tablet') {
-    padding: 80px 0;
+    padding: 64px 0 80px;
   }
   @include av-mq('desk') {
-    padding: 96px 0;
+    padding: 80px 0 96px;
   }
 
   .Container {
     position: relative;
     padding: 0;
+  }
+
+  &--Header {
+    text-align: center;
+    padding: 0 25px;
+    .section-title {
+      font-family: $heading-font-family;
+      font-size: 28px;
+      line-height: 1;
+      color: $primary-color;
+      margin-bottom: 16px;
+      @include av-mq('tablet-and-up') {
+        font-size: 32px;
+      }
+      @include av-mq('desk') {
+        font-size: 36px;
+      }
+    }
+    .section-subtitle {
+      font-family: $heading-font-family;
+      font-size: 42px;
+      line-height: 50px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 24px;
+      @include av-mq('tablet-and-up') {
+        font-size: 56px;
+        line-height: 64px;
+      }
+      @include av-mq('desk') {
+        font-size: 64px;
+        line-height: 72px;
+      }
+    }
+    margin-bottom: calc(32px + 28.46vw);
+    @include av-mq('tablet-and-up') {
+      margin-bottom: 56px;
+    }
+    @include av-mq('desk') {
+      margin-bottom: 64px;
+    }
   }
 
   &--Content {

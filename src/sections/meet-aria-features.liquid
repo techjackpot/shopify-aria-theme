@@ -1,0 +1,75 @@
+<section class="Section Section--spacingNormal Section-Meet-Aria-Features" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="meet-aria-features">
+  <div class="Container Container--narrow">
+    <div class="Section-Meet-Aria-Features--Header">
+      <div class="section-title">
+        <span>{{ section.settings.title }}</span>
+      </div>
+    </div>
+    <div class="Section-Meet-Aria-Features--Content">
+      <div class="Feature-List">
+        {%- for block in section.blocks -%}
+          <div id="block-{{ block.id }}" class="Feature-Item" {{ block.shopify_attributes }}>
+            <div class="Feature-Item__Container" data-action="open-modal" aria-controls="modal-{{ section.id }}-{{ block.id }}">
+              <div class="Feature-Item--Icon">
+                {%- if block.settings.image != blank -%}
+                  <img src="{{ block.settings.image | img_url: 'master' }}">
+                {%- endif -%}
+              </div>
+              <div class="Feature-Item--Meta">
+                <div class="Feature-Item--Title">
+                  <span>{{ block.settings.title }}</span>
+                </div>
+                <div class="Feature-Item--Description">
+                  <span>{{ block.settings.description }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Meet Aria - Features",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Meet Aria",
+      "name": "Features",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

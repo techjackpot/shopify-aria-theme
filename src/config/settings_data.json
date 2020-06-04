@@ -360,10 +360,6 @@
         "type": "meet-aria-components",
         "settings": {}
       },
-      "meet-aria-good": {
-        "type": "meet-aria-good",
-        "settings": {}
-      },
       "meet-aria-testimonials": {
         "type": "meet-aria-testimonials",
         "blocks": {
@@ -524,6 +520,61 @@
           "title": "Backed by ResMed.",
           "text": "Aria Free was developed in association with ResMed, our parent company. For thirty years, ResMed has been a leader in health technology, transforming care for people with sleep apnea, COPD, and other chronic diseases. The company continues to make an impact with cloud-connected medical devices and out-of-hospital software solutions that deliver quality outcomes and quality of life for healthcare providers and those they serve.",
           "image": "shopify:\/\/shop_images\/backed-by-resmed.jpg"
+        }
+      },
+      "meet-aria-features": {
+        "type": "meet-aria-features",
+        "blocks": {
+          "1591286326381": {
+            "type": "feature",
+            "settings": {
+              "title": "Exceptionally engineered",
+              "description": "<p>Low-pressure pump, designed to be petite yet powerful.<\/p>",
+              "image": "shopify:\/\/shop_images\/icon-exceptionally-engineered.png"
+            }
+          },
+          "1591286459211": {
+            "type": "feature",
+            "settings": {
+              "title": "Seriously smart",
+              "description": "<p>Remote coaching, notifications, and daily progress tracking all accessible via mobile app.<\/p>",
+              "image": "shopify:\/\/shop_images\/icon-seriously-smart.png"
+            }
+          },
+          "1591286480644": {
+            "type": "feature",
+            "settings": {
+              "title": "Quick and easy",
+              "description": "<p>Slip-on garment, one-button start, simple connect\/disconnect, in-app instructions.<\/p>",
+              "image": "shopify:\/\/shop_images\/icon-quick-and-easy.png"
+            }
+          },
+          "1591286498633": {
+            "type": "feature",
+            "settings": {
+              "title": "Super portable",
+              "description": "<p>Streamlined garment and small compression pump go wherever you go.<\/p>",
+              "image": "shopify:\/\/shop_images\/icon-super-portable.png"
+            }
+          },
+          "1591286525339": {
+            "type": "feature",
+            "settings": {
+              "title": "Innovative quality",
+              "description": "<p>Backed by 30 years of ResMed&rsquo;s health technology leadership.<\/p>",
+              "image": "shopify:\/\/shop_images\/icon-innovative-quality.png"
+            }
+          }
+        },
+        "block_order": [
+          "1591286326381",
+          "1591286459211",
+          "1591286480644",
+          "1591286498633",
+          "1591286525339"
+        ],
+        "settings": {
+          "title": "A world of good."
         }
       }
     },

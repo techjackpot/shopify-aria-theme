@@ -1,0 +1,114 @@
+.Section-Meet-Aria-Features {
+  background: transparent linear-gradient(166deg, #E5EFF5 0%, #CEE0E9 100%) 0% 0% no-repeat padding-box;
+  margin: 0;
+  padding: 64px 0 144px;
+  margin-bottom: -80px !important;
+  @include av-mq('tablet') {
+    padding: 72px 0 184px;
+    margin-bottom: -112px !important;
+  }
+  @include av-mq('desk') {
+    padding: 96px 0 256px;
+    margin-bottom: -144px !important;
+  }
+
+  .Container {
+    position: relative;
+    padding: 0 25px;
+    @include av-mq('tablet-and-up') {
+      padding: 0 36px;
+    }
+    @include av-mq('desk') {
+      padding: 0 48px;
+    }
+  }
+
+  &--Header {
+    text-align: center;
+    .section-title {
+      font-family: $heading-font-family;
+      font-size: 42px;
+      line-height: 50px;
+      font-weight: 700;
+      color: #000000;
+      @include av-mq('tablet-and-up') {
+        font-size: 48px;
+        line-height: 64px;
+      }
+      @include av-mq('desk') {
+        font-size: 56px;
+        line-height: 88px;
+      }
+    }
+    margin-bottom: 48px;
+    @include av-mq('tablet-and-up') {
+      margin-bottom: 56px;
+    }
+    @include av-mq('desk') {
+      margin-bottom: 80px;
+    }
+  }
+
+  &--Content {
+    .Feature-List {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: -40px;
+      @include av-mq('tablet-and-up') {
+        margin-bottom: -56px;
+      }
+      @include av-mq('desk') {
+        margin-bottom: -68px;
+      }
+      .Feature-Item {
+        flex: 1 0 100%;
+        padding: 0 15px;
+        margin-bottom: 40px;
+        @include av-mq('tablet-and-up') {
+          flex: 1 0 50%;
+          max-width: 50%;
+          margin-bottom: 56px;
+        }
+        @include av-mq('desk') {
+          flex: 1 0 33%;
+          max-width: 33%;
+          margin-bottom: 68px;
+        }
+        &:last-of-type {
+          // margin-bottom: 0;
+        }
+        .Feature-Item__Container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+          text-align: center;
+        }
+        .Feature-Item--Icon {
+          position: relative;
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+          margin-bottom: 24px;
+        }
+        .Feature-Item--Title {
+          font-family: $heading-font-family;
+          font-weight: 700;
+          color: $primary-color;
+          line-height: 1;
+          font-size: 24px;
+          margin-bottom: 12px;
+        }
+        .Feature-Item--Description {
+          color: $secondary-color;
+          font-size: 18px;
+          line-height: 26px;
+          max-width: 272px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
