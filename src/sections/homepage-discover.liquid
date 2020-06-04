@@ -3,6 +3,11 @@
     <div class="Section-Homepage-Discover--Content">
       <div class="discover-content-wrapper">
         <div class="discover-content-container">
+          {%- if section.settings.image != blank -%}
+          <div class="discover-image">
+            <img src="{{ section.settings.image | img_url: 'master' }}">
+          </div>
+          {%- endif -%}
           <div class="discover-content">
             <div class="discover-title">
               <span>{{ section.settings.title }}</span>
@@ -16,11 +21,6 @@
           </div>
         </div>
       </div>
-      {%- if section.settings.image != blank -%}
-      <div class="discover-image">
-        <img src="{{ section.settings.image | img_url: 'master' }}">
-      </div>
-      {%- endif -%}
     </div>
   </div>
 </section>

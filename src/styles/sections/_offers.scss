@@ -29,14 +29,14 @@
         margin-right: 0;
       }
       svg {
-        color: #43AD92;
+        color: $primary-color;
       }
       span {
         margin-left: 10px;
         @include av-mq('tablet-and-up') {
           margin-left: 12px;
         }
-        color: #525364;
+        color: $secondary-color;
         white-space: nowrap;
       }
     }

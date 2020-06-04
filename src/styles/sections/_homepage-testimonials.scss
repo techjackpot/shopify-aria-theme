@@ -10,7 +10,7 @@
   min-height: 320px;
   margin-bottom: 0;
 
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
 
   .section-background {
@@ -25,6 +25,7 @@
 
   .Container {
     position: relative;
+    background: transparent linear-gradient(180deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box;
   }
 
   &--Header {
@@ -70,7 +71,7 @@
             padding: 32px;
           }
           svg {
-            color: #43AD92;
+            color: $primary-color;
             font-size: 24px;
             width: 1em;
             height: 1em;

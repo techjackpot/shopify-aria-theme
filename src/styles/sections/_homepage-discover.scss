@@ -2,6 +2,12 @@
   background: transparent linear-gradient(118deg, #E5F5F1 0%, #CEE9E2 100%) 0% 0% no-repeat padding-box;
   margin: 0;
   padding: 50px 0 64px;
+  @include av-mq('phone') {
+    padding-top: calc(50px + 28.46vw);
+  }
+  @include av-mq('tablet') {
+    padding: 80px 0;
+  }
   @include av-mq('desk') {
     padding: 96px 0;
   }
@@ -14,15 +20,27 @@
   &--Content {
 
     .discover-image {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 50%;
-      img {
-        display: block;
-        width: 100%;
-        object-fit: cover;
+      margin-top: -50%;
+      margin-bottom: 36px;
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      @include av-mq('tablet-and-up') {
+        // position: absolute;
+        // left: 0;
+        // top: 50%;
+        // transform: translateY(-50%);
+        // width: calc(50% - 12px);
+        margin: 0 40px 0 0;
+        img {
+          display: block;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      @include av-mq('desk') {
+        width: calc(50% + 20px);
+        margin: 0 90px 0 0;
       }
     }
     .discover-content-wrapper {
@@ -35,35 +53,76 @@
       display: flex;
       justify-content: flex-end;
       .discover-content-container {
-        background: #ffffff;
         display: flex;
-        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        width: 100%;
         padding: 64px 25px;
+        @include av-mq('tablet-and-up') {
+          flex-direction: row;
+          align-items: center;
+          padding: 56px 0;
+        }
         @include av-mq('desk') {
-          padding: 143px 90px;
-          width: calc(50% + 72px);
+          padding: 72px 0;
+        }
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 0;
+          @include av-mq('tablet-and-up') {
+            width: 64.19%;
+          }
+          @include av-mq('desk') {
+            width: 56.38%;
+          }
         }
       }
       .discover-content {
-        max-width: 520px;
+        position: relative;
+        z-index: 1;
+        flex: 1;
+        @include av-mq('tablet-and-up') {
+          max-width: 324px;
+          margin-right: 32px;
+        }
+        @include av-mq('desk') {
+          max-width: 520px;
+          margin-right: 90px;
+        }
         .discover-title {
           font-family: $heading-font-family;
           font-weight: 700;
-          color: #43AD92;
+          color: $primary-color;
           font-size: 32px;
           line-height: 44px;
           margin-bottom: 24px;
+          @include av-mq('tablet-and-up') {
+            font-size: 36px;
+            line-height: 46px;
+          }
           @include av-mq('desk') {
             font-size: 44px;
-            line-height: 46px;
             margin-bottom: 32px;
           }
         }
         .discover-text {
-          color: #525364;
+          color: $secondary-color;
           font-size: 16px;
           line-height: 30px;
           margin-bottom: 32px;
+          @include av-mq('tablet-and-up') {
+            font-size: 17px;
+            line-height: 31px;
+            margin-bottom: 40px;
+          }
           @include av-mq('desk') {
             font-size: 18px;
             line-height: 32px;

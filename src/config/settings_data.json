@@ -234,14 +234,6 @@
           "apparition_delay": 5
         }
       },
-      "1589812918999": {
-        "type": "custom-html",
-        "settings": {
-          "subheading": "Sub-heading",
-          "title": "Your HTML",
-          "html": "<p>Write your own custom HTML content.<\/p>"
-        }
-      },
       "offers": {
         "type": "offers",
         "blocks": {
@@ -275,10 +267,90 @@
         "settings": {
           "show_offers": true
         }
+      },
+      "1589889522892": {
+        "type": "homepage-hero",
+        "settings": {
+          "title": "Aria Health™",
+          "text": "Compression therapy that<br> fits your life, and a device<br> that fits in your pocket.",
+          "image": "shopify:\/\/shop_images\/aria-free-therapy.jpg"
+        }
+      },
+      "1589892992064": {
+        "type": "homepage-product",
+        "settings": {
+          "title": "Less machine.<br>More you.",
+          "product_label": "Aria Free",
+          "product_title": "A simpler, friendlier approach to therapy.",
+          "product_description": "Introducing a compression pump that’s about the size and weight of a smartphone + a streamlined garment with a modern fit and design. Now therapy is easy, with just one hose to connect—and most importantly: disconnect. So answer the door, pick up the baby, head to the bathroom. No more building your life around therapy. Just automated compression massage at the touch of a button, and remote coaching to keep everything on track.",
+          "image": "shopify:\/\/shop_images\/Product.png"
+        }
+      },
+      "1589895048071": {
+        "type": "homepage-testimonials",
+        "blocks": {
+          "1589895067181": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+            }
+          },
+          "1589895113039": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Jane Adams",
+              "quote": "<p>Being able to pause it and walk to the door is a plus.<\/p>"
+            }
+          },
+          "1589895137212": {
+            "type": "testimonial",
+            "settings": {
+              "title": "John Hancock",
+              "quote": "<p>A hundred times more comfortable and less bulky.<\/p>"
+            }
+          },
+          "1589895148676": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Tester",
+              "quote": "<p>A hundred times more comfortable and less bulky.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1589895067181",
+          "1589895113039",
+          "1589895137212",
+          "1589895148676"
+        ],
+        "settings": {
+          "title": "Little goes a long way."
+        }
+      },
+      "1589900837718": {
+        "type": "homepage-discover",
+        "settings": {
+          "title": "Portable and packable, for what’s possible.",
+          "text": "Wherever you go, Aria Free goes. With smart, flexible therapy, and an app to reach your goals, you’re in control.",
+          "image": "shopify:\/\/shop_images\/aria-free-app.jpg"
+        }
+      },
+      "1589903027759": {
+        "type": "homepage-form",
+        "settings": {
+          "form_label": "Aria Free is for you",
+          "form_title": "We’re building a community.",
+          "form_description": "Stay connected to all the Aria Health™ news. You’ll also receive updates, offers, and details about co-creation opportunities. We’re doing something different, together."
+        }
       }
     },
     "content_for_index": [
-      "1589812918999"
+      "1589889522892",
+      "1589892992064",
+      "1589895048071",
+      "1589900837718",
+      "1589903027759"
     ]
   },
   "presets": {

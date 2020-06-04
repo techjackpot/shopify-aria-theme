@@ -1,6 +1,7 @@
 
 $phone:            "screen and (max-width: 640px)";
-$tablet:           "screen and (min-width: 641px) and (max-width: 1007px)";
+// $tablet:           "screen and (min-width: 641px) and (max-width: 1007px)";
+$tablet:           "screen and (min-width: 641px) and (max-width: 1239px)";
 $tablet-and-up:    "screen and (min-width: 641px)";
 $pocket:           "screen and (max-width: 1007px)";
 $lap:              "screen and (min-width: 1008px) and (max-width: 1239px)";
@@ -46,3 +47,6 @@ $widescreen:       "screen and (min-width: 1500px)";
 
 $heading-font-family : "century-gothic", sans-serif;
 $text-font-family : Arial, sans-serif;
+
+$primary-color: #43AD92;
+$secondary-color: #525364;

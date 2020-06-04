@@ -1,7 +1,7 @@
 .Button {
 }
 .Button--fill {
-  background: #43AD92;
+  background: $primary-color;
   color: #ffffff;
   &:hover {
     color: #ffffff;
@@ -15,10 +15,10 @@
   }
 }
 .Button--outline {
-  border: solid 2px #43AD92;
-  color: #43AD92;
+  border: solid 2px $primary-color;
+  color: $primary-color;
   &:hover {
-    color: #43AD92;
+    color: $primary-color;
   }
   &.Button--second {
     border: solid 2px #ffffff;

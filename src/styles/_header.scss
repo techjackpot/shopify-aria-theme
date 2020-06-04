@@ -71,7 +71,7 @@
 
       .Header__LinkSpacer {
         &:after {
-          border-bottom-color: #43AD92;
+          border-bottom-color: $primary-color;
           // top: calc(100% + 16px);
         }
       }
@@ -81,7 +81,7 @@
       //   display: none;
       //   width: 100%;
       //   height: 2px;
-      //   background: #43AD92;
+      //   background: $primary-color;
       //   position: absolute;
       //   top: calc(100% + 16px);
       //   transition: opacity 0.25s ease;
@@ -183,7 +183,7 @@
       transform: translateY(-50%);
       left: 27.5px;
       &:before {
-        background: #43AD92;
+        background: $primary-color;
         z-index: -1;
         left: 50%;
         top: 50%;
@@ -244,7 +244,7 @@
             .Linklist {
               .Linklist__Item {
                 .Link {
-                  background: #43AD92;
+                  background: $primary-color;
                   color: #ffffff;
                   font-size: 21px;
                   line-height: 56px;

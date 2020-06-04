@@ -1,7 +1,11 @@
 .Section-Homepage-Product {
   background: #ffffff;
   min-height: 600px;
-  padding: 96px 0;
+
+  padding: 64px 0;
+  @include av-mq('desk') {
+    padding: 96px 0;
+  }
 
   .Container {
   }
@@ -10,65 +14,198 @@
     text-align: center;
     .section-title {
       font-family: $heading-font-family;
-      font-size: 64px;
-      line-height: 72px;
+      font-size: 42px;
+      line-height: 50px;
       font-weight: 700;
       color: #000000;
       margin-bottom: 24px;
+      @include av-mq('tablet-and-up') {
+        font-size: 56px;
+        line-height: 64px;
+      }
+      @include av-mq('desk') {
+        font-size: 64px;
+        line-height: 72px;
+      }
     }
-    margin-bottom: 52px;
+    margin-bottom: 56px;
+    @include av-mq('tablet-and-up') {
+      margin-bottom: 64px;
+    }
+    @include av-mq('desk') {
+      margin-bottom: 52px;
+    }
   }
 
   &--Content {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    align-items: center;
     @include av-mq('desk') {
-      flex-direction: row;
+      display: flex;
+      align-items: flex-start;
     }
 
     .product-image {
       flex: 1;
       img {
         display: block;
+        margin: 0 auto;
       }
     }
     .product-content {
       flex: 1;
-      max-width: 520px;
       position: relative;
+      margin-bottom: 48px;
+      display: flex;
+      flex-wrap: wrap;
+      @include av-mq('desk') {
+        flex-direction: column;
+        max-width: 520px;
+        margin-bottom: 0;
+      }
+      &-col {
+        flex: 1;
+        &-info {
+          @include av-mq('tablet') {
+            margin-right: 25px;
+          }
+        }
+        &-meta {
+          @include av-mq('tablet') {
+            flex: 0;
+          }
+        }
+      }
       .product-label {
         font-family: $heading-font-family;
-        font-size: 24px;
-        line-height: 1;
         margin-bottom: 24px;
+        line-height: 1;
+        font-size: 20px;
+        @include av-mq('tablet-and-up') {
+          font-size: 24px;
+        }
       }
       .product-title {
         font-family: $heading-font-family;
-        font-size: 44px;
         font-weight: 700;
-        line-height: 52px;
-        color: #43AD92;
+        color: $primary-color;
         margin-bottom: 32px;
+        font-size: 30px;
+        line-height: 38px;
+        @include av-mq('tablet-and-up') {
+          font-size: 40px;
+          line-height: 52px;
+        }
+        @include av-mq('desk') {
+          font-size: 44px;
+        }
       }
       .product-description {
-        font-size: 18px;
-        line-height: 32px;
-        color: #525364;
+        color: $secondary-color;
         margin-bottom: 48px;
+        font-size: 16px;
+        line-height: 30px;
+        @include av-mq('tablet-and-up') {
+          font-size: 17px;
+          line-height: 31px;
+        }
+        @include av-mq('desk') {
+          font-size: 18px;
+          line-height: 32px;
+        }
       }
       .product-price {
         background: #E5F5F1;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        margin-bottom: 48px;
+        flex-direction: column;
+        min-width: 220px;
+        @include av-mq('tablet') {
+          margin-bottom: 32px;
+        }
+        @include av-mq('desk') {
+          flex-direction: row;
+        }
+        &-col {
+          flex: 1;
+          font-size: 16px;
+          padding: 24px;
+          color: $secondary-color;
+          text-align: center;
+          line-height: 1;
+          @include av-mq('desk') {
+            padding: 16px;
+          }
+          &.product-price-col-separator {
+            flex: 0;
+            position: relative;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+              text-transform: uppercase;
+              font-size: 12px;
+              font-weight: bold;
+              display: block;
+              padding: 0 8.5px;
+              color: $primary-color;
+              background: #E5F5F1;
+              position: relative;
+              @include av-mq('desk') {
+                padding: 2px 0;
+              }
+            }
+            &:before {
+              content: '';
+              display: block;
+              background: #7ECBB780;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 120px;
+              height: 1px;
+              @include av-mq('desk') {
+                width: 1px;
+                height: calc(100% - 32px);
+              }
+            }
+          }
+          &-value {
+            color: $primary-color;
+            font-size: 32px;
+            font-family: $heading-font-family;
+            font-weight: bold;
+            margin: 12px 0 18px;
+          }
+          &-meta {
+            span {
+              color: $primary-color;
+            }
+          }
+        }
       }
       .product-actions {
+        text-align: center;
+        @include av-mq('desk') {
+          text-align: left;
+        }
         .Button {
           min-width: 174px;
           text-transform: none;
           margin-right: 40px;
+          margin-bottom: 32px;
           letter-spacing: 0;
           font-size: 20px;
           &:last-of-type {
+            margin-right: 0;
+            margin-bottom: 0;
+          }
+          @include av-mq('phone') {
+            margin-right: 0px;
+          }
+          @include av-mq('tablet') {
             margin-right: 0;
           }
         }

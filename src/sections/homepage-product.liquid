@@ -8,20 +8,35 @@
     </div>
     <div class="Section-Homepage-Product--Content">
       <div class="product-content">
-        <div class="product-label">
-          <span>{{ section.settings.product_label }}</span>
+        <div class="product-content-col product-content-col-info">
+          <div class="product-label">
+            <span>{{ section.settings.product_label }}</span>
+          </div>
+          <div class="product-title">
+            <span>{{ section.settings.product_title }}</span>
+          </div>
+          <div class="product-description">
+            <span>{{ section.settings.product_description }}</span>
+          </div>
         </div>
-        <div class="product-title">
-          <span>{{ section.settings.product_title }}</span>
-        </div>
-        <div class="product-description">
-          <span>{{ section.settings.product_description }}</span>
-        </div>
-        <div class="product-price">
-        </div>
-        <div class="product-actions">
-          <a href="#" class="Link Link--primary Button Button--fill Button--round">Buy now</a>
-          <a href="#" class="Link Link--primary Button Button--outline Button--round">Shop</a> 
+        <div class="product-content-col product-content-col-meta">
+          <div class="product-price">
+            <div class="product-price-col">
+              <div class="product-price-col-label">From</div>
+              <div class="product-price-col-value">$2,500</div>
+              <div class="product-price-col-meta"><s>$2,700</s> <span>$200</span></div>
+            </div>
+            <div class="product-price-col product-price-col-separator"><span>or</span></div>
+            <div class="product-price-col">
+              <div class="product-price-col-label">As low as</div>
+              <div class="product-price-col-value">$208/mo</div>
+              <div class="product-price-col-meta">with <span>partial.ly</span></div>
+            </div>
+          </div>
+          <div class="product-actions">
+            <a href="#" class="Link Link--primary Button Button--fill Button--round">Buy now</a>
+            <a href="#" class="Link Link--primary Button Button--outline Button--round">Shop</a> 
+          </div>
         </div>
       </div>
       <div class="product-image">

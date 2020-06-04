@@ -1,5 +1,5 @@
 .Footer {
-  background: #525364;
+  background: $secondary-color;
   color: #9AB5C6;
   padding: 64px 0 64px 0;
   @include av-mq('tablet-and-up') {
