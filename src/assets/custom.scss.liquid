@@ -300,6 +300,52 @@ body {
       text-transform: none;
       transition: color, border-color 0.25s ease; }
 
+/* integrations */
+.wFormContainer .wForm form {
+  padding: 48px 25px; }
+  @media screen and (min-width: 641px) {
+    .wFormContainer .wForm form {
+      padding: 80px 40px; } }
+  .wFormContainer .wForm form div.oneField {
+    margin-top: 0;
+    margin-bottom: 15px; }
+    @media screen and (max-width: 640px) {
+      .wFormContainer .wForm form div.oneField {
+        padding-left: 0;
+        padding-right: 0; } }
+    .wFormContainer .wForm form div.oneField .label {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: #525364; }
+    .wFormContainer .wForm form div.oneField .reqMark:after {
+      color: #43AD92; }
+    .wFormContainer .wForm form div.oneField .inputWrapper input {
+      border-radius: 8px;
+      border: solid 2px #F0EFF1;
+      font-size: 16px;
+      line-height: 32px;
+      color: #525364; }
+
+.wFormContainer .wForm .htmlSection {
+  color: #525364; }
+  .wFormContainer .wForm .htmlSection a {
+    color: #43AD92; }
+
+.wFormContainer .wForm .actions .primaryAction {
+  background: #43AD92;
+  color: #ffffff;
+  font-family: "century-gothic", sans-serif;
+  min-width: 170px;
+  font-size: 20px;
+  line-height: 56px;
+  border-radius: 100px;
+  padding: 0;
+  font-weight: 400 !important; }
+  .wFormContainer .wForm .actions .primaryAction:disabled {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.7); }
+
 /* sections */
 .Section--Shop-Offers {
   background: transparent linear-gradient(180deg, #F0EFF1 0%, #FAFAFB 21%, #FAFAFB 100%) 0% 0% no-repeat padding-box;
@@ -903,8 +949,14 @@ body {
 
 .Section-Homepage-Form {
   background: transparent linear-gradient(300deg, #F0EFF1 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
-  padding: 96px 0;
-  margin: 0; }
+  margin: 0;
+  padding: 64px 0; }
+  @media screen and (min-width: 641px) and (max-width: 1239px) {
+    .Section-Homepage-Form {
+      padding: 80px 0; } }
+  @media screen and (min-width: 1240px) {
+    .Section-Homepage-Form {
+      padding: 96px 0; } }
   .Section-Homepage-Form--Content {
     display: flex;
     align-items: flex-start;
@@ -1629,8 +1681,14 @@ body {
 
 .Section-Meet-Aria-Form {
   background: transparent linear-gradient(300deg, #F0EFF1 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
-  padding: 96px 0;
-  margin: 0; }
+  margin: 0;
+  padding: 64px 0; }
+  @media screen and (min-width: 641px) and (max-width: 1239px) {
+    .Section-Meet-Aria-Form {
+      padding: 80px 0; } }
+  @media screen and (min-width: 1240px) {
+    .Section-Meet-Aria-Form {
+      padding: 96px 0; } }
   .Section-Meet-Aria-Form--Content {
     display: flex;
     align-items: flex-start;

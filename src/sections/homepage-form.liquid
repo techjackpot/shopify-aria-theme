@@ -18,9 +18,7 @@
         </div>
       </div>
       <div class="form-container">
-        {%- if section.settings.image != blank -%}
-          <img src="{{ section.settings.image | img_url: 'master' }}">
-        {%- endif -%}
+        {% render 'form-assembly-form-body' %}
       </div>
     </div>
   </div>
