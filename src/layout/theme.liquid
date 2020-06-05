@@ -25,7 +25,9 @@
 
     {{ content_for_header }}
 
-    {% render 'form-assembly-form-head' %}
+    {%- if template.name == 'index' or template.suffix == 'meet-aria' -%}
+      {% render 'form-assembly-form-head' %}
+    {%- endif -%}
     
     <script src="https://kit.fontawesome.com/bf86609f7f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/qcj6mmw.css">

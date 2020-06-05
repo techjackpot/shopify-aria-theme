@@ -25,10 +25,21 @@
 
   .Container {
     position: relative;
-    background: transparent linear-gradient(180deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box;
+    &:before {
+      content: '';
+      display: block;
+      width: 100vw;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: transparent linear-gradient(180deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box;
+    }
   }
 
   &--Header {
+    position: relative;
     text-align: center;
     .section-title {
       font-family: $heading-font-family;
@@ -47,6 +58,7 @@
   }
 
   &--Content {
+    position: relative;
     .Testimonials {
       padding-bottom: 32px;
       @include av-mq('desk') {

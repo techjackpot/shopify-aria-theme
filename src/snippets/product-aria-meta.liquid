@@ -1,0 +1,52 @@
+<div class="ProductMeta">
+  {%- if section.settings.show_vendor and product.vendor != blank -%}
+    <h2 class="ProductMeta__Vendor Heading u-h6">
+      {%- assign vendor_handle = product.vendor | handle -%}
+      {%- assign collection_for_vendor = collections[vendor_handle] -%}
+
+      {%- unless collection_for_vendor.empty? -%}
+        <a href="{{ collection_for_vendor.url }}">{{ product.vendor }}</a>
+      {%- else -%}
+        {{- product.vendor -}}
+      {%- endunless -%}
+    </h2>
+  {%- endif -%}
+
+  <h1 class="ProductMeta__Title Heading u-h2">
+    {%- if template.name == 'product' -%}
+      {{- product.title -}}
+    {%- else -%}
+      <a href="{{ product.url }}">{{ product.title }}</a>
+    {%- endif -%}
+  </h1>
+  <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+
+
+  {%- if section.settings.show_sku and product.selected_or_first_available_variant.sku != blank -%}
+    <p class="ProductMeta__Sku Heading Text--subdued u-h6">{{ 'product.form.sku' | t }}: <span class="ProductMeta__SkuNumber">{{ product.selected_or_first_available_variant.sku }}</span></p>
+  {%- endif -%}
+
+  {%- if product.template_suffix != 'coming-soon' -%}
+    <div class="ProductMeta__PriceList Heading">
+      {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+        <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+        <span class="ProductMeta__Price Price Price--compareAt Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}</span>
+      {%- else -%}
+        <span class="ProductMeta__Price Price Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  {%- if show_description and section.settings.description_below_add_to_cart == false -%}
+    <div class="ProductMeta__Description">
+      <div class="Rte">
+        {%- comment -%}
+        We have figured out that some merchants were copy-pasting huge chunk of code into the product description,
+        which can make the theme crashes if it contains some special attributes used by the theme. We therefore make sure to process this
+        {%- endcomment -%}
+
+        {{ product.description | replace: 'data-section-type', 'data-section-type-placeholder' }}
+      </div>
+    </div>
+  {%- endif -%}
+</div>

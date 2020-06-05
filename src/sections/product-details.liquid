@@ -1,0 +1,47 @@
+<section class="Section Section--spacingNormal Section-Product-Details" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product-details">
+  <div class="Container Container--narrow">
+    <div class="Section-Product-Details--Header">
+      <div class="section-title">
+        <span>{{ section.settings.title }}</span>
+      </div>
+    </div>
+    <div class="Section-Product-Details--Content">
+      {% render 'product-aria-tabs' %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product - Details",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Product details"
+    },
+    {
+      "type": "header",
+      "content": "Reviews"
+    },
+    {
+      "type": "paragraph",
+      "content": "You need to install [Shopify's free Product Reviews](https://apps.shopify.com/product-reviews) app before enabling this option."
+    },
+    {
+      "type": "checkbox",
+      "id": "reviews_enabled",
+      "label": "Enable",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "category": "Product",
+      "name": "Details",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

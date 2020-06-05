@@ -1,0 +1,105 @@
+.Product--Aria {
+  margin-bottom: 0 !important;
+  .ProductMeta {
+    text-align: left;
+    .ProductMeta__Title {
+      font-family: $heading-font-family;
+      color: $primary-color;
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 0;
+      @include av-mq('tablet-and-up') {
+        font-size: 40px;
+      }
+      @include av-mq('desk') {
+        font-size: 48px;
+      }
+    }
+    .spr-badge {
+      .spr-icon {
+        font-size: 16px;
+        line-height: 19px;
+        width: 18px;
+        height: 16px;
+        margin-right: 4px;
+      }
+      .spr-badge-caption {
+        color: #9AB5C6;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+    .ProductMeta__PriceList {
+      background: #E5F5F1;
+      padding: 24px 20px;
+      text-align: center;
+      .ProductMeta__Price {
+        font-family: $text-font-family;
+        font-size: 24px;
+        line-height: 26px;
+        &.Price--highlight {
+          color: #000000;
+          font-weight: 700;
+        }
+        &.Price--compareAt {
+          color: #9AB5C6;
+        }
+      }
+    }
+  }
+  .ProductMeta__ShareButtons {
+    margin: 40px 0;
+    @include av-mq('tablet-and-up') {
+      margin: 64px 0;
+    }
+    span {
+      font-family: $text-font-family;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $secondary-color;
+      margin-right: 24px;
+    }
+    .ProductMeta__ShareList {
+      .ProductMeta__ShareItem {
+        font-size: 24px;
+        color: #7ECBB7;
+        margin: 0 24px 0 0;
+        svg {
+          width: 24px;
+          height: 24px;
+          font-size: 24px;
+          line-height: 29px;
+        }
+      }
+    }
+  }
+  .ProductForm {
+    margin-top: 32px;
+    &__Variants {
+      margin-bottom: 40px;
+    }
+    &__Option {
+      margin-bottom: 32px;
+    }
+    &__Item {
+      border: solid 2px #F0EFF1;
+      border-radius: 8px;
+    }
+    .ProductForm__QuantitySelector {
+      & > span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: $secondary-color;
+        margin-right: 24px;
+      }
+    }
+    .QuantitySelector {
+      border: solid 2px #F0EFF1;
+      border-radius: 8px;
+    }
+  }
+}

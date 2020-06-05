@@ -41,7 +41,7 @@
     "product_image_size": "natural",
     "product_list_horizontal_spacing": "medium",
     "product_list_vertical_spacing": "small",
-    "cart_type": "drawer",
+    "cart_type": "page",
     "cart_enable_notes": true,
     "cart_show_free_shipping_threshold": false,
     "cart_free_shipping_threshold": "50",
@@ -167,7 +167,7 @@
       "recently-viewed-products": {
         "type": "recently-viewed-products",
         "settings": {
-          "show_section": true,
+          "show_section": false,
           "title": "Recently viewed",
           "show_product_info": true,
           "show_vendor": false,
@@ -575,6 +575,86 @@
         ],
         "settings": {
           "title": "A world of good."
+        }
+      },
+      "product-aria-template": {
+        "type": "product-aria-template",
+        "settings": {
+          "show_share_buttons": true,
+          "show_vendor": false,
+          "show_sku": false,
+          "description_below_add_to_cart": true,
+          "selector_mode": "dropdown",
+          "show_color_swatch": false,
+          "show_color_carousel": false,
+          "show_quantity_selector": true,
+          "show_inventory_quantity": false,
+          "inventory_quantity_threshold": 0,
+          "show_price_in_button": false,
+          "show_payment_button": false,
+          "image_size": "large",
+          "stack_images": false,
+          "show_thumbnails": true,
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "tab_page_1_handle": "",
+          "tab_page_2_handle": "",
+          "reviews_enabled": true,
+          "featured_image_size": "large"
+        }
+      },
+      "product-details": {
+        "type": "product-details",
+        "settings": {
+          "title": "Product details",
+          "reviews_enabled": true
+        }
+      },
+      "product-testimonials": {
+        "type": "product-testimonials",
+        "blocks": {
+          "1591347620572": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+            }
+          },
+          "1591347631324": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+            }
+          },
+          "1591347632945": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+            }
+          },
+          "1591347927113": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1591347620572",
+          "1591347631324",
+          "1591347632945",
+          "1591347927113"
+        ],
+        "settings": {}
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "show_shipping_estimator": false,
+          "shipping_estimator_default_country": "United States"
         }
       }
     },

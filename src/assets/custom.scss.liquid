@@ -725,9 +725,19 @@ body {
     display: block;
     pointer-events: none; }
   .Section-Homepage-Testimonials .Container {
-    position: relative;
-    background: transparent linear-gradient(180deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box; }
+    position: relative; }
+    .Section-Homepage-Testimonials .Container:before {
+      content: '';
+      display: block;
+      width: 100vw;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: transparent linear-gradient(180deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box; }
   .Section-Homepage-Testimonials--Header {
+    position: relative;
     text-align: center;
     margin-bottom: 48px; }
     .Section-Homepage-Testimonials--Header .section-title {
@@ -742,91 +752,93 @@ body {
     @media screen and (min-width: 1240px) {
       .Section-Homepage-Testimonials--Header {
         margin-bottom: 72px; } }
-  .Section-Homepage-Testimonials--Content .Testimonials {
-    padding-bottom: 32px; }
-    @media screen and (min-width: 1240px) {
-      .Section-Homepage-Testimonials--Content .Testimonials {
-        padding-bottom: 48px; } }
-    .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem {
-      width: 100%;
-      margin-right: 55px; }
-      @media screen and (min-width: 641px) {
-        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem {
-          width: calc((100% - 55px) / 2); } }
+  .Section-Homepage-Testimonials--Content {
+    position: relative; }
+    .Section-Homepage-Testimonials--Content .Testimonials {
+      padding-bottom: 32px; }
       @media screen and (min-width: 1240px) {
-        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem {
-          width: calc((100% - 80px) / 3);
-          margin-right: 40px; } }
-      .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container {
-        background: #ffffff;
-        position: relative;
-        display: flex;
-        padding: 20px; }
+        .Section-Homepage-Testimonials--Content .Testimonials {
+          padding-bottom: 48px; } }
+      .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem {
+        width: 100%;
+        margin-right: 55px; }
+        @media screen and (min-width: 641px) {
+          .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem {
+            width: calc((100% - 55px) / 2); } }
         @media screen and (min-width: 1240px) {
-          .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container {
-            padding: 32px; } }
-        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container svg {
-          color: #43AD92;
-          font-size: 24px;
-          width: 1em;
-          height: 1em;
-          display: block;
-          flex: 0; }
-        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
-          flex: 1;
-          padding: 6px 0 0 20px; }
+          .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem {
+            width: calc((100% - 80px) / 3);
+            margin-right: 40px; } }
+        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container {
+          background: #ffffff;
+          position: relative;
+          display: flex;
+          padding: 20px; }
           @media screen and (min-width: 1240px) {
-            .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
-              padding: 6px 8px 0 24px; } }
-        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
-          font-family: "century-gothic", sans-serif;
-          font-size: 24px;
-          line-height: 36px;
-          margin-bottom: 1em; }
+            .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container {
+              padding: 32px; } }
+          .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container svg {
+            color: #43AD92;
+            font-size: 24px;
+            width: 1em;
+            height: 1em;
+            display: block;
+            flex: 0; }
+          .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
+            flex: 1;
+            padding: 6px 0 0 20px; }
+            @media screen and (min-width: 1240px) {
+              .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
+                padding: 6px 8px 0 24px; } }
+          .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
+            font-family: "century-gothic", sans-serif;
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 1em; }
+            @media screen and (min-width: 1240px) {
+              .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
+                font-size: 28px;
+                line-height: 40px; } }
+          .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
+            font-style: italic;
+            font-size: 14px;
+            line-height: 1;
+            color: #9AB5C6; }
+            @media screen and (min-width: 1240px) {
+              .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
+                font-size: 16px; } }
+        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer {
+          height: 16px;
+          position: relative; }
           @media screen and (min-width: 1240px) {
-            .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
-              font-size: 28px;
-              line-height: 40px; } }
-        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
-          font-style: italic;
-          font-size: 14px;
-          line-height: 1;
-          color: #9AB5C6; }
-          @media screen and (min-width: 1240px) {
-            .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
-              font-size: 16px; } }
-      .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer {
-        height: 16px;
-        position: relative; }
+            .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer {
+              height: 20px; } }
+          .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: #ffffff transparent transparent transparent;
+            border-width: 16px;
+            margin-left: 26px; }
+            @media screen and (min-width: 1240px) {
+              .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
+                border-width: 20px;
+                margin-left: 32px; } }
+      .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots {
+        margin-top: 50px; }
+        @media screen and (min-width: 641px) {
+          .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots {
+            margin-top: 66px; } }
         @media screen and (min-width: 1240px) {
-          .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer {
-            height: 20px; } }
-        .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-color: #ffffff transparent transparent transparent;
-          border-width: 16px;
-          margin-left: 26px; }
-          @media screen and (min-width: 1240px) {
-            .Section-Homepage-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
-              border-width: 20px;
-              margin-left: 32px; } }
-    .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots {
-      margin-top: 50px; }
-      @media screen and (min-width: 641px) {
-        .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots {
-          margin-top: 66px; } }
-      @media screen and (min-width: 1240px) {
-        .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots {
-          margin-top: 64px; } }
-      .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots .dot {
-        border-color: #ffffff;
-        border-width: 2px;
-        width: 16px;
-        height: 16px; }
-        .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots .dot.is-selected {
-          background: #FFFFFF80; }
+          .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots {
+            margin-top: 64px; } }
+        .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots .dot {
+          border-color: #ffffff;
+          border-width: 2px;
+          width: 16px;
+          height: 16px; }
+          .Section-Homepage-Testimonials--Content .Testimonials .flickity-page-dots .dot.is-selected {
+            background: #FFFFFF80; }
 
 .Section-Homepage-Discover {
   background: transparent linear-gradient(118deg, #E5F5F1 0%, #CEE9E2 100%) 0% 0% no-repeat padding-box;
@@ -1437,17 +1449,17 @@ body {
 
 .Section-Meet-Aria-Testimonials {
   position: relative;
-  padding-top: 80px;
+  padding-top: 96px;
   min-height: 320px;
   margin-bottom: 0;
   background-size: 100% auto;
   background-repeat: no-repeat; }
   @media screen and (min-width: 641px) {
     .Section-Meet-Aria-Testimonials {
-      padding-top: 112px; } }
+      padding-top: 128px; } }
   @media screen and (min-width: 1240px) {
     .Section-Meet-Aria-Testimonials {
-      padding-top: 144px; } }
+      padding-top: 192px; } }
   .Section-Meet-Aria-Testimonials .section-background {
     position: absolute;
     left: 0;
@@ -1457,9 +1469,19 @@ body {
     display: block;
     pointer-events: none; }
   .Section-Meet-Aria-Testimonials .Container {
-    position: relative;
-    background: transparent linear-gradient(180deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box; }
+    position: relative; }
+    .Section-Meet-Aria-Testimonials .Container:before {
+      content: '';
+      display: block;
+      width: 100vw;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: transparent linear-gradient(180deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box; }
   .Section-Meet-Aria-Testimonials--Header {
+    position: relative;
     text-align: center;
     margin-bottom: 48px; }
     .Section-Meet-Aria-Testimonials--Header .section-title {
@@ -1474,91 +1496,93 @@ body {
     @media screen and (min-width: 1240px) {
       .Section-Meet-Aria-Testimonials--Header {
         margin-bottom: 72px; } }
-  .Section-Meet-Aria-Testimonials--Content .Testimonials {
-    padding-bottom: 32px; }
-    @media screen and (min-width: 1240px) {
-      .Section-Meet-Aria-Testimonials--Content .Testimonials {
-        padding-bottom: 48px; } }
-    .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem {
-      width: 100%;
-      margin-right: 55px; }
-      @media screen and (min-width: 641px) {
-        .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem {
-          width: calc((100% - 55px) / 2); } }
+  .Section-Meet-Aria-Testimonials--Content {
+    position: relative; }
+    .Section-Meet-Aria-Testimonials--Content .Testimonials {
+      padding-bottom: 32px; }
       @media screen and (min-width: 1240px) {
-        .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem {
-          width: calc((100% - 80px) / 3);
-          margin-right: 40px; } }
-      .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container {
-        background: #ffffff;
-        position: relative;
-        display: flex;
-        padding: 20px; }
+        .Section-Meet-Aria-Testimonials--Content .Testimonials {
+          padding-bottom: 48px; } }
+      .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem {
+        width: 100%;
+        margin-right: 55px; }
+        @media screen and (min-width: 641px) {
+          .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem {
+            width: calc((100% - 55px) / 2); } }
         @media screen and (min-width: 1240px) {
-          .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container {
-            padding: 32px; } }
-        .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container svg {
-          color: #43AD92;
-          font-size: 24px;
-          width: 1em;
-          height: 1em;
-          display: block;
-          flex: 0; }
-        .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
-          flex: 1;
-          padding: 6px 0 0 20px; }
+          .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem {
+            width: calc((100% - 80px) / 3);
+            margin-right: 40px; } }
+        .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container {
+          background: #ffffff;
+          position: relative;
+          display: flex;
+          padding: 20px; }
           @media screen and (min-width: 1240px) {
-            .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
-              padding: 6px 8px 0 24px; } }
-        .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
-          font-family: "century-gothic", sans-serif;
-          font-size: 24px;
-          line-height: 36px;
-          margin-bottom: 1em; }
+            .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container {
+              padding: 32px; } }
+          .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container svg {
+            color: #43AD92;
+            font-size: 24px;
+            width: 1em;
+            height: 1em;
+            display: block;
+            flex: 0; }
+          .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
+            flex: 1;
+            padding: 6px 0 0 20px; }
+            @media screen and (min-width: 1240px) {
+              .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
+                padding: 6px 8px 0 24px; } }
+          .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
+            font-family: "century-gothic", sans-serif;
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 1em; }
+            @media screen and (min-width: 1240px) {
+              .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
+                font-size: 28px;
+                line-height: 40px; } }
+          .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
+            font-style: italic;
+            font-size: 14px;
+            line-height: 1;
+            color: #9AB5C6; }
+            @media screen and (min-width: 1240px) {
+              .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
+                font-size: 16px; } }
+        .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Footer {
+          height: 16px;
+          position: relative; }
           @media screen and (min-width: 1240px) {
-            .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
-              font-size: 28px;
-              line-height: 40px; } }
-        .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
-          font-style: italic;
-          font-size: 14px;
-          line-height: 1;
-          color: #9AB5C6; }
-          @media screen and (min-width: 1240px) {
-            .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
-              font-size: 16px; } }
-      .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Footer {
-        height: 16px;
-        position: relative; }
+            .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Footer {
+              height: 20px; } }
+          .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: #ffffff transparent transparent transparent;
+            border-width: 16px;
+            margin-left: 26px; }
+            @media screen and (min-width: 1240px) {
+              .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
+                border-width: 20px;
+                margin-left: 32px; } }
+      .Section-Meet-Aria-Testimonials--Content .Testimonials .flickity-page-dots {
+        margin-top: 50px; }
+        @media screen and (min-width: 641px) {
+          .Section-Meet-Aria-Testimonials--Content .Testimonials .flickity-page-dots {
+            margin-top: 66px; } }
         @media screen and (min-width: 1240px) {
-          .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Footer {
-            height: 20px; } }
-        .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-color: #ffffff transparent transparent transparent;
-          border-width: 16px;
-          margin-left: 26px; }
-          @media screen and (min-width: 1240px) {
-            .Section-Meet-Aria-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
-              border-width: 20px;
-              margin-left: 32px; } }
-    .Section-Meet-Aria-Testimonials--Content .Testimonials .flickity-page-dots {
-      margin-top: 50px; }
-      @media screen and (min-width: 641px) {
-        .Section-Meet-Aria-Testimonials--Content .Testimonials .flickity-page-dots {
-          margin-top: 66px; } }
-      @media screen and (min-width: 1240px) {
-        .Section-Meet-Aria-Testimonials--Content .Testimonials .flickity-page-dots {
-          margin-top: 64px; } }
-      .Section-Meet-Aria-Testimonials--Content .Testimonials .flickity-page-dots .dot {
-        border-color: #ffffff;
-        border-width: 2px;
-        width: 16px;
-        height: 16px; }
-        .Section-Meet-Aria-Testimonials--Content .Testimonials .flickity-page-dots .dot.is-selected {
-          background: #FFFFFF80; }
+          .Section-Meet-Aria-Testimonials--Content .Testimonials .flickity-page-dots {
+            margin-top: 64px; } }
+        .Section-Meet-Aria-Testimonials--Content .Testimonials .flickity-page-dots .dot {
+          border-color: #ffffff;
+          border-width: 2px;
+          width: 16px;
+          height: 16px; }
+          .Section-Meet-Aria-Testimonials--Content .Testimonials .flickity-page-dots .dot.is-selected {
+            background: #FFFFFF80; }
 
 .Section-Meet-Aria-Footer {
   background: transparent linear-gradient(118deg, #E5F5F1 0%, #CEE9E2 100%) 0% 0% no-repeat padding-box;
@@ -1581,10 +1605,12 @@ body {
     margin-bottom: 36px;
     position: relative;
     z-index: 2;
-    flex: 1; }
+    flex: 1;
+    order: -1; }
     @media screen and (min-width: 641px) {
       .Section-Meet-Aria-Footer--Content .footer-image {
-        margin: 0 0 0 40px; }
+        margin: 0 0 0 40px;
+        order: 2; }
         .Section-Meet-Aria-Footer--Content .footer-image img {
           display: block;
           width: 100%;
@@ -2232,10 +2258,12 @@ body {
     margin-bottom: 36px;
     position: relative;
     z-index: 2;
-    flex: 1; }
+    flex: 1;
+    order: -1; }
     @media screen and (min-width: 641px) {
       .Section-Our-Story-Footer--Content .footer-image {
-        margin: 0 0 0 40px; }
+        margin: 0 0 0 40px;
+        order: 2; }
         .Section-Our-Story-Footer--Content .footer-image img {
           display: block;
           width: 100%;
@@ -2329,3 +2357,301 @@ body {
         font-size: 20px; }
         .Section-Our-Story-Footer--Content .footer-content-wrapper .footer-content .footer-actions .Button:last-of-type {
           margin-right: 0; }
+
+.Product--Aria {
+  margin-bottom: 0 !important; }
+  .Product--Aria .ProductMeta {
+    text-align: left; }
+    .Product--Aria .ProductMeta .ProductMeta__Title {
+      font-family: "century-gothic", sans-serif;
+      color: #43AD92;
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 0; }
+      @media screen and (min-width: 641px) {
+        .Product--Aria .ProductMeta .ProductMeta__Title {
+          font-size: 40px; } }
+      @media screen and (min-width: 1240px) {
+        .Product--Aria .ProductMeta .ProductMeta__Title {
+          font-size: 48px; } }
+    .Product--Aria .ProductMeta .spr-badge .spr-icon {
+      font-size: 16px;
+      line-height: 19px;
+      width: 18px;
+      height: 16px;
+      margin-right: 4px; }
+    .Product--Aria .ProductMeta .spr-badge .spr-badge-caption {
+      color: #9AB5C6;
+      font-size: 16px;
+      line-height: 18px; }
+    .Product--Aria .ProductMeta .ProductMeta__PriceList {
+      background: #E5F5F1;
+      padding: 24px 20px;
+      text-align: center; }
+      .Product--Aria .ProductMeta .ProductMeta__PriceList .ProductMeta__Price {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        line-height: 26px; }
+        .Product--Aria .ProductMeta .ProductMeta__PriceList .ProductMeta__Price.Price--highlight {
+          color: #000000;
+          font-weight: 700; }
+        .Product--Aria .ProductMeta .ProductMeta__PriceList .ProductMeta__Price.Price--compareAt {
+          color: #9AB5C6; }
+  .Product--Aria .ProductMeta__ShareButtons {
+    margin: 40px 0; }
+    @media screen and (min-width: 641px) {
+      .Product--Aria .ProductMeta__ShareButtons {
+        margin: 64px 0; } }
+    .Product--Aria .ProductMeta__ShareButtons span {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: #525364;
+      margin-right: 24px; }
+    .Product--Aria .ProductMeta__ShareButtons .ProductMeta__ShareList .ProductMeta__ShareItem {
+      font-size: 24px;
+      color: #7ECBB7;
+      margin: 0 24px 0 0; }
+      .Product--Aria .ProductMeta__ShareButtons .ProductMeta__ShareList .ProductMeta__ShareItem svg {
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+        line-height: 29px; }
+  .Product--Aria .ProductForm {
+    margin-top: 32px; }
+    .Product--Aria .ProductForm__Variants {
+      margin-bottom: 40px; }
+    .Product--Aria .ProductForm__Option {
+      margin-bottom: 32px; }
+    .Product--Aria .ProductForm__Item {
+      border: solid 2px #F0EFF1;
+      border-radius: 8px; }
+    .Product--Aria .ProductForm .ProductForm__QuantitySelector > span {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: #525364;
+      margin-right: 24px; }
+    .Product--Aria .ProductForm .QuantitySelector {
+      border: solid 2px #F0EFF1;
+      border-radius: 8px; }
+
+.Section-Product-Details {
+  background: transparent linear-gradient(113deg, #E5F5F1 0%, #CEE9E2 100%) 0% 0% no-repeat padding-box;
+  margin: 0;
+  padding: 64px 0 144px;
+  margin-bottom: -80px !important; }
+  @media screen and (min-width: 641px) and (max-width: 1239px) {
+    .Section-Product-Details {
+      padding: 72px 0 184px;
+      margin-bottom: -112px !important; } }
+  @media screen and (min-width: 1240px) {
+    .Section-Product-Details {
+      padding: 96px 0 256px;
+      margin-bottom: -144px !important; } }
+  .Section-Product-Details .Container {
+    position: relative;
+    padding: 0 25px; }
+    @media screen and (min-width: 641px) {
+      .Section-Product-Details .Container {
+        padding: 0 32px; } }
+    @media screen and (min-width: 1240px) {
+      .Section-Product-Details .Container {
+        padding: 0 68px;
+        display: flex;
+        justify-content: space-between; } }
+  .Section-Product-Details--Header {
+    margin-bottom: 20px; }
+    .Section-Product-Details--Header .section-title {
+      font-family: "century-gothic", sans-serif;
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 700;
+      color: #43AD92; }
+      @media screen and (min-width: 641px) {
+        .Section-Product-Details--Header .section-title {
+          font-size: 28px; } }
+      @media screen and (min-width: 1240px) {
+        .Section-Product-Details--Header .section-title {
+          font-size: 32px; } }
+    @media screen and (min-width: 641px) {
+      .Section-Product-Details--Header {
+        margin-bottom: 28px; } }
+    @media screen and (min-width: 1240px) {
+      .Section-Product-Details--Header {
+        flex: 0 0 auto; } }
+  @media screen and (min-width: 1240px) {
+    .Section-Product-Details--Content {
+      flex: 1;
+      max-width: 856px;
+      margin-top: -28px; } }
+  .Section-Product-Details--Content .Product__Tabs {
+    margin: 0; }
+    .Section-Product-Details--Content .Product__Tabs .Collapsible {
+      padding: 0 16px;
+      border-top: none;
+      border-bottom: solid 1px #7ECBB7; }
+      @media screen and (min-width: 641px) {
+        .Section-Product-Details--Content .Product__Tabs .Collapsible {
+          padding: 0 24px; } }
+      .Section-Product-Details--Content .Product__Tabs .Collapsible:last-of-type {
+        border-bottom: none; }
+    .Section-Product-Details--Content .Product__Tabs .Collapsible__Button {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 80px;
+      padding: 0;
+      color: #000000; }
+      .Section-Product-Details--Content .Product__Tabs .Collapsible__Button .Collapsible__Plus {
+        width: 18px;
+        height: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #43AD92; }
+        .Section-Product-Details--Content .Product__Tabs .Collapsible__Button .Collapsible__Plus:before {
+          width: 18px;
+          height: 2px; }
+        .Section-Product-Details--Content .Product__Tabs .Collapsible__Button .Collapsible__Plus:after {
+          height: 18px;
+          width: 2px; }
+
+.Section-Product-Testimonials {
+  position: relative;
+  padding-top: 96px;
+  min-height: 320px;
+  margin-bottom: 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat; }
+  @media screen and (min-width: 641px) {
+    .Section-Product-Testimonials {
+      padding-top: 128px; } }
+  @media screen and (min-width: 1240px) {
+    .Section-Product-Testimonials {
+      padding-top: 192px; } }
+  .Section-Product-Testimonials .section-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none; }
+  .Section-Product-Testimonials .Container {
+    position: relative; }
+    .Section-Product-Testimonials .Container:before {
+      content: '';
+      display: block;
+      width: 100vw;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: transparent linear-gradient(180deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box; }
+  .Section-Product-Testimonials--Header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 48px; }
+    .Section-Product-Testimonials--Header .section-title {
+      font-family: "century-gothic", sans-serif;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 700;
+      color: #ffffff; }
+      @media screen and (min-width: 1240px) {
+        .Section-Product-Testimonials--Header .section-title {
+          font-size: 32px; } }
+    @media screen and (min-width: 1240px) {
+      .Section-Product-Testimonials--Header {
+        margin-bottom: 72px; } }
+  .Section-Product-Testimonials--Content {
+    position: relative; }
+    .Section-Product-Testimonials--Content .Testimonials {
+      padding-bottom: 32px; }
+      @media screen and (min-width: 1240px) {
+        .Section-Product-Testimonials--Content .Testimonials {
+          padding-bottom: 48px; } }
+      .Section-Product-Testimonials--Content .Testimonials .TestimonialItem {
+        width: 100%;
+        margin-right: 55px; }
+        @media screen and (min-width: 641px) {
+          .Section-Product-Testimonials--Content .Testimonials .TestimonialItem {
+            width: calc((100% - 55px) / 2); } }
+        @media screen and (min-width: 1240px) {
+          .Section-Product-Testimonials--Content .Testimonials .TestimonialItem {
+            width: calc((100% - 80px) / 3);
+            margin-right: 40px; } }
+        .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Container {
+          background: #ffffff;
+          position: relative;
+          display: flex;
+          padding: 20px; }
+          @media screen and (min-width: 1240px) {
+            .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Container {
+              padding: 32px; } }
+          .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Container svg {
+            color: #43AD92;
+            font-size: 24px;
+            width: 1em;
+            height: 1em;
+            display: block;
+            flex: 0; }
+          .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
+            flex: 1;
+            padding: 6px 0 0 20px; }
+            @media screen and (min-width: 1240px) {
+              .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Container__Content {
+                padding: 6px 8px 0 24px; } }
+          .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
+            font-family: "century-gothic", sans-serif;
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 1em; }
+            @media screen and (min-width: 1240px) {
+              .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Container__Quote {
+                font-size: 28px;
+                line-height: 40px; } }
+          .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
+            font-style: italic;
+            font-size: 14px;
+            line-height: 1;
+            color: #9AB5C6; }
+            @media screen and (min-width: 1240px) {
+              .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Container__Name {
+                font-size: 16px; } }
+        .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Footer {
+          height: 16px;
+          position: relative; }
+          @media screen and (min-width: 1240px) {
+            .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Footer {
+              height: 20px; } }
+          .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: #ffffff transparent transparent transparent;
+            border-width: 16px;
+            margin-left: 26px; }
+            @media screen and (min-width: 1240px) {
+              .Section-Product-Testimonials--Content .Testimonials .TestimonialItem__Footer__Arrow {
+                border-width: 20px;
+                margin-left: 32px; } }
+      .Section-Product-Testimonials--Content .Testimonials .flickity-page-dots {
+        margin-top: 50px; }
+        @media screen and (min-width: 641px) {
+          .Section-Product-Testimonials--Content .Testimonials .flickity-page-dots {
+            margin-top: 66px; } }
+        @media screen and (min-width: 1240px) {
+          .Section-Product-Testimonials--Content .Testimonials .flickity-page-dots {
+            margin-top: 64px; } }
+        .Section-Product-Testimonials--Content .Testimonials .flickity-page-dots .dot {
+          border-color: #ffffff;
+          border-width: 2px;
+          width: 16px;
+          height: 16px; }
+          .Section-Product-Testimonials--Content .Testimonials .flickity-page-dots .dot.is-selected {
+            background: #FFFFFF80; }

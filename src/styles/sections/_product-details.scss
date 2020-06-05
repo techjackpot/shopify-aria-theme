@@ -1,0 +1,95 @@
+.Section-Product-Details {
+  background: transparent linear-gradient(113deg, #E5F5F1 0%, #CEE9E2 100%) 0% 0% no-repeat padding-box;
+  margin: 0;
+  padding: 64px 0 144px;
+  margin-bottom: -80px !important;
+  @include av-mq('tablet') {
+    padding: 72px 0 184px;
+    margin-bottom: -112px !important;
+  }
+  @include av-mq('desk') {
+    padding: 96px 0 256px;
+    margin-bottom: -144px !important;
+  }
+
+  .Container {
+    position: relative;
+    padding: 0 25px;
+    @include av-mq('tablet-and-up') {
+      padding: 0 32px;
+    }
+    @include av-mq('desk') {
+      padding: 0 68px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &--Header {
+    .section-title {
+      font-family: $heading-font-family;
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 700;
+      color: $primary-color;
+      @include av-mq('tablet-and-up') {
+        font-size: 28px;
+      }
+      @include av-mq('desk') {
+        font-size: 32px;
+      }
+    }
+    margin-bottom: 20px;
+    @include av-mq('tablet-and-up') {
+      margin-bottom: 28px;
+    }
+    @include av-mq('desk') {
+      flex: 0 0 auto;
+    }
+  }
+
+  &--Content {
+    @include av-mq('desk') {
+      flex: 1;
+      max-width: 856px;
+      margin-top: -28px;
+    }
+    .Product__Tabs {
+      margin: 0;
+      .Collapsible {
+        padding: 0 16px;
+        @include av-mq('tablet-and-up') {
+          padding: 0 24px;
+        }
+        border-top: none;
+        border-bottom: solid 1px #7ECBB7;
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+      .Collapsible__Button {
+        font-family: $text-font-family;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 80px;
+        padding: 0;
+        color: #000000;
+        .Collapsible__Plus {
+          width: 18px;
+          height: 18px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: $primary-color;
+          &:before {
+            width: 18px;
+            height: 2px;
+          }
+          &:after {
+            height: 18px;
+            width: 2px;
+          }
+        }
+      }
+    }
+  }
+}
