@@ -64,6 +64,7 @@
   }
 
   .Footer__Block--text {
+    align-items: center;
     @include av-mq('widescreen') {
       flex-basis: 240px;
     }

@@ -77,10 +77,66 @@
                 <p class="Cart__Taxes Text--subdued">{{ shipping_and_taxes_notice }}</p>
               {%- endif -%}
 
+              {% comment %}
               <button type="submit" name="checkout" class="Cart__Checkout Button Button--primary Button--full">{{ 'cart.general.checkout' | t }}</button>
+              {% endcomment %}
+
             </div>
           </footer>
         </form>
+
+{% if customer.tags contains 'PLAN-RTO' %}
+  <div id="partiallyCartButtonContainer" style="text-align: right;"></div>
+  <script>
+  document.partiallyButtonConfig = {
+       offer: '38bf5cf6-5bb4-4fa7-ac91-cac0319ad020',
+       returnUrl: '{{shop.url}}/cart',
+       returnConfirmedUrl: '{{shop.url}}/cart/clear',
+       cssButton: true,
+       cssButtonText: 'Purchase with',
+       cssButtonShowLogo: true,
+       cssButtonLogoType: 'full',
+       cssButtonLogoPlacement: 'after',
+       
+       renderSelector: '#partiallyCartButtonContainer',
+      shopifyCart: {{cart | json}}
+     };
+     (function() {
+       var script = document.createElement('script');
+       script.type = 'text/javascript';
+       script.src = 'https://partial.ly/js/partially-checkout-button.js';
+       script.async = true;
+       document.head.appendChild(script);
+     })();
+  </script>
+{% endif %}
+
+{% if customer.tags contains 'PLAN-CASH' %}
+  <div id="partiallyCartButtonContainer" style="text-align: right;"></div>
+  <script>
+  document.partiallyButtonConfig = {
+       offer: 'd82327d5-d30d-4e7d-901b-a3777189b90a',
+       returnUrl: '{{shop.url}}/cart',
+       returnConfirmedUrl: '{{shop.url}}/cart/clear',
+       cssButton: true,
+       cssButtonText: 'Purchase with',
+       cssButtonShowLogo: true,
+       cssButtonLogoType: 'full',
+       cssButtonLogoPlacement: 'after',
+       
+       renderSelector: '#partiallyCartButtonContainer',
+      shopifyCart: {{cart | json}}
+     };
+     (function() {
+       var script = document.createElement('script');
+       script.type = 'text/javascript';
+       script.src = 'https://partial.ly/js/partially-checkout-button.js';
+       script.async = true;
+       document.head.appendChild(script);
+     })();
+  </script>
+{% endif %}
+
 
         {%- if section.settings.show_shipping_estimator -%}
           <div class="Section Section--spacingExtraLarge">

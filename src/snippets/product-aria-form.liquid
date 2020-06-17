@@ -257,6 +257,8 @@ for size, we use it to display a size chart (if applicable)
   --------------------------------------------------------------------------------------------------------------------
   {%- endcomment -%}
 
+  {% if customer and customer.tags contains 'QUALIFIED' %}
+
   <button type="submit" class="ProductForm__AddToCart Button {% if selected_variant.available and section.settings.show_payment_button == false %}/*Button--primary*/{% else %}/*Button--secondary*/{% endif %} Button--full Button--fill Button--round" {% if selected_variant.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %}>
     {%- if selected_variant.available -%}
       <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
@@ -269,6 +271,12 @@ for size, we use it to display a size chart (if applicable)
       {{- 'product.form.sold_out' | t -}}
     {%- endif -%}
   </button>
+
+  {% else %}
+
+  <a href="/pages/get-started" class="ProductForm__AddToCart Button Button--full Button--fill Button--round">Get Started</a>
+
+  {% endif %}
 
   {%- if section.settings.show_payment_button and product.template_suffix != 'pre-order' -%}
     {{ form | payment_button }}

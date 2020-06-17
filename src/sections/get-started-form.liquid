@@ -1,0 +1,27 @@
+<section class="Section Section--spacingNormal Section-Get-Started-Form" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="get-started-form">
+  <div class="Container Container--narrow">
+    <div class="Section-Get-Started-Form--Content">
+      <div class="form-container">
+        {% capture qs_step %}{%- render 'fn.querystring', param: "step" -%}{% endcapture %}
+        {%- if qs_step == 'final' -%}
+          {% render 'web-form-get-started-part2-body' %}
+        {%- else -%}
+          {% render 'web-form-get-started-part1-body' %}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Get Started - Form",
+  "presets": [
+    {
+      "category": "Get Started",
+      "name": "Form",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

@@ -10,6 +10,11 @@
 @import "forms";
 
 
+/* pages */
+
+@import "pages/thank-you";
+
+
 /* sections */
 
 @import "sections/offers";
@@ -32,6 +37,8 @@
 @import "sections/our-story-header";
 @import "sections/our-story-people";
 @import "sections/our-story-footer";
+
+@import "sections/get-started-form";
 
 @import "sections/product-aria-template";
 @import "sections/product-details";

@@ -50,6 +50,7 @@
       margin-bottom: -40px;
       @include av-mq('tablet') {
         margin-bottom: -48px;
+        justify-content: center;
       }
       .Person-Item {
         flex: 1 0 100%;

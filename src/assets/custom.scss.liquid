@@ -23,6 +23,9 @@
 .Button--round {
   border-radius: 100px; }
 
+.Button--text-normal {
+  text-transform: none; }
+
 body {
   background: #ffffff; }
 
@@ -254,9 +257,11 @@ body {
     .Footer .Footer__Block--links .Linklist .Linklist__Item .Link {
       font-size: 16px;
       line-height: 19px; }
-  @media screen and (min-width: 1500px) {
-    .Footer .Footer__Block--text {
-      flex-basis: 240px; } }
+  .Footer .Footer__Block--text {
+    align-items: center; }
+    @media screen and (min-width: 1500px) {
+      .Footer .Footer__Block--text {
+        flex-basis: 240px; } }
   .Footer .Footer__Block--logo {
     font-size: 12px;
     line-height: 24px; }
@@ -345,6 +350,17 @@ body {
   .wFormContainer .wForm .actions .primaryAction:disabled {
     background-color: rgba(0, 0, 0, 0.2);
     color: rgba(255, 255, 255, 0.7); }
+
+/* pages */
+.Page-Thank-You-Container .PageHeader .SectionHeader__Heading {
+  font-family: "century-gothic", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: left;
+  color: #000000;
+  max-width: 1000px;
+  margin: 0 auto; }
 
 /* sections */
 .Section--Shop-Offers {
@@ -2105,7 +2121,8 @@ body {
     margin-bottom: -40px; }
     @media screen and (min-width: 641px) and (max-width: 1239px) {
       .Section-Our-Story-People--Content .Person-List {
-        margin-bottom: -48px; } }
+        margin-bottom: -48px;
+        justify-content: center; } }
     .Section-Our-Story-People--Content .Person-List .Person-Item {
       flex: 1 0 100%;
       padding: 0 15px;
@@ -2357,6 +2374,77 @@ body {
         font-size: 20px; }
         .Section-Our-Story-Footer--Content .footer-content-wrapper .footer-content .footer-actions .Button:last-of-type {
           margin-right: 0; }
+
+.Section-Get-Started-Form {
+  background: transparent linear-gradient(300deg, #F0EFF1 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+  margin: 0;
+  padding: 64px 0; }
+  @media screen and (min-width: 641px) and (max-width: 1239px) {
+    .Section-Get-Started-Form {
+      padding: 80px 0; } }
+  @media screen and (min-width: 1240px) {
+    .Section-Get-Started-Form {
+      padding: 96px 0; } }
+  .Section-Get-Started-Form--Content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center; }
+    @media screen and (min-width: 1240px) {
+      .Section-Get-Started-Form--Content {
+        flex-direction: row; } }
+    .Section-Get-Started-Form--Content .form-container {
+      flex: 1; }
+    .Section-Get-Started-Form--Content .form-content {
+      flex: 1;
+      max-width: 520px;
+      position: relative; }
+      .Section-Get-Started-Form--Content .form-content .form-label {
+        font-family: "century-gothic", sans-serif;
+        line-height: 1;
+        font-size: 20px;
+        margin-bottom: 24px; }
+        @media screen and (min-width: 641px) {
+          .Section-Get-Started-Form--Content .form-content .form-label {
+            font-size: 24px; } }
+      .Section-Get-Started-Form--Content .form-content .form-title {
+        font-family: "century-gothic", sans-serif;
+        font-weight: 700;
+        color: #43AD92;
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 24px; }
+        @media screen and (min-width: 641px) {
+          .Section-Get-Started-Form--Content .form-content .form-title {
+            font-size: 32px;
+            line-height: 46px; } }
+        @media screen and (min-width: 641px) {
+          .Section-Get-Started-Form--Content .form-content .form-title {
+            font-size: 36px;
+            margin-bottom: 32px; } }
+      .Section-Get-Started-Form--Content .form-content .form-description {
+        color: #525364;
+        margin-bottom: 48px;
+        font-size: 16px;
+        line-height: 30px; }
+        @media screen and (min-width: 641px) {
+          .Section-Get-Started-Form--Content .form-content .form-description {
+            font-size: 17px;
+            line-height: 31px; } }
+        @media screen and (min-width: 641px) {
+          .Section-Get-Started-Form--Content .form-content .form-description {
+            font-size: 18px;
+            line-height: 32px; } }
+      .Section-Get-Started-Form--Content .form-content .form-price {
+        background: #E5F5F1; }
+      .Section-Get-Started-Form--Content .form-content .form-contacts p {
+        font-size: 18px;
+        line-height: 40px;
+        color: #000000;
+        margin-bottom: 0; }
+        .Section-Get-Started-Form--Content .form-content .form-contacts p svg {
+          color: #43AD92;
+          margin-right: 16px; }
 
 .Product--Aria {
   margin-bottom: 0 !important; }
