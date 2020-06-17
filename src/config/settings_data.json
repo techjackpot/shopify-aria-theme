@@ -83,7 +83,7 @@
       "announcement": {
         "type": "announcement",
         "settings": {
-          "enable_bar": true,
+          "enable_bar": false,
           "home_page_only": false,
           "background": "#43ad92",
           "text_color": "#ffffff",
@@ -349,7 +349,7 @@
         "settings": {
           "title": "Designed to be different.",
           "text": "We’ve learned that you can’t just treat problems—you have to treat people. So we created a better therapy experience. While most pneumatic compression therapy equipment can be cumbersome, the compact Aria system is portable, targeting the burden and isolation of therapy.",
-          "image": "shopify:\/\/shop_images\/aria-free-boot_2x_07f8e29b-6703-452c-9af4-4544979e3c38.png"
+          "image": "shopify:\/\/shop_images\/aria-family-family.png"
         }
       },
       "meet-aria-therapy": {
@@ -441,18 +441,18 @@
             "type": "person",
             "settings": {
               "title": "Brooke Harding",
-              "position": "<p>General Manager, Aria<br>VP, Strategy and Ventures, ResMed<\/p>",
+              "position": "<p>General Manager<\/p>",
               "image": "shopify:\/\/shop_images\/brooke-harding.jpg",
-              "bio": "<p>At ResMed, Brooke leads a team in corporate strategy development with emphasis on strategy planning through execution, new business innovation, new markets, market disruption, and competitor strategy. She also prepares business cases and communications to make recommendations to the executive team and board of directors. Brooke has contributed in many different departments during her sixteen years with ResMed, and we value her expertise at the helm of Aria Health. She holds a bachelor&rsquo;s degree in cultural anthropology from James Madison University.<\/p>\n<p><\/p>\n<p>She holds a Bachelor of Science in cultural anthropology from James Madison University.<\/p>"
+              "bio": "<p>As the leader of Aria Health, Brooke brings the varied expertise she gained during her sixteen years at ResMed. There, her impact was seen in many areas of business: leading teams in corporate strategy development with an emphasis on strategy planning through execution, business innovation, new markets, market disruption, and competitor strategy. Brooke most recently led the New Business Creation team, developing transformational business concepts into new businesses, where Aria Health was born. She holds a bachelor&rsquo;s degree in cultural anthropology.<\/p>"
             }
           },
           "1591278036608": {
             "type": "person",
             "settings": {
               "title": "Eric Saunders",
-              "position": "<p>Operations<\/p>",
+              "position": "<p>Regulatory and Operations<\/p>",
               "image": "shopify:\/\/shop_images\/eric-saunders.jpg",
-              "bio": ""
+              "bio": "<p>Eric applies his energy and experience in many ways as he leads regulatory and operations for Aria Health. After receiving a bachelor of engineering and an MBA, Eric joined McKinsey consulting where he advised senior&nbsp;leadership across multiple companies on how to successfully bring new products to market. Eric joined ResMed in 2017 to find promising new healthcare innovations and develop those projects in collaboration with patients and clinicians. As a founding member of Aria Health he is very much looking forward to bringing a new and simple experience to market and supporting those in the lymphedema community.<\/p>"
             }
           },
           "1591278085748": {
@@ -461,7 +461,7 @@
               "title": "Dinesh Ramanan",
               "position": "<p>Product and clinical<\/p>",
               "image": "shopify:\/\/shop_images\/dinesh-ramanan.jpg",
-              "bio": ""
+              "bio": "<p>Dinesh is responsible for the product development and clinical innovation behind Aria Health. Prior to his work with Aria Health, Dinesh was a key member of the clinical science and innovation team within ResMed, and he combines over ten years of&nbsp;medical device experience with his master&rsquo;s degree in biomedical engineering to elevate our team&rsquo;s capabilities. The innovator behind the product, Dinesh credits a family member living with venous disease as his inspiration. His passion for helping people is also evident in the six years he managed fundraising efforts for a nonprofit focused on developing better healthcare solutions for those living in rural India.<\/p>"
             }
           },
           "1591278114942": {
@@ -470,7 +470,7 @@
               "title": "Jeannine Mar",
               "position": "<p>Commercial<\/p>",
               "image": "shopify:\/\/shop_images\/jeannine-mar.jpg",
-              "bio": ""
+              "bio": "<p>With over thirteen years of experience in the health tech industry, Jeannine leads the commercial efforts for Aria Health. Since 2012, she&rsquo;s worked in marketing and strategy roles across ResMed&rsquo;s portfolio of medical&nbsp;devices and out-of-hospital software. She also brings a scientific perspective to her position at Aria Health, with both an MBA and a bachelor of science in molecular biology. Jeannine is eager to apply her knowledge, and hopeful that Aria Health will positively impact people&rsquo;s lives by transforming the treatment of lymphedema and other chronic edema conditions.<\/p>"
             }
           },
           "1591278153305": {
@@ -479,7 +479,7 @@
               "title": "Kimm Ehlen",
               "position": "<p>Community<\/p>",
               "image": "shopify:\/\/shop_images\/kimm-ehlen.jpg",
-              "bio": ""
+              "bio": "<p>Kimm Ehlen is well known for her involvement in the lymphedema community. Following a cancer diagnosis, treatment, onset of secondary lymphedema, and the ensuing physical limitations, Kimm&rsquo;s life became unrecognizable. In a&nbsp;testament to her resilience, she set out to manage her lymphedema and reclaim the active lifestyle she loves. Today, she helps others do the same by sharing her experience and support. And she brings that same optimism and dedication to our team every day. Kimm has a passion for photography&mdash;many of her photographs of people in the lymphedema community appear on our website and social accounts. If you&rsquo;ve been in touch with us, you&rsquo;ve likely already met Kimm. And if have thoughts to share, reach out.<\/p>"
             }
           },
           "1591278169742": {
@@ -488,7 +488,7 @@
               "title": "Amy Cook",
               "position": "<p>Digital<\/p>",
               "image": "shopify:\/\/shop_images\/amy-cook.jpg",
-              "bio": ""
+              "bio": "<p>Amy is responsible for Aria Health digital solutions. She joined Aria Health after seven years working with ResMed&rsquo;s connected medical devices. She brings a science and business education to the team, with over ten years designing software to&nbsp;deliver exceptional patient experiences. She&rsquo;s passionate about problem solving, and is excited to put her efforts and expertise with digital tools and support toward enabling successful therapy. If you engage with the Aria app, you will see Amy&rsquo;s work firsthand. Her favorite part of working with digital solutions is that they can always be changed if you don&rsquo;t get it right the first time&mdash;so she wants to hear from the community so we can keep making improvements!<\/p>"
             }
           },
           "1591278190802": {
@@ -497,7 +497,7 @@
               "title": "Tommy Broski",
               "position": "<p>Supply Chain<\/p>",
               "image": "shopify:\/\/shop_images\/tommy-broski.jpg",
-              "bio": ""
+              "bio": "<p>In the eight years prior to role managing the supply chain across Aria Health, Tommy worked in product development across ResMed&rsquo;s sleep and respiratory care portfolio, successfully taking a number of products from concept&nbsp;through to launch. With a degree in biomedical engineering, Tommy brings a &ldquo;can-be-built&rdquo; attitude to the team and strives to deliver users the ultimate product experience. He&rsquo;s most excited by the freedom Aria will provide its users, and loves to receive product feedback from the everyone in the lymphedema community.<\/p>"
             }
           }
         },
@@ -530,7 +530,7 @@
             "settings": {
               "title": "Exceptionally engineered",
               "description": "<p>Low-pressure pump, designed to be petite yet powerful.<\/p>",
-              "image": "shopify:\/\/shop_images\/icon-exceptionally-engineered.png"
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-exceptionally-engineered.svg?v=1592416349"
             }
           },
           "1591286459211": {
@@ -538,7 +538,7 @@
             "settings": {
               "title": "Seriously smart",
               "description": "<p>Remote coaching, notifications, and daily progress tracking all accessible via mobile app.<\/p>",
-              "image": "shopify:\/\/shop_images\/icon-seriously-smart.png"
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-seriously-smart.svg?v=1592416350"
             }
           },
           "1591286480644": {
@@ -546,7 +546,7 @@
             "settings": {
               "title": "Quick and easy",
               "description": "<p>Slip-on garment, one-button start, simple connect\/disconnect, in-app instructions.<\/p>",
-              "image": "shopify:\/\/shop_images\/icon-quick-and-easy.png"
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-quick-and-easy.svg?v=1592416349"
             }
           },
           "1591286498633": {
@@ -554,7 +554,7 @@
             "settings": {
               "title": "Super portable",
               "description": "<p>Streamlined garment and small compression pump go wherever you go.<\/p>",
-              "image": "shopify:\/\/shop_images\/icon-super-portable.png"
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-super-portable.svg?v=1592416349"
             }
           },
           "1591286525339": {
@@ -562,7 +562,7 @@
             "settings": {
               "title": "Innovative quality",
               "description": "<p>Backed by 30 years of ResMed&rsquo;s health technology leadership.<\/p>",
-              "image": "shopify:\/\/shop_images\/icon-innovative-quality.png"
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-innovative-quality.svg?v=1592416349"
             }
           }
         },

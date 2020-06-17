@@ -27,6 +27,9 @@
     .form-content {
       flex: 1;
       max-width: 520px;
+      @include av-mq('desk') {
+        margin-right: 112px;
+      }
       position: relative;
       .form-label {
         font-family: $heading-font-family;

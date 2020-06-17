@@ -1,18 +1,20 @@
 <section class="Section Section--spacingNormal Section-Meet-Aria-Features" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="meet-aria-features">
   <div class="Container Container--narrow">
-    <div class="Section-Meet-Aria-Features--Header">
+    <div class="Section-Meet-Aria-Features--Header" data-aos="fade-up">
       <div class="section-title">
         <span>{{ section.settings.title }}</span>
       </div>
     </div>
     <div class="Section-Meet-Aria-Features--Content">
       <div class="Feature-List">
+        {%- assign block_delay = 0 -%}
         {%- for block in section.blocks -%}
-          <div id="block-{{ block.id }}" class="Feature-Item" {{ block.shopify_attributes }}>
-            <div class="Feature-Item__Container" data-action="open-modal" aria-controls="modal-{{ section.id }}-{{ block.id }}">
+          {%- capture block_delay -%}{{ block_delay | plus: 150 }}{%- endcapture -%}
+          <div id="block-{{ block.id }}" class="Feature-Item" {{ block.shopify_attributes }} data-aos="fade" data-aos-delay="{{ block_delay }}">
+            <div class="Feature-Item__Container">
               <div class="Feature-Item--Icon">
-                {%- if block.settings.image != blank -%}
-                  <img src="{{ block.settings.image | img_url: 'master' }}">
+                {%- if block.settings.image_url != blank -%}
+                  <img src="{{ block.settings.image_url }}">
                 {%- endif -%}
               </div>
               <div class="Feature-Item--Meta">
@@ -57,9 +59,9 @@
           "label": "Description"
         },
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Icon"
+          "type": "text",
+          "id": "image_url",
+          "label": "Icon (url here)"
         }
       ]
     }

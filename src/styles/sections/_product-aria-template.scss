@@ -33,8 +33,8 @@
     }
     .ProductMeta__PriceList {
       background: #E5F5F1;
-      padding: 24px 20px;
-      text-align: center;
+      padding: 24px 32px;
+      text-align: left;
       .ProductMeta__Price {
         font-family: $text-font-family;
         font-size: 24px;
@@ -46,6 +46,13 @@
         &.Price--compareAt {
           color: #9AB5C6;
         }
+      }
+      .special-offer {
+        font-family: $text-font-family;
+        color: $primary-color;
+        line-height: 24px;
+        margin-top: 16px;
+        display: block;
       }
     }
   }
@@ -100,6 +107,16 @@
     .QuantitySelector {
       border: solid 2px #F0EFF1;
       border-radius: 8px;
+    }
+  }
+
+  .product-form-pre-qualified-notice {
+    font-family: $heading-font-family;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000;
+    a {
+      color: $primary-color;
     }
   }
 }

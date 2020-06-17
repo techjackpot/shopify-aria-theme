@@ -2,11 +2,11 @@
   <div class="Container Container--narrow">
     <div class="Section-Homepage-Hero--Content">
       {%- if section.settings.image != blank -%}
-      <div class="hero-image">
+      <div class="hero-image" data-aos="fade-left">
         <img src="{{ section.settings.image | img_url: 'master' }}">
       </div>
       {%- endif -%}
-      <div class="hero-content">
+      <div class="hero-content" data-aos="fade-up">
         <div class="hero-title">
           <span>{{ section.settings.title }}</span>
         </div>

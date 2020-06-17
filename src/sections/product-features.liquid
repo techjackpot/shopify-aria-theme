@@ -1,0 +1,65 @@
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "wrapAround": true,
+  "dragThreshold": 16,
+  "cellAlign": "left",
+  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
+}
+{%- endcapture -%}
+
+<section class="Section Section--spacingNormal Section-Product-Features" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product-features">
+  <div class="Container Container--narrow">
+    <div class="Section-Product-Features--Content">
+      <div class="Feature-List Carousel" data-flickity='{{ flickity_options }}'>
+        {%- for block in section.blocks -%}
+          <div id="block-{{ block.id }}" class="Feature-Item" {{ block.shopify_attributes }}>
+            <div class="Feature-Item__Container">
+              <div class="Feature-Item--Icon">
+                {%- if block.settings.image != blank -%}
+                  <img src="{{ block.settings.image | img_url: 'master' }}">
+                {%- endif -%}
+              </div>
+              <div class="Feature-Item--Meta">
+                <div class="Feature-Item--Title">
+                  <span>{{ block.settings.title }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product - Features",
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Product",
+      "name": "Features",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

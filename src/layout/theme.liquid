@@ -132,6 +132,8 @@
 
     {% render 'microdata-schema' %}
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=gm8xucznyc9xojltvxa5ea" async="true"></script>
   </head>
 
@@ -159,5 +161,10 @@
 
       {% section 'footer' %}
     </div>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

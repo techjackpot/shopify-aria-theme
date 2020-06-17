@@ -1,4 +1,20 @@
 <div class="Product__Tabs">
+  {%- if product.metafields.tabs['eligible-states'] -%}
+    <div class="Collapsible Collapsible--large">
+      <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+        Eligible states <span class="Collapsible__Plus"></span>
+      </button>
+
+      <div class="Collapsible__Inner" id="product-tab-eligible-states">
+        <div class="Collapsible__Content">
+          <div class="Rte">
+            {{- product.metafields.tabs['eligible-states'] -}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
   <div class="Collapsible Collapsible--large">
     <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
       Overview <span class="Collapsible__Plus"></span>
@@ -32,7 +48,7 @@
   {%- if product.metafields.tabs.payment_options -%}
     <div class="Collapsible Collapsible--large">
       <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
-        Specifications <span class="Collapsible__Plus"></span>
+        Payment options <span class="Collapsible__Plus"></span>
       </button>
 
       <div class="Collapsible__Inner">
@@ -48,7 +64,7 @@
   {%- if product.metafields.tabs.shipping_and_returns -%}
     <div class="Collapsible Collapsible--large">
       <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
-        Specifications <span class="Collapsible__Plus"></span>
+        Shipping and returns <span class="Collapsible__Plus"></span>
       </button>
 
       <div class="Collapsible__Inner">
@@ -64,7 +80,7 @@
   {%- if product.metafields.tabs.warranty -%}
     <div class="Collapsible Collapsible--large">
       <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
-        Specifications <span class="Collapsible__Plus"></span>
+        Warranty <span class="Collapsible__Plus"></span>
       </button>
 
       <div class="Collapsible__Inner">

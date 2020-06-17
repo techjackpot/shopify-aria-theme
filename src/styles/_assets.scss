@@ -10,6 +10,7 @@
     background: #ffffff;
     color: #000000;
     &:hover {
+      background: #FFFFFFBF;
       color: #000000;
     }
   }
@@ -24,7 +25,8 @@
     border: solid 2px #ffffff;
     color: #ffffff;
     &:hover {
-      color: #ffffff;
+      background: #FFFFFFBF;
+      color: #000000;
     }
   }
 }
@@ -33,4 +35,12 @@
 }
 .Button--text-normal {
   text-transform: none;
+}
+
+.Button--second {
+  transition: all 0.25s ease;
+}
+
+.Header__CartDot {
+  background-color: $primary-color;
 }

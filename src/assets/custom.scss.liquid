@@ -7,6 +7,7 @@
     background: #ffffff;
     color: #000000; }
     .Button--fill.Button--second:hover {
+      background: #FFFFFFBF;
       color: #000000; }
 
 .Button--outline {
@@ -18,13 +19,20 @@
     border: solid 2px #ffffff;
     color: #ffffff; }
     .Button--outline.Button--second:hover {
-      color: #ffffff; }
+      background: #FFFFFFBF;
+      color: #000000; }
 
 .Button--round {
   border-radius: 100px; }
 
 .Button--text-normal {
   text-transform: none; }
+
+.Button--second {
+  transition: all 0.25s ease; }
+
+.Header__CartDot {
+  background-color: #43AD92; }
 
 body {
   background: #ffffff; }
@@ -371,13 +379,7 @@ body {
     .Section--Shop-Offers {
       padding: 16px 0; } }
   .Section--Shop-Offers .ShopOffersList {
-    padding: 0 25px;
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 0 auto;
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
-    max-width: max-content; }
+    padding: 0 25px; }
     @media screen and (min-width: 641px) {
       .Section--Shop-Offers .ShopOffersList {
         padding: 0 40px; } }
@@ -439,11 +441,13 @@ body {
     .Section-Homepage-Hero--Content .hero-image {
       position: absolute;
       right: 0;
-      top: 50%;
-      transform: translateY(-50%);
       width: 56.3%;
       margin: 0;
-      padding: 0; } }
+      padding: 0;
+      top: 0;
+      height: 100%;
+      display: flex;
+      align-items: center; } }
   .Section-Homepage-Hero--Content .hero-image img {
     display: block;
     width: 100%;
@@ -999,6 +1003,9 @@ body {
       flex: 1;
       max-width: 520px;
       position: relative; }
+      @media screen and (min-width: 1240px) {
+        .Section-Homepage-Form--Content .form-content {
+          margin-right: 112px; } }
       .Section-Homepage-Form--Content .form-content .form-label {
         font-family: "century-gothic", sans-serif;
         line-height: 1;
@@ -1745,6 +1752,9 @@ body {
       flex: 1;
       max-width: 520px;
       position: relative; }
+      @media screen and (min-width: 1240px) {
+        .Section-Meet-Aria-Form--Content .form-content {
+          margin-right: 112px; } }
       .Section-Meet-Aria-Form--Content .form-content .form-label {
         font-family: "century-gothic", sans-serif;
         line-height: 1;
@@ -1827,11 +1837,13 @@ body {
     .Section-Our-Story-Hero--Content .hero-image {
       position: absolute;
       right: 0;
-      top: 50%;
-      transform: translateY(-50%);
       width: 56.3%;
       margin: 0;
-      padding: 0; } }
+      padding: 0;
+      top: 0;
+      height: 100%;
+      display: flex;
+      align-items: center; } }
   .Section-Our-Story-Hero--Content .hero-image img {
     display: block;
     width: 100%;
@@ -2204,10 +2216,7 @@ body {
     color: #000000;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 24px; }
-    @media screen and (min-width: 641px) {
-      .Modal--personContent .Person-Item--Position {
-        margin-bottom: 40px; } }
+    margin-bottom: 32px; }
   .Modal--personContent .Person-Item--Photo {
     margin-bottom: 32px; }
     .Modal--personContent .Person-Item--Photo img {
@@ -2476,8 +2485,8 @@ body {
       line-height: 18px; }
     .Product--Aria .ProductMeta .ProductMeta__PriceList {
       background: #E5F5F1;
-      padding: 24px 20px;
-      text-align: center; }
+      padding: 24px 32px;
+      text-align: left; }
       .Product--Aria .ProductMeta .ProductMeta__PriceList .ProductMeta__Price {
         font-family: Arial, sans-serif;
         font-size: 24px;
@@ -2487,6 +2496,12 @@ body {
           font-weight: 700; }
         .Product--Aria .ProductMeta .ProductMeta__PriceList .ProductMeta__Price.Price--compareAt {
           color: #9AB5C6; }
+      .Product--Aria .ProductMeta .ProductMeta__PriceList .special-offer {
+        font-family: Arial, sans-serif;
+        color: #43AD92;
+        line-height: 24px;
+        margin-top: 16px;
+        display: block; }
   .Product--Aria .ProductMeta__ShareButtons {
     margin: 40px 0; }
     @media screen and (min-width: 641px) {
@@ -2526,6 +2541,13 @@ body {
     .Product--Aria .ProductForm .QuantitySelector {
       border: solid 2px #F0EFF1;
       border-radius: 8px; }
+  .Product--Aria .product-form-pre-qualified-notice {
+    font-family: "century-gothic", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000; }
+    .Product--Aria .product-form-pre-qualified-notice a {
+      color: #43AD92; }
 
 .Section-Product-Details {
   background: transparent linear-gradient(113deg, #E5F5F1 0%, #CEE9E2 100%) 0% 0% no-repeat padding-box;

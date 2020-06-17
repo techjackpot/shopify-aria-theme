@@ -1,6 +1,18 @@
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "wrapAround": false,
+  "contain": true,
+  "dragThreshold": 16,
+  "cellAlign": "center",
+  "autoPlay": false,
+  "pageDots": false
+}
+{%- endcapture -%}
+
 {%- if section.settings.show_offers -%}
 <section id="section-{{ section.id }}" class="Section Section--Shop-Offers">
-  <div class="ShopOffersList">
+  <div class="ShopOffersList Carousel"  data-flickity='{{ flickity_options }}'>
     {%- for block in section.blocks -%}
       <div id="block-{{ block.id }}" class="Offer">
         {%- if block.settings.icon_class -%}

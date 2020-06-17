@@ -3,7 +3,7 @@
     <div class="Section-Our-Story-Footer--Content">
       <div class="footer-content-wrapper">
         <div class="footer-content-container">
-          <div class="footer-content">
+          <div class="footer-content" data-aos="fade-right">
             <div class="footer-title">
               <span>{{ section.settings.title }}</span>
             </div>
@@ -15,7 +15,7 @@
             </div>
           </div>
           {%- if section.settings.image != blank -%}
-          <div class="footer-image">
+          <div class="footer-image" data-aos="fade-left">
             <img src="{{ section.settings.image | img_url: 'master' }}">
           </div>
           {%- endif -%}

@@ -1,6 +1,6 @@
 <section class="Section Section--spacingNormal Section-Meet-Aria-Header" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="meet-aria-header">
   <div class="Container Container--narrow">
-    <div class="Section-Meet-Aria-Header--Header">
+    <div class="Section-Meet-Aria-Header--Header" data-aos="fade-up">
       <div class="section-title">
         <span>Aria Free</span>
       </div>
@@ -13,11 +13,11 @@
       <div class="header-content-wrapper">
         <div class="header-content-container">
           {%- if section.settings.image != blank -%}
-          <div class="header-image">
+          <div class="header-image" data-aos="fade-right">
             <img src="{{ section.settings.image | img_url: 'master' }}">
           </div>
           {%- endif -%}
-          <div class="header-content">
+          <div class="header-content" data-aos="fade-left">
             <div class="header-title">
               <span>{{ section.settings.title }}</span>
             </div>

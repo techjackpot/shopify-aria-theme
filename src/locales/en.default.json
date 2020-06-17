@@ -313,7 +313,7 @@
       "quantity": "Quantity",
       "from_price_html": "From {{min_price}}",
       "select_model": "Select this model",
-      "size_chart": "Size chart",
+      "size_chart": "Sizing chart",
       "inventory_quantity_count": {
         "one": "{{count}} piece in stock.",
         "other": "{{count}} pieces in stock"
