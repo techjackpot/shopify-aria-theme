@@ -656,6 +656,54 @@
           "show_shipping_estimator": false,
           "shipping_estimator_default_country": "United States"
         }
+      },
+      "product-features": {
+        "type": "product-features",
+        "blocks": {
+          "1592902907698": {
+            "type": "feature",
+            "settings": {
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-exceptionally-engineered.svg?v=1592416349",
+              "title": "Exceptionally<br> engineered"
+            }
+          },
+          "1592902924855": {
+            "type": "feature",
+            "settings": {
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-seriously-smart.svg?v=1592416350",
+              "title": "Seriously<br> smart"
+            }
+          },
+          "1592902930896": {
+            "type": "feature",
+            "settings": {
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-quick-and-easy.svg?v=1592416349",
+              "title": "Quick<br> and easy"
+            }
+          },
+          "1592902935711": {
+            "type": "feature",
+            "settings": {
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-super-portable.svg?v=1592416349",
+              "title": "Super<br> portable"
+            }
+          },
+          "1592902941033": {
+            "type": "feature",
+            "settings": {
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-innovative-quality.svg?v=1592416349",
+              "title": "Innovative<br> quality"
+            }
+          }
+        },
+        "block_order": [
+          "1592902907698",
+          "1592902924855",
+          "1592902930896",
+          "1592902935711",
+          "1592902941033"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": [

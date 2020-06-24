@@ -119,4 +119,27 @@
       color: $primary-color;
     }
   }
+  .product-form-phone-support-notice {
+    font-family: $heading-font-family;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000;
+    a {
+      color: $primary-color;
+    }
+  }
+  .product-form-phone-support-link {
+    color: $primary-color;
+    font-family: $heading-font-family;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    svg {
+      width: 40px;
+      height: 37px;
+      margin-right: 12px;
+    }
+  }
 }

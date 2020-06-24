@@ -16,8 +16,8 @@
           <div id="block-{{ block.id }}" class="Feature-Item" {{ block.shopify_attributes }}>
             <div class="Feature-Item__Container">
               <div class="Feature-Item--Icon">
-                {%- if block.settings.image != blank -%}
-                  <img src="{{ block.settings.image | img_url: 'master' }}">
+                {%- if block.settings.image_url != blank -%}
+                  <img src="{{ block.settings.image_url }}">
                 {%- endif -%}
               </div>
               <div class="Feature-Item--Meta">
@@ -42,9 +42,9 @@
       "name": "Feature",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Icon"
+          "type": "text",
+          "id": "image_url",
+          "label": "Icon (url here)"
         },
         {
           "type": "text",

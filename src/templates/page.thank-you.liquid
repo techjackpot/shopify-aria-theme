@@ -1,9 +1,17 @@
 {% capture qs_qualified %}{%- render 'fn.querystring', param: "e" -%}{% endcapture %}
+{% capture qs_state %}{%- render 'fn.querystring', param: "state" -%}{% endcapture %}
+{% assign qs_state = qs_state | replace: '+', ' ' %}
+{% assign states = 'California, Texas, Colorado, Delaware, New York, Pennsylvania, Ohio, Maine, Georgia, Washington, Minnesota, Massachusetts, Missouri, New Jersey, Maryland, Oregon, New Mexico, Oklahoma, Nebraska, Hawaii, Rhode Island, South Dakota, Alaska, District of Columbia, Vermont, West Virginia, Wisconsin, Wyoming' | split: ', ' %}
+{% assign show_welcome = false %}
+{% if qs_qualified == 'true' or states contains qs_state %}
+  {% assign show_welcome = true %}
+{% endif %}
+
 <div class="Container Page-Thank-You-Container">
   <header class="PageHeader">
     <div class="SectionHeader SectionHeader--center">
       <h1 class="SectionHeader__Heading Heading u-h1">
-        {%- if qs_qualified == 'true' -%}
+        {%- if show_welcome -%}
           You've qualified!
         {%- else -%}
           We're sorry.
@@ -13,7 +21,7 @@
   </header>
 
   <div class="PageContent Rte">
-    {%- if qs_qualified == 'true' -%}
+    {%- if show_welcome -%}
       <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis.</p>
     {%- else -%}
       <p>On the basis of your location or garment needs, we are unable to offer the Aria Free system to you at this time. We currently ship to select states and offer the leg garment exclusively. As we continue to expand our shipping destinations and make additional garments available, we’ll let you know.</p>
