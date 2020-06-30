@@ -4,7 +4,10 @@
       <div class="section-title">
         <span>{{ section.settings.title }}</span>
       </div>
-      <img src="{{ 'icon-swoop.svg' | asset_url }}">
+      <img src="{{ 'icon-swoop.svg' | asset_url }}" style="display: block; margin: 0 auto;">
+      <div style="margin-top: 24px;">
+        <a href="/pages/support-archive" class="Link Link--primary Button Button--fill Button--round">Learn More</a>
+      </div>
     </div>
     <div class="Section-Homepage-Product--Content">
       <div class="product-content" data-aos="fade-right">
@@ -36,8 +39,8 @@
           </div>
           {%- endif -%}
           <div class="product-actions">
-            <a href="#" class="Link Link--primary Button Button--fill Button--round">Buy now</a>
-            <a href="#" class="Link Link--primary Button Button--outline Button--round">Shop</a> 
+            <a href="/pages/get-started" class="Link Link--primary Button Button--fill Button--round">Get started</a>
+            <a href="/products/aria-free" class="Link Link--primary Button Button--outline Button--round">Shop</a> 
           </div>
         </div>
       </div>

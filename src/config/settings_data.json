@@ -237,6 +237,13 @@
       "offers": {
         "type": "offers",
         "blocks": {
+          "1593486651718": {
+            "type": "offer",
+            "settings": {
+              "icon_class": "fa-clinic-medical",
+              "title": "Remote coaching"
+            }
+          },
           "1589814768831": {
             "type": "offer",
             "settings": {
@@ -248,18 +255,19 @@
             "type": "offer",
             "settings": {
               "icon_class": "fa-box-alt",
-              "title": "30-day free returns"
+              "title": "30-day guarantee"
             }
           },
           "1589815013377": {
             "type": "offer",
             "settings": {
               "icon_class": "fa-calendar-check",
-              "title": "2-year limited warranty"
+              "title": "Contactless delivery"
             }
           }
         },
         "block_order": [
+          "1593486651718",
           "1589814768831",
           "1589814875516",
           "1589815013377"
@@ -282,7 +290,7 @@
           "title": "Less machine.<br>More you.",
           "product_label": "Aria Free",
           "product_title": "A simpler, friendlier approach to therapy.",
-          "product_description": "Introducing a compression pump that’s about the size and weight of a smartphone + a streamlined garment with a modern fit and design. Now therapy is easy, with just one hose to connect—and most importantly: disconnect. So answer the door, pick up the baby, head to the bathroom. No more building your life around therapy. Just automated compression massage at the touch of a button, and remote coaching to keep everything on track.",
+          "product_description": "Introducing a compression pump that’s about the size and weight of a smartphone + a streamlined garment with a modern fit and design. Now therapy is easy, with just one hose to connect—and most importantly: disconnect. So answer the door, pick up the baby, head to the bathroom. No more building your life around therapy. Just automated compression massage at the touch of a button, plus personal tracking and remote coaching to keep you moving forward.",
           "image": "shopify:\/\/shop_images\/Product.png"
         }
       },
@@ -332,7 +340,7 @@
         "type": "homepage-discover",
         "settings": {
           "title": "Portable and packable, for what’s possible.",
-          "text": "Wherever you go, Aria Free goes. With smart, flexible therapy, and an app to reach your goals, you’re in control.",
+          "text": "Wherever you go, Aria goes. With smart, flexible therapy, and an app to reach your goals, you’re in control.",
           "image": "shopify:\/\/shop_images\/aria-free-app.jpg"
         }
       },
@@ -367,28 +375,91 @@
             "type": "testimonial",
             "settings": {
               "title": "Ben Franklin",
-              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+              "quote": "<p>Really comfortable, the fabric feels nice.<\/p>"
             }
           },
           "1591271537248": {
             "type": "testimonial",
             "settings": {
               "title": "Ben Franklin",
-              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+              "quote": "<p>Being able to pause it and walk to the door is a plus.<\/p>"
             }
           },
           "1591271541390": {
             "type": "testimonial",
             "settings": {
               "title": "Ben Franklin",
-              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+              "quote": "<p>Aria Free feels similar to the compression stockings I have on.<\/p>"
             }
           },
           "1591271543583": {
             "type": "testimonial",
             "settings": {
               "title": "Ben Franklin",
-              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+              "quote": "<p>I love the small pump.<\/p>"
+            }
+          },
+          "1593488909729": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Easy. Very easy<\/p>"
+            }
+          },
+          "1593488924197": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>100% different, in a good way. Streamlined, easy to operate, comfortable.<\/p>"
+            }
+          },
+          "1593488933343": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>A hundred times more comfortable and less bulky.<\/p>"
+            }
+          },
+          "1593488941319": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>This system would be amazing to travel with.<\/p>"
+            }
+          },
+          "1593488979276": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Looking forward to using it and telling people about it.<\/p>"
+            }
+          },
+          "1593488991776": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Pleasantly surprised that it worked so well.<\/p>"
+            }
+          },
+          "1593488999551": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Love the portability.<\/p>"
+            }
+          },
+          "1593489008741": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Significant reduction in foot size (able to get shoe on easier post therapy).<\/p>"
+            }
+          },
+          "1593489016627": {
+            "type": "testimonial",
+            "settings": {
+              "title": "Ben Franklin",
+              "quote": "<p>Nothing bad to say about it. Easy to walk around with it on. Felt like after lymphatic massage. Leg felt lighter.<\/p>"
             }
           }
         },
@@ -396,14 +467,23 @@
           "1591271522933",
           "1591271537248",
           "1591271541390",
-          "1591271543583"
+          "1591271543583",
+          "1593488909729",
+          "1593488924197",
+          "1593488933343",
+          "1593488941319",
+          "1593488979276",
+          "1593488991776",
+          "1593488999551",
+          "1593489008741",
+          "1593489016627"
         ],
         "settings": {}
       },
       "meet-aria-footer": {
         "type": "meet-aria-footer",
         "settings": {
-          "title": "Great escapes.",
+          "title": "Aria goes where you go.",
           "text": "Aria is the perfect traveling companion. Get a portable pump for therapy on the go—without sacrificing performance.",
           "image": "shopify:\/\/shop_images\/aria-free-outdoor-therapy.jpg"
         }
@@ -413,7 +493,7 @@
         "settings": {
           "form_label": "Aria Free is for you",
           "form_title": "We’re building a community.",
-          "form_description": "Stay connected to all the Aria Health™ news. You’ll also receive updates, offers, and details about co-creation opportunities. We’re doing something different, together."
+          "form_description": "Stay connected to all the Aria Health™ news. You’ll get news, updates, offers, and details about co-creation opportunities. We’re doing something different, together."
         }
       },
       "our-story-hero": {
@@ -479,7 +559,7 @@
               "title": "Kimm Ehlen",
               "position": "<p>Community<\/p>",
               "image": "shopify:\/\/shop_images\/kimm-ehlen.jpg",
-              "bio": "<p>Kimm Ehlen is well known for her involvement in the lymphedema community. Following a cancer diagnosis, treatment, onset of secondary lymphedema, and the ensuing physical limitations, Kimm&rsquo;s life became unrecognizable. In a&nbsp;testament to her resilience, she set out to manage her lymphedema and reclaim the active lifestyle she loves. Today, she helps others do the same by sharing her experience and support. And she brings that same optimism and dedication to our team every day. Kimm has a passion for photography&mdash;many of her photographs of people in the lymphedema community appear on our website and social accounts. If you&rsquo;ve been in touch with us, you&rsquo;ve likely already met Kimm. And if have thoughts to share, reach out.<\/p>"
+              "bio": "<p>Kimm oversees community outreach and manages all of our events. Her input on product development is an invaluable asset to the Aria Health team, as she shares her personal experience living with lymphedema. It was after cancer treatment that Kimm experienced the onset of secondary lymphedema. The subsequent physical limitations made her life unrecognizable, but in a testament to her resilience, she managed her symptoms and reclaimed her active lifestyle. Today, she shares her experience in support of others as they do the same. Kimm brings optimism and dedication to our team, as well as her passion for photography&mdash;many of her photographs appear on our website and social accounts. If you have thoughts to share about Aria Free, reach out to Kimm.<\/p>"
             }
           },
           "1591278169742": {

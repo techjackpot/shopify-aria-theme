@@ -55,7 +55,7 @@
           justify-content: flex-start;
           margin-bottom: 68px;
           &:last-of-type {
-            margin-bottom: 0;
+            // margin-bottom: 0;
           }
         }
         &--Number {
@@ -102,6 +102,15 @@
           @include av-mq('tablet-and-up') {
             display: none;
           }
+        }
+      }
+      .Therapy--Content--Info--Actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+        @include av-mq('tablet-and-up') {
+          margin-top: 0;
+          justify-content: flex-start;
         }
       }
     }
