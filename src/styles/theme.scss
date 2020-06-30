@@ -13,6 +13,7 @@
 /* pages */
 
 @import "pages/thank-you";
+@import "pages/size-chart";
 
 
 /* sections */
@@ -44,6 +45,10 @@
 @import "sections/product-details";
 @import "sections/product-features";
 @import "sections/product-testimonials";
+@import "sections/product-tabs";
 
 @import "sections/cart-template";
 
+@import "sections/support-template";
+@import "sections/support-blog-template";
+@import "sections/support-footer";

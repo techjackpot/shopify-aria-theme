@@ -20,6 +20,7 @@
           </div>
         </div>
         <div class="product-content-col product-content-col-meta">
+          {%- if customer.tags contains 'QUALIFIED' -%}
           <div class="product-price">
             <div class="product-price-col">
               <div class="product-price-col-label">From</div>
@@ -33,6 +34,7 @@
               <div class="product-price-col-meta">with <span>partial.ly</span></div>
             </div>
           </div>
+          {%- endif -%}
           <div class="product-actions">
             <a href="#" class="Link Link--primary Button Button--fill Button--round">Buy now</a>
             <a href="#" class="Link Link--primary Button Button--outline Button--round">Shop</a> 

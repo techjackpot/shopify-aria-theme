@@ -1,0 +1,40 @@
+<div id="section-{{ section.id }}" class="Section Section-Blog-Posts" data-section-id="{{ section.id }}" data-section-type="article-list">
+  {%- if blog.articles_count == 0 -%}
+    <div class="EmptyState">
+      <div class="Container">
+        <h1 class="EmptyState__Title Heading u-h5">{{ 'blog.general.no_articles' | t: blog_title: blog.title }}</h1>
+        <a href="{{ routes.root_url }}" class="EmptyState__Action Button Button--primary">{{ 'blog.general.empty_button' | t }}</a>
+      </div>
+    </div>
+  {%- else -%}
+    <div class="Blog">
+      <div class="Container">
+        <header class="PageHeader">
+          <div class="SectionHeader SectionHeader--center">
+            <h1 class="SectionHeader__Heading Heading u-h1">
+              Support center / <a href="/blogs/{{ blog.handle }}">{{- blog.title -}}</a>
+            </h1>
+          </div>
+        </header>
+        <div class="ArticleContainer">
+          <div class="ArticleListWrapper">
+            <div class="ArticleList">
+              {%- assign articles = blog.articles | sort: 'published_at' -%}
+              {%- for article in articles -%}
+                <div class="ArticleItem">
+                  <a href="{{ article.url }}">{{ article.title }}</a>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Support - Blog page"
+}
+{% endschema %}

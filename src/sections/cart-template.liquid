@@ -25,7 +25,7 @@
     </div>
   {%- else -%}
     <div class="Container">
-      <header class="PageHeader" data-aos="fade-up">
+      <header class="PageHeader PageContent" data-aos="fade-up">
         <div class="SectionHeader SectionHeader--center">
           <h1 class="SectionHeader__Heading Heading u-h1">Your cart.</h1>
           <div class="">
@@ -44,6 +44,8 @@
               {%- endif -%}
             </p>
           {%- endif -%}
+
+          <a href="/products/aria-free" class="btn-continue-shopping">Continue shopping</a>
         </div>
       </header>
 
@@ -58,7 +60,7 @@
             {%- if settings.cart_enable_notes -%}
               <div class="Cart__NoteContainer">
                 <span class="Cart__NoteButton">{{ 'cart.general.add_note' | t }}</span>
-                <textarea class="Cart__Note Form__Textarea" name="note" id="cart-note" rows="4" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
+                <textarea class="Cart__Note Form__Textarea" name="note" id="cart-note" rows="3">{{ cart.note }}</textarea>
               </div>
             {%- endif -%}
 
@@ -71,14 +73,14 @@
                 {%- endfor -%}
               {%- endif -%}
 
-              <p class="Cart__Total Heading u-h6">{{ 'cart.general.total' | t }}: <span data-money-convertible>{{ cart.total_price | money_without_trailing_zeros }}</span></p>
+              <p class="Cart__Total Heading u-h6">Your total <span data-money-convertible>{{ cart.total_price | money_without_trailing_zeros }}</span></p>
 
               {%- if shipping_and_taxes_notice != blank -%}
-                <p class="Cart__Taxes Text--subdued">{{ shipping_and_taxes_notice }}</p>
+                <!-- <p class="Cart__Taxes Text--subdued">{{ shipping_and_taxes_notice }}</p> -->
               {%- endif -%}
 
               {%- if customer.tags contains 'QUALIFIED' -%}
-                <button type="submit" name="checkout" class="Cart__Checkout Button Button--primary Button--full">{{ 'cart.general.checkout' | t }}</button>
+                <button type="submit" name="checkout" class="Cart__Checkout Button Button--fill Button--round Button--text-normal">Check out</button>
               {%- endif -%}
 
             </div>

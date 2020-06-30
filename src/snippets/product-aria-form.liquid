@@ -305,13 +305,9 @@ for size, we use it to display a size chart (if applicable)
   {%- comment -%}If we have a size chart we capture the modal content (it must be displayed outside the form for proper positioning){%- endcomment -%}
 
   {%- capture product_modals -%}
-    <div id="modal-{{ size_chart_page.handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
-      <header class="Modal__Header">
-        <h2 class="Modal__Title Heading u-h1">{{ size_chart_page.title }}</h2>
-      </header>
-
+    <div id="modal-{{ size_chart_page.handle }}" class="Modal Modal--fullScreen" aria-hidden="true" role="dialog" data-scrollable>
       <div class="Modal__Content Rte">
-        <div class="Container Container--extraNarrow">
+        <div class="Container">
           {{- size_chart_page.content -}}
         </div>
       </div>

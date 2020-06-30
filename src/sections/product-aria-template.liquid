@@ -278,7 +278,7 @@
     <div class="Product__InfoWrapper">
       <div class="Product__Info {% if media_count == 0 %}Product__Info--noGallery{% endif %}">
         <div class="Container">
-          {%- render 'product-aria-meta', product: product, show_description: true -%}
+          {%- render 'product-aria-meta', product: product, show_description: true, reviews_enabled: section.settings.reviews_enabled -%}
 
           {%- if product.template_suffix != 'coming-soon' -%}
             {%- render 'product-aria-form', product: product -%}

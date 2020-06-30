@@ -269,3 +269,19 @@
     }
   }
 }
+
+#fsb_container {
+  #fsb_bar {
+    font-family: $text-font-family !important;
+    font-size: 15px !important;
+    line-height: 40px !important;
+    padding: 0 !important;
+    a {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+  #fsb_close {
+
+  }
+}

@@ -1,0 +1,116 @@
+.Section-Blog-Posts {
+  .Blog {
+    padding-bottom: 64px;
+    @include av-mq('tablet-and-up') {
+      padding-bottom: 80px;
+    }
+    @include av-mq('desk') {
+      padding-bottom: 96px;
+    }
+  }
+  .PageHeader {
+    .SectionHeader__Heading {
+      text-align: left;
+      font-size: 20px;
+      line-height: 24px;
+      color: #000000;
+      a {
+        font-weight: 700;
+      }
+      @include av-mq('tablet-and-up') {
+        font-size: 24px;
+      }
+    }
+    .ArticleHeader {
+      text-align: left;
+      font-family: $heading-font-family;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      color: $primary-color;
+      @include av-mq('tablet-and-up') {
+        font-size: 36px;
+        line-height: 44px;
+      }
+      @include av-mq('desk') {
+        font-size: 44px;
+        line-height: 52px;
+      }
+    }
+  }
+  .ArticleListWrapper {
+    .ArticleList {
+      .ArticleItem {
+        margin-bottom: 16px;
+        a {
+          font-size: 19px;
+          line-height: 27px;
+          color: #525364;
+          @include av-mq('tablet-and-up') {
+            font-size: 20px;
+            line-height: 28px;
+          }
+          @include av-mq('desk') {
+            font-size: 21px;
+            line-height: 29px;
+          }
+          &.active {
+            color: #000000;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .ArticleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    .ArticleListWrapper {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      @include av-mq('tablet-and-up') {
+        max-width: 33%;
+      }
+    }
+    .ArticleContent {
+      flex: 1;
+
+      color: #525364;
+      h1 {
+        margin-top: 0;
+        margin-bottom: 32px;
+        font-size: 32px;
+        line-height: 40px;
+        font-family: $heading-font-family;
+        font-weight: 700;
+        color: #000000;
+      }
+
+      h4 {
+        font-family: $text-font-family;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 26px;
+        margin: 0;
+        color: #000000;
+      }
+
+      hr {
+        margin: 48px 0;
+        border: 0;
+        border-top: solid 1px #7ECBB7;
+        @include av-mq('tablet-and-up') {
+          margin: 56px 0;
+        }
+        @include av-mq('desk') {
+          margin: 64px 0;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

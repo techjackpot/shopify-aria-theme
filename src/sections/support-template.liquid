@@ -1,0 +1,85 @@
+<section class="Section Section--spacingNormal Section-Support-Archive-Template" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="support-archive-template">
+  <div class="Container Container--narrow">
+    <div class="Section-Support-Archive-Template--Header" data-aos="fade-up">
+      <div class="section-title">
+        <span>{{ section.settings.title }}</span>
+      </div>
+      <img src="{{ 'icon-swoop.svg' | asset_url }}">
+    </div>
+    <div class="Section-Support-Archive-Template--Content">
+      <div class="Blog-List">
+        {%- assign block_delay = 0 -%}
+        {%- for block in section.blocks -%}
+          {%- capture block_delay -%}{{ block_delay | plus: 150 }}{%- endcapture -%}
+          <div id="block-{{ block.id }}" class="Blog-Item" {{ block.shopify_attributes }} data-aos="fade" data-aos-delay="{{ block_delay }}">
+            <div class="Blog-Item__Container">
+              <a href="{{ block.settings.url | default: '#' }}">
+              <div class="Blog-Item--Image">
+                {%- if block.settings.image != blank -%}
+                  <img src="{{ block.settings.image | img_url: 'master' }}">
+                {%- endif -%}
+              </div>
+              <div class="Blog-Item--Meta">
+                <div class="Blog-Item--Name">
+                  <span>{{ block.settings.title }}</span>
+                </div>
+                <div class="Blog-Item--Description">
+                  <span>{{ block.settings.description }}</span>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Support Archive - Blogs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "blog",
+      "name": "Blog",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Url"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Support Archive",
+      "name": "Blogs",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

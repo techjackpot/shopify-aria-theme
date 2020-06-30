@@ -93,7 +93,7 @@
     </div>
   {%- endif -%}
 
-  {%- if section.settings.reviews_enabled -%}
+  {%- if reviews_enabled -%}
     <div class="Collapsible Collapsible--large">
       {%- comment -%}We parse from metafields the number of reviews. First we try to use the old way, and then the updated way{%- endcomment -%}
       {%- if product.metafields.spr.reviews contains 'itemprop="reviewCount"' -%}

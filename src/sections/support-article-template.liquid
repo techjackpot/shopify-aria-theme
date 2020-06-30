@@ -1,0 +1,35 @@
+<div id="section-{{ section.id }}" class="Section Section-Blog-Posts" data-section-id="{{ section.id }}" data-section-type="article-list">
+  <div class="Blog">
+    <div class="Container">
+      <header class="PageHeader">
+        <div class="SectionHeader SectionHeader--center">
+          <h1 class="SectionHeader__Heading Heading u-h1">
+            Support center / <a href="/blogs/{{ blog.handle }}">{{- blog.title -}}</a>
+          </h1>
+          <p class="ArticleHeader">{{ article.title }}</p>
+        </div>
+      </header>
+      <div class="ArticleContainer">
+        <div class="ArticleListWrapper">
+          <div class="ArticleList">
+            {%- assign articles = blog.articles | sort: 'published_at' -%}
+            {%- for item in articles -%}
+              <div class="ArticleItem">
+                <a href="{{ item.url }}" class="{%- if item.handle == article.handle -%}active{%- endif -%}">{{ item.title }}</a>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+        <div class="ArticleContent Rte">
+          {{ article.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Support - Article page"
+}
+{% endschema %}

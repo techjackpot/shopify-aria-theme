@@ -3,7 +3,7 @@
     "heading_color": "#1c1b1b",
     "text_color": "#1c1b1b",
     "text_light_color": "#6a6a6a",
-    "link_color": "#6a6a6a",
+    "link_color": "#43ad92",
     "background": "#efefef",
     "light_background": "#ffffff",
     "product_on_sale_color": "#f94c43",
@@ -42,7 +42,7 @@
     "product_list_horizontal_spacing": "medium",
     "product_list_vertical_spacing": "small",
     "cart_type": "page",
-    "cart_enable_notes": false,
+    "cart_enable_notes": true,
     "cart_show_free_shipping_threshold": false,
     "cart_free_shipping_threshold": "50",
     "share_image": "",
@@ -599,7 +599,7 @@
           "enable_video_looping": false,
           "tab_page_1_handle": "",
           "tab_page_2_handle": "",
-          "reviews_enabled": true,
+          "reviews_enabled": false,
           "featured_image_size": "large"
         }
       },
@@ -607,7 +607,7 @@
         "type": "product-details",
         "settings": {
           "title": "Product details",
-          "reviews_enabled": true
+          "reviews_enabled": false
         }
       },
       "product-testimonials": {
@@ -703,6 +703,75 @@
           "1592902935711",
           "1592902941033"
         ],
+        "settings": {}
+      },
+      "support-template": {
+        "type": "support-template",
+        "blocks": {
+          "1593442095948": {
+            "type": "blog",
+            "settings": {
+              "title": "How it works",
+              "description": "<p>New to Aria Free? Here&rsquo;s all you<br> need to know.<\/p>",
+              "url": "shopify:\/\/blogs\/how-it-works",
+              "image": "shopify:\/\/shop_images\/blog-how-it-works.png"
+            }
+          },
+          "1593442406170": {
+            "type": "blog",
+            "settings": {
+              "title": "Current customers",
+              "description": "<p>Find videos, manuals, customer<br> service, FAQ, tips, and more.<\/p>",
+              "url": "shopify:\/\/blogs\/current-customers",
+              "image": "shopify:\/\/shop_images\/blog-current-customers.png"
+            }
+          },
+          "1593442428535": {
+            "type": "blog",
+            "settings": {
+              "title": "Clinicians",
+              "description": "<p>Aria Free information for<br> healthcare providers.<\/p>",
+              "url": "shopify:\/\/blogs\/clinicians",
+              "image": "shopify:\/\/shop_images\/blog-clinicians.png"
+            }
+          }
+        },
+        "block_order": [
+          "1593442095948",
+          "1593442406170",
+          "1593442428535"
+        ],
+        "settings": {
+          "title": "Support starts here."
+        }
+      },
+      "support-footer": {
+        "type": "support-footer",
+        "settings": {}
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "show_rss": false,
+          "show_tags": false,
+          "show_featured_article": true,
+          "show_category": false
+        }
+      },
+      "shop-now": {
+        "type": "shop-now",
+        "settings": {
+          "show_section": false,
+          "title": "Shop now",
+          "collection": "",
+          "grid_items_count": 6,
+          "show_product_info": true,
+          "show_vendor": false,
+          "show_color_swatch": false
+        }
+      },
+      "support-article-template": {
+        "type": "support-article-template",
         "settings": {}
       }
     },

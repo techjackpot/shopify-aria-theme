@@ -1,0 +1,68 @@
+.Product__Tabs {
+  .Collapsible__Inner {
+    .Collapsible__Content {
+      color: #525364;
+      a {
+        color: $primary-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.product-tab-eligible-states {
+  th, td {
+    border: 0 none !important;
+    font-family: $text-font-family !important;
+    padding: 0 32px !important;
+    line-height: 32px !important;
+    position: relative !important;
+    max-width: unset !important;
+  }
+  thead {
+    background: #7ECBB7;
+    color: #fff;
+    font-size: 16px;
+    th {
+      text-transform: none !important;
+      font-weight: 700 !important;
+      letter-spacing: 0 !important;
+    }
+  }
+  tbody {
+    font-size: 14px;
+    line-height: 29px;
+    td {
+      color: #525364;
+      border: solid 1px #7ECBB7 !important;
+      border-right: 0 !important;
+      border-top: 0 !important;
+      &:first-of-type {
+        border-left: 0 !important;
+      }
+      svg {
+        color: #43AD92;
+      }
+    }
+  }
+}
+
+.product-tab-specifications {
+  th, td {
+    border: 0 none !important;
+    font-family: $text-font-family !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    background: transparent !important;
+    color: #525364 !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+    font-size: 18px !important;
+    letter-spacing: 0 !important;
+  }
+  th {
+    font-weight: 700 !important;
+    position: relative !important;
+    max-width: unset !important;
+  }
+}

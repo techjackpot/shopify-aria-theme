@@ -1,7 +1,7 @@
 .Section-Homepage-Hero {
   background: transparent linear-gradient(303deg, $primary-color 0%, #7ECBB7 100%) 0% 0% no-repeat padding-box;
   @include av-mq('desk') {
-    height: calc(100vh - 76px);
+    height: calc(100vh - 124px);
   }
 
   .Container {
