@@ -129,8 +129,8 @@
             "type": "logo",
             "settings": {
               "content": "<p>&copy; 2020 by <strong>Aria Health<\/strong>&trade; a ResMed Company.<\/p>",
-              "privacy_policy_url": "#",
-              "terms_of_use_url": "#"
+              "privacy_policy_url": "shopify:\/\/policies\/privacy-policy",
+              "terms_of_use_url": "shopify:\/\/policies\/terms-of-service"
             }
           }
         },
@@ -341,7 +341,7 @@
         "settings": {
           "title": "Portable and packable, for what’s possible.",
           "text": "Wherever you go, Aria goes. With smart, flexible therapy, and an app to reach your goals, you’re in control.",
-          "image": "shopify:\/\/shop_images\/aria-free-app.jpg"
+          "image": "shopify:\/\/shop_images\/home-discover_c1c73ff1-16c3-4f38-8379-4e3095c7a217.png"
         }
       },
       "1589903027759": {
@@ -853,6 +853,14 @@
       "support-article-template": {
         "type": "support-article-template",
         "settings": {}
+      },
+      "homepage-form": {
+        "type": "homepage-form",
+        "settings": {
+          "form_label": "Aria Free is for you",
+          "form_title": "We’re building a community.",
+          "form_description": "Stay connected to all the Aria Health™ news. You’ll also receive updates, offers, and details about co-creation opportunities. We’re doing something different, together."
+        }
       }
     },
     "content_for_index": [

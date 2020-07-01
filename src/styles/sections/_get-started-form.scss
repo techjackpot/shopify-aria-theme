@@ -1,12 +1,9 @@
 .Section-Get-Started-Form {
-  background: transparent linear-gradient(300deg, #F0EFF1 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
   margin: 0;
-  padding: 64px 0;
+  padding: 0;
   @include av-mq('tablet') {
-    padding: 80px 0;
   }
   @include av-mq('desk') {
-    padding: 96px 0;
   }
 
   .Container {
@@ -81,6 +78,12 @@
             margin-right: 16px;
           }
         }
+      }
+    }
+
+    .wFormContainer {
+      .wFormHeader, .wFormFooter, .supportInfo {
+        display: none;
       }
     }
 

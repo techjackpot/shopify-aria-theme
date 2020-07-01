@@ -57,6 +57,7 @@
           &.active {
             color: #000000;
             text-decoration: underline;
+            font-weight: 700;
           }
         }
       }
@@ -110,6 +111,10 @@
 
       a {
         text-decoration: none;
+      }
+
+      .Button {
+        letter-spacing: 0;
       }
     }
   }

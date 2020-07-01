@@ -1,7 +1,13 @@
+@charset "UTF-8";
+.Button {
+  letter-spacing: 0;
+  transition: all 0.25s ease; }
+
 .Button--fill {
   background: #43AD92;
   color: #ffffff; }
   .Button--fill:hover {
+    background: #7ECBB7;
     color: #ffffff; }
   .Button--fill.Button--second {
     background: #ffffff;
@@ -14,6 +20,7 @@
   border: solid 2px #43AD92;
   color: #43AD92; }
   .Button--outline:hover {
+    background: #7ECBB7;
     color: #43AD92; }
   .Button--outline.Button--second {
     border: solid 2px #ffffff;
@@ -33,6 +40,12 @@
 
 .Header__CartDot {
   background-color: #43AD92; }
+
+.Shadow--Right {
+  box-shadow: 10px 10px 0px 0px #5253641A; }
+
+.Shadow--Left {
+  box-shadow: -10px 10px 0px 0px #5253641A; }
 
 body {
   background: #ffffff; }
@@ -229,6 +242,26 @@ body {
     font-weight: 700;
     text-decoration: underline; }
 
+#fsb_container #fsb_close {
+  top: 0 !important;
+  right: 0 !important;
+  transform: none !important;
+  width: 20px;
+  height: 20px;
+  color: transparent !important; }
+  #fsb_container #fsb_close:after {
+    content: '×';
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #7ECBB7; }
+
 .Footer {
   background: #525364;
   color: #9AB5C6;
@@ -348,6 +381,9 @@ body {
       font-size: 16px;
       line-height: 32px;
       color: #525364; }
+  @media screen and (min-width: 641px) {
+    .wFormContainer .wForm form .section.inline.group .oneField {
+      max-width: 49%; } }
 
 .wFormContainer .wForm .htmlSection {
   color: #525364; }
@@ -483,7 +519,8 @@ body {
   background: transparent linear-gradient(303deg, #43AD92 0%, #7ECBB7 100%) 0% 0% no-repeat padding-box; }
   @media screen and (min-width: 1240px) {
     .Section-Homepage-Hero {
-      height: calc(100vh - 124px); } }
+      height: calc(100vh - 124px);
+      min-height: 800px; } }
   .Section-Homepage-Hero .Container {
     position: relative; }
     @media screen and (min-width: 1240px) {
@@ -549,8 +586,7 @@ body {
         padding-bottom: 64px; } }
     @media screen and (min-width: 641px) {
       .Section-Homepage-Hero--Content .hero-content {
-        margin-top: -28px;
-        padding-bottom: 158px; } }
+        margin-top: -28px; } }
     @media screen and (min-width: 1240px) {
       .Section-Homepage-Hero--Content .hero-content {
         margin-top: 0;
@@ -600,20 +636,21 @@ body {
         @media screen and (max-width: 640px) {
           .Section-Homepage-Hero--Content .hero-content .hero-actions .Button:last-of-type {
             margin-bottom: 0; } }
-  .Section-Homepage-Hero--Content .has-content-more {
-    position: absolute;
-    bottom: 32px;
-    left: 32px; }
-    @media screen and (max-width: 640px) {
-      .Section-Homepage-Hero--Content .has-content-more {
-        display: none; } }
-    @media screen and (min-width: 1240px) {
-      .Section-Homepage-Hero--Content .has-content-more {
-        left: 68px;
-        bottom: 40px; } }
-    .Section-Homepage-Hero--Content .has-content-more svg {
-      font-size: 48px;
-      color: #fff; }
+  @media screen and (max-width: 640px) {
+    .Section-Homepage-Hero--Content .has-content-more {
+      display: none; } }
+  @media screen and (min-width: 641px) and (max-width: 1239px) {
+    .Section-Homepage-Hero--Content .has-content-more {
+      margin-top: 40px;
+      padding-bottom: 32px; } }
+  @media screen and (min-width: 1240px) {
+    .Section-Homepage-Hero--Content .has-content-more {
+      position: absolute;
+      left: 68px;
+      bottom: 40px; } }
+  .Section-Homepage-Hero--Content .has-content-more svg {
+    font-size: 48px;
+    color: #fff; }
 
 .Section-Homepage-Product {
   background: #ffffff;
@@ -1125,6 +1162,10 @@ body {
         .Section-Homepage-Form--Content .form-content .form-contacts p svg {
           color: #43AD92;
           margin-right: 16px; }
+    .Section-Homepage-Form--Content .wFormContainer {
+      margin: 0; }
+      .Section-Homepage-Form--Content .wFormContainer .wFormHeader, .Section-Homepage-Form--Content .wFormContainer .wFormFooter, .Section-Homepage-Form--Content .wFormContainer .supportInfo {
+        display: none; }
 
 .Section-Meet-Aria-Header {
   background: transparent linear-gradient(118deg, #E5F5F1 0%, #CEE9E2 100%) 0% 0% no-repeat padding-box;
@@ -1885,7 +1926,8 @@ body {
   background: transparent linear-gradient(303deg, #43AD92 0%, #7ECBB7 100%) 0% 0% no-repeat padding-box; }
   @media screen and (min-width: 1240px) {
     .Section-Our-Story-Hero {
-      height: calc(100vh - 76px); } }
+      height: calc(100vh - 124px);
+      min-height: 800px; } }
   .Section-Our-Story-Hero .Container {
     position: relative; }
     @media screen and (min-width: 1240px) {
@@ -1951,8 +1993,7 @@ body {
         padding-bottom: 64px; } }
     @media screen and (min-width: 641px) {
       .Section-Our-Story-Hero--Content .hero-content {
-        margin-top: -28px;
-        padding-bottom: 158px; } }
+        margin-top: -28px; } }
     @media screen and (min-width: 1240px) {
       .Section-Our-Story-Hero--Content .hero-content {
         margin-top: 0;
@@ -2012,20 +2053,21 @@ body {
         @media screen and (max-width: 640px) {
           .Section-Our-Story-Hero--Content .hero-content .hero-actions .Button:last-of-type {
             margin-bottom: 0; } }
-  .Section-Our-Story-Hero--Content .has-content-more {
-    position: absolute;
-    bottom: 32px;
-    left: 32px; }
-    @media screen and (max-width: 640px) {
-      .Section-Our-Story-Hero--Content .has-content-more {
-        display: none; } }
-    @media screen and (min-width: 1240px) {
-      .Section-Our-Story-Hero--Content .has-content-more {
-        left: 68px;
-        bottom: 40px; } }
-    .Section-Our-Story-Hero--Content .has-content-more svg {
-      font-size: 48px;
-      color: #fff; }
+  @media screen and (max-width: 640px) {
+    .Section-Our-Story-Hero--Content .has-content-more {
+      display: none; } }
+  @media screen and (min-width: 641px) and (max-width: 1239px) {
+    .Section-Our-Story-Hero--Content .has-content-more {
+      margin-top: 40px;
+      padding-bottom: 32px; } }
+  @media screen and (min-width: 1240px) {
+    .Section-Our-Story-Hero--Content .has-content-more {
+      position: absolute;
+      left: 68px;
+      bottom: 40px; } }
+  .Section-Our-Story-Hero--Content .has-content-more svg {
+    font-size: 48px;
+    color: #fff; }
 
 .Section-Our-Story-Header {
   background: transparent linear-gradient(125deg, #E5F5F1 0%, #CEE9E2 100%) 0% 0% no-repeat padding-box;
@@ -2464,15 +2506,8 @@ body {
           margin-right: 0; }
 
 .Section-Get-Started-Form {
-  background: transparent linear-gradient(300deg, #F0EFF1 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
   margin: 0;
-  padding: 64px 0; }
-  @media screen and (min-width: 641px) and (max-width: 1239px) {
-    .Section-Get-Started-Form {
-      padding: 80px 0; } }
-  @media screen and (min-width: 1240px) {
-    .Section-Get-Started-Form {
-      padding: 96px 0; } }
+  padding: 0; }
   .Section-Get-Started-Form--Content {
     display: flex;
     align-items: flex-start;
@@ -2533,6 +2568,8 @@ body {
         .Section-Get-Started-Form--Content .form-content .form-contacts p svg {
           color: #43AD92;
           margin-right: 16px; }
+    .Section-Get-Started-Form--Content .wFormContainer .wFormHeader, .Section-Get-Started-Form--Content .wFormContainer .wFormFooter, .Section-Get-Started-Form--Content .wFormContainer .supportInfo {
+      display: none; }
 
 .Product--Aria {
   margin-bottom: 0 !important; }
@@ -2960,35 +2997,37 @@ body {
     color: #43AD92;
     text-decoration: none; }
 
-.product-tab-eligible-states th, .product-tab-eligible-states td {
-  border: 0 none !important;
-  font-family: Arial, sans-serif !important;
-  padding: 0 32px !important;
-  line-height: 32px !important;
-  position: relative !important;
-  max-width: unset !important; }
-
-.product-tab-eligible-states thead {
-  background: #7ECBB7;
-  color: #fff;
-  font-size: 16px; }
-  .product-tab-eligible-states thead th {
-    text-transform: none !important;
-    font-weight: 700 !important;
-    letter-spacing: 0 !important; }
-
-.product-tab-eligible-states tbody {
-  font-size: 14px;
-  line-height: 29px; }
-  .product-tab-eligible-states tbody td {
-    color: #525364;
-    border: solid 1px #7ECBB7 !important;
-    border-right: 0 !important;
-    border-top: 0 !important; }
-    .product-tab-eligible-states tbody td:first-of-type {
-      border-left: 0 !important; }
-    .product-tab-eligible-states tbody td svg {
-      color: #43AD92; }
+.product-tab-eligible-states {
+  width: auto !important; }
+  .product-tab-eligible-states th, .product-tab-eligible-states td {
+    border: 0 none !important;
+    font-family: Arial, sans-serif !important;
+    padding: 0 32px !important;
+    line-height: 32px !important;
+    position: relative !important;
+    max-width: unset !important; }
+  .product-tab-eligible-states thead {
+    background: #7ECBB7;
+    color: #fff;
+    font-size: 16px; }
+    .product-tab-eligible-states thead th {
+      text-transform: none !important;
+      font-weight: 700 !important;
+      letter-spacing: 0 !important; }
+  .product-tab-eligible-states tbody {
+    font-size: 14px;
+    line-height: 29px; }
+    .product-tab-eligible-states tbody td {
+      color: #525364;
+      border: solid 1px #7ECBB7 !important;
+      border-right: 0 !important;
+      border-top: 0 !important; }
+      .product-tab-eligible-states tbody td:first-of-type {
+        border-left: 0 !important; }
+      .product-tab-eligible-states tbody td svg {
+        color: #43AD92; }
+      .product-tab-eligible-states tbody td:last-of-type {
+        text-align: center; }
 
 .product-tab-specifications th, .product-tab-specifications td {
   border: 0 none !important;
@@ -3025,7 +3064,6 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 9999;
   color: #43AD92;
   font-size: 14px; }
   @media screen and (max-width: 640px) {
@@ -3242,7 +3280,8 @@ body {
         line-height: 29px; } }
     .Section-Blog-Posts .ArticleListWrapper .ArticleList .ArticleItem a.active {
       color: #000000;
-      text-decoration: underline; }
+      text-decoration: underline;
+      font-weight: 700; }
 
 .Section-Blog-Posts .ArticleContainer {
   display: flex;
@@ -3284,6 +3323,8 @@ body {
           margin: 64px 0; } }
     .Section-Blog-Posts .ArticleContainer .ArticleContent a {
       text-decoration: none; }
+    .Section-Blog-Posts .ArticleContainer .ArticleContent .Button {
+      letter-spacing: 0; }
 
 .Section-Support-Footer {
   background: transparent linear-gradient(108deg, #E5F5F1 0%, #CEE9E2 100%) 0% 0% no-repeat padding-box;

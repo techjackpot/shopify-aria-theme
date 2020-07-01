@@ -4,7 +4,7 @@
   {%- assign add_top_margin = false -%}
 {%- endif -%}
 
-{%- if template == 'page.collections' or template == 'page.meet-aria' or template == 'page.our-story' or template == 'page.get-started' or template == 'page.support-archive' or template == 'blog' or template == 'article' -%}
+{%- if template == 'page.collections' or template == 'page.meet-aria' or template == 'page.our-story' or template == 'page.get-started' or template == 'page.support-archive' or template == 'blog' or template == 'article' or template == 'page.subscribe' -%}
   {%- assign add_top_margin = false -%}
 {%- endif -%}
 
@@ -27,7 +27,7 @@
                 {%- endif -%}
 
                 {%- if block.settings.show_social_media -%}
-                  {% render 'social-media', class: 'Footer__Social', spacing: 'loose', subscribe_url: '#' %}
+                  {% render 'social-media', class: 'Footer__Social', spacing: 'loose', subscribe_url: '/pages/subscribe' %}
                 {%- endif -%}
 
               {%- when 'logo' -%}
@@ -42,8 +42,8 @@
                 {%- endif -%}
 
                 <div class="policy-links">
-                  <a href="{{ section.setings.privacy_policy_url }}">Privacy Policy</a>
-                  <a href="{{ section.settings.terms_of_use_url }}">Terms of Use</a>
+                  <a href="{{ block.settings.privacy_policy_url }}">Privacy Policy</a>
+                  <a href="{{ block.settings.terms_of_use_url }}">Terms of Use</a>
                 </div>
 
               {%- when 'links' -%}

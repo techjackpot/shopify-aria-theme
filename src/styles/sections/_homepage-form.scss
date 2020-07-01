@@ -87,6 +87,13 @@
       }
     }
 
+    .wFormContainer {
+      margin: 0;
+      .wFormHeader, .wFormFooter, .supportInfo {
+        display: none;
+      }
+    }
+
   }
 
 }

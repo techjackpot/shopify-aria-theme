@@ -11,6 +11,7 @@
 }
 
 .product-tab-eligible-states {
+  width: auto !important;
   th, td {
     border: 0 none !important;
     font-family: $text-font-family !important;
@@ -42,6 +43,9 @@
       }
       svg {
         color: #43AD92;
+      }
+      &:last-of-type {
+        text-align: center;
       }
     }
   }

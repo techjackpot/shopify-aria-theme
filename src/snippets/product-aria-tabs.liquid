@@ -54,6 +54,19 @@
       <div class="Collapsible__Inner">
         <div class="Collapsible__Content">
           <div class="Rte">
+
+            {%- capture payment_methods -%}
+              {%- for type in shop.enabled_payment_types -%}
+                <li class="HorizontalList__Item">{{ type | payment_type_svg_tag }}</li>
+              {%- endfor -%}
+            {%- endcapture -%}
+
+            {%- if payment_methods != blank -%}
+              <ul class="Footer__PaymentList HorizontalList">
+                {{ payment_methods }}
+              </ul>
+            {%- endif -%}
+
             {{- product.metafields.tabs.payment_options -}}
           </div>
         </div>

@@ -2,6 +2,7 @@
   background: transparent linear-gradient(303deg, $primary-color 0%, #7ECBB7 100%) 0% 0% no-repeat padding-box;
   @include av-mq('desk') {
     height: calc(100vh - 124px);
+    min-height: 800px;
   }
 
   .Container {
@@ -77,7 +78,7 @@
       }
       @include av-mq('tablet-and-up') {
         margin-top: -28px;
-        padding-bottom: 158px;
+        // padding-bottom: 158px;
       }
       @include av-mq('desk') {
         margin-top: 0;
@@ -139,13 +140,15 @@
     }
 
     .has-content-more {
-      position: absolute;
-      bottom: 32px;
-      left: 32px;
       @include av-mq('phone') {
         display: none;
       }
+      @include av-mq('tablet') {
+        margin-top: 40px;
+        padding-bottom: 32px;
+      }
       @include av-mq('desk') {
+        position: absolute;
         left: 68px;
         bottom: 40px;
       }

@@ -25,7 +25,7 @@
 
     {{ content_for_header }}
 
-    {%- if template.name == 'index' or template.suffix == 'meet-aria' -%}
+    {%- if template.name == 'index' or template.suffix == 'meet-aria' or template.suffix == 'subscribe' -%}
       {% render 'web-form-newsletter-head' %}
     {%- endif -%}
     {%- if template.suffix == 'get-started' -%}

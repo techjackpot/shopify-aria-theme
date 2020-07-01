@@ -1,9 +1,12 @@
 .Button {
+  letter-spacing: 0;
+  transition: all 0.25s ease;
 }
 .Button--fill {
   background: $primary-color;
   color: #ffffff;
   &:hover {
+    background: #7ECBB7;
     color: #ffffff;
   }
   &.Button--second {
@@ -19,6 +22,7 @@
   border: solid 2px $primary-color;
   color: $primary-color;
   &:hover {
+    background: #7ECBB7;
     color: $primary-color;
   }
   &.Button--second {
@@ -43,4 +47,11 @@
 
 .Header__CartDot {
   background-color: $primary-color;
+}
+
+.Shadow--Right {
+  box-shadow: 10px 10px 0px 0px #5253641A;
+}
+.Shadow--Left {
+  box-shadow: -10px 10px 0px 0px #5253641A;
 }
