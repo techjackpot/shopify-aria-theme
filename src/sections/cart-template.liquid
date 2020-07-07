@@ -80,37 +80,81 @@
               {%- endif -%}
 
               {%- if customer.tags contains 'QUALIFIED' -%}
-                <button type="submit" name="checkout" class="Cart__Checkout Button Button--fill Button--round Button--text-normal">Check out</button>
+
+                {% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' %}
+                  <div class="pay_via_selector-container">
+                    <span>Pay via</span>
+                    <label><input type="radio" name="pay_via" class="pay_via_selector" onclick="choosePayment('shopify')" {% unless customer.tags contains 'PAY-PARTIALLY' %}checked{% endunless %}> Shopify</label>
+                    <label><input type="radio" name="pay_via" class="pay_via_selector" onclick="choosePayment('partially')" {% if customer.tags contains 'PAY-PARTIALLY' %}checked{% endif %}> Partial.ly</label>
+                  </div>
+                {% endif %}
+
+                {% unless customer.tags contains 'PAY-PARTIALLY' %}
+                <div class="pay_via_shopify">
+                  <button type="submit" name="checkout" class="Cart__Checkout Button Button--fill Button--round Button--text-normal">Check out</button>
+                </div>
+                {% endunless %}
+
               {%- endif -%}
 
             </div>
           </footer>
         </form>
 
-{% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' %}
-  <div id="partiallyCartButtonContainer" style="text-align: right;"></div>
-  <script>
-  document.partiallyButtonConfig = {
-       offer: '38bf5cf6-5bb4-4fa7-ac91-cac0319ad020',
-       returnUrl: '{{shop.url}}/cart',
-       returnConfirmedUrl: '{{shop.url}}/cart/clear',
-       cssButton: true,
-       cssButtonText: 'Purchase with',
-       cssButtonShowLogo: true,
-       cssButtonLogoType: 'full',
-       cssButtonLogoPlacement: 'after',
-       
-       renderSelector: '#partiallyCartButtonContainer',
-      shopifyCart: {{cart | json}}
-     };
-     (function() {
-       var script = document.createElement('script');
-       script.type = 'text/javascript';
-       script.src = 'https://partial.ly/js/partially-checkout-button.js';
-       script.async = true;
-       document.head.appendChild(script);
-     })();
-  </script>
+{% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' and customer.tags contains 'PAY-PARTIALLY' %}
+<div class="partiallyButtonsContainer pay_via_partially">
+  <div id="partiallyCartButtonContainer1"></div>
+  <div id="partiallyCartButtonContainer2"></div>
+  <div id="partiallyCartButtonContainer3"></div>
+</div>
+<script type="text/javascript">
+  var btn1 = new PartiallyButton({
+    offer: 'd82327d5-d30d-4e7d-901b-a3777189b90a',
+    returnUrl: '{{shop.url}}/cart',
+    returnConfirmedUrl: '{{shop.url}}/cart/clear',
+    cssButton: true,
+    cssButtonText: 'Cash 100% payment',
+    cssButtonShowLogo: true,
+    cssButtonLogoType: 'glyph',
+    cssButtonLogoPlacement: 'before',
+
+    renderSelector: '#partiallyCartButtonContainer1',
+    shopifyCart: {{cart | json}}
+  });
+  btn1.init();
+</script>
+<script type="text/javascript">
+  var btn2 = new PartiallyButton({
+    offer: 'c8f8bddd-972d-4808-8171-5ad1a33e900c',
+    returnUrl: '{{shop.url}}/cart',
+    returnConfirmedUrl: '{{shop.url}}/cart/clear',
+    cssButton: true,
+    cssButtonText: 'Test--12 month payment plan',
+    cssButtonShowLogo: true,
+    cssButtonLogoType: 'glyph',
+    cssButtonLogoPlacement: 'before',
+
+    renderSelector: '#partiallyCartButtonContainer2',
+    shopifyCart: {{cart | json}}
+  });
+  btn2.init();
+</script>
+<script type="text/javascript">
+  var btn3 = new PartiallyButton({
+    offer: 'd08bd524-d0d3-4c1a-b99d-a262efd0e2e6',
+    returnUrl: '{{shop.url}}/cart',
+    returnConfirmedUrl: '{{shop.url}}/cart/clear',
+    cssButton: true,
+    cssButtonText: 'test 18 month plan',
+    cssButtonShowLogo: true,
+    cssButtonLogoType: 'glyph',
+    cssButtonLogoPlacement: 'before',
+
+    renderSelector: '#partiallyCartButtonContainer3',
+    shopifyCart: {{cart | json}}
+  });
+  btn3.init();
+</script>
 {% endif %}
 
         {%- if section.settings.show_shipping_estimator -%}

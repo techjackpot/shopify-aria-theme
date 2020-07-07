@@ -1,0 +1,9 @@
+.partiallyButtonsContainer {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: flex-end;
+}
+a.partiallyButton {
+  padding-right: 1rem !important;
+  margin-left: 1rem !important;
+}

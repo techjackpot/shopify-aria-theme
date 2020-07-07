@@ -22,3 +22,33 @@
  *   bubbles: true
  * }));
  */
+
+
+function choosePayment (payment_method) {
+  if (customer.tags.includes('PAY-' + payment_method.toUpperCase())) return;
+  document.querySelectorAll('.pay_via_selector').forEach(el => {
+    el.disabled = true;
+  });
+  document.querySelectorAll('.pay_via_shopify, .pay_via_partially').forEach(el => {
+    el.remove();
+  });
+  (async () => {
+    try {
+      const rawResponse = await fetch(theme.ARIA_API_URL + '/shopify/change_payment_method', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          customer_id: customer.available && customer.id || '',
+          payment_method,
+        }),
+      });
+      const response = await rawResponse.json();
+      location.href = '';
+    } catch(error) {
+      console.log(error);
+    };
+  })();
+};
