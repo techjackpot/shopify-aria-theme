@@ -300,28 +300,28 @@
           "1589895067181": {
             "type": "testimonial",
             "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+              "title": "",
+              "quote": "<p>Really comfortable. Fabric feels nice.<\/p>"
             }
           },
           "1589895113039": {
             "type": "testimonial",
             "settings": {
-              "title": "Jane Adams",
+              "title": "",
               "quote": "<p>Being able to pause it and walk to the door is a plus.<\/p>"
             }
           },
           "1589895137212": {
             "type": "testimonial",
             "settings": {
-              "title": "John Hancock",
-              "quote": "<p>A hundred times more comfortable and less bulky.<\/p>"
+              "title": "",
+              "quote": "<p>Feels similar to the compression stockings I have on.<\/p>"
             }
           },
           "1589895148676": {
             "type": "testimonial",
             "settings": {
-              "title": "Tester",
+              "title": "",
               "quote": "<p>A hundred times more comfortable and less bulky.<\/p>"
             }
           }
@@ -340,7 +340,7 @@
         "type": "homepage-discover",
         "settings": {
           "title": "Portable and packable, for what’s possible.",
-          "text": "Wherever you go, Aria goes. With smart, flexible therapy, and an app to reach your goals, you’re in control.",
+          "text": "Wherever you go, Aria Free goes. With smart, flexible therapy, and an app to reach your goals, you’re in control.",
           "image": "shopify:\/\/shop_images\/home-discover_c1c73ff1-16c3-4f38-8379-4e3095c7a217.png"
         }
       },
@@ -374,92 +374,29 @@
           "1591271522933": {
             "type": "testimonial",
             "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Really comfortable, the fabric feels nice.<\/p>"
+              "title": "",
+              "quote": "<p><em>I love the small pump.&nbsp;<\/em><em>Easy. Very easy.<\/em><\/p>"
             }
           },
           "1591271537248": {
             "type": "testimonial",
             "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Being able to pause it and walk to the door is a plus.<\/p>"
+              "title": "",
+              "quote": "<p>Really comfortable. Fabric feels nice.<\/p>"
             }
           },
           "1591271541390": {
             "type": "testimonial",
             "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Aria Free feels similar to the compression stockings I have on.<\/p>"
+              "title": "",
+              "quote": "<p>Pleasantly surprised that it worked so well.<\/p>"
             }
           },
           "1591271543583": {
             "type": "testimonial",
             "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>I love the small pump.<\/p>"
-            }
-          },
-          "1593488909729": {
-            "type": "testimonial",
-            "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Easy. Very easy<\/p>"
-            }
-          },
-          "1593488924197": {
-            "type": "testimonial",
-            "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>100% different, in a good way. Streamlined, easy to operate, comfortable.<\/p>"
-            }
-          },
-          "1593488933343": {
-            "type": "testimonial",
-            "settings": {
-              "title": "Ben Franklin",
+              "title": "",
               "quote": "<p>A hundred times more comfortable and less bulky.<\/p>"
-            }
-          },
-          "1593488941319": {
-            "type": "testimonial",
-            "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>This system would be amazing to travel with.<\/p>"
-            }
-          },
-          "1593488979276": {
-            "type": "testimonial",
-            "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Looking forward to using it and telling people about it.<\/p>"
-            }
-          },
-          "1593488991776": {
-            "type": "testimonial",
-            "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Pleasantly surprised that it worked so well.<\/p>"
-            }
-          },
-          "1593488999551": {
-            "type": "testimonial",
-            "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Love the portability.<\/p>"
-            }
-          },
-          "1593489008741": {
-            "type": "testimonial",
-            "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Significant reduction in foot size (able to get shoe on easier post therapy).<\/p>"
-            }
-          },
-          "1593489016627": {
-            "type": "testimonial",
-            "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Nothing bad to say about it. Easy to walk around with it on. Felt like after lymphatic massage. Leg felt lighter.<\/p>"
             }
           }
         },
@@ -467,24 +404,15 @@
           "1591271522933",
           "1591271537248",
           "1591271541390",
-          "1591271543583",
-          "1593488909729",
-          "1593488924197",
-          "1593488933343",
-          "1593488941319",
-          "1593488979276",
-          "1593488991776",
-          "1593488999551",
-          "1593489008741",
-          "1593489016627"
+          "1591271543583"
         ],
         "settings": {}
       },
       "meet-aria-footer": {
         "type": "meet-aria-footer",
         "settings": {
-          "title": "Aria goes where you go.",
-          "text": "Aria is the perfect traveling companion. Get a portable pump for therapy on the go—without sacrificing performance.",
+          "title": "Aria Free goes where you go.",
+          "text": "Aria Free is the perfect traveling companion. Get a portable pump for therapy on the go—without sacrificing performance.",
           "image": "shopify:\/\/shop_images\/aria-free-outdoor-therapy.jpg"
         }
       },
@@ -539,7 +467,7 @@
             "type": "person",
             "settings": {
               "title": "Dinesh Ramanan",
-              "position": "<p>Product and clinical<\/p>",
+              "position": "<p>Product and Clinical<\/p>",
               "image": "shopify:\/\/shop_images\/dinesh-ramanan.jpg",
               "bio": "<p>Dinesh is responsible for the product development and clinical innovation behind Aria Health. Prior to his work with Aria Health, Dinesh was a key member of the clinical science and innovation team within ResMed, and he combines over ten years of&nbsp;medical device experience with his master&rsquo;s degree in biomedical engineering to elevate our team&rsquo;s capabilities. The innovator behind the product, Dinesh credits a family member living with venous disease as his inspiration. His passion for helping people is also evident in the six years he managed fundraising efforts for a nonprofit focused on developing better healthcare solutions for those living in rural India.<\/p>"
             }
@@ -696,29 +624,29 @@
           "1591347620572": {
             "type": "testimonial",
             "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+              "title": "",
+              "quote": "<p>Streamlined, easy to operate, comfortable.<\/p>"
             }
           },
           "1591347631324": {
             "type": "testimonial",
             "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+              "title": "",
+              "quote": "<p>Pleasantly surprised that it worked so well.<\/p>"
             }
           },
           "1591347632945": {
             "type": "testimonial",
             "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+              "title": "",
+              "quote": "<p>Looking forward to using it and telling people about it.<\/p>"
             }
           },
           "1591347927113": {
             "type": "testimonial",
             "settings": {
-              "title": "Ben Franklin",
-              "quote": "<p>Really comfortable, the fabric feels nice and soft.<\/p>"
+              "title": "",
+              "quote": "<p>This system would be amazing to travel with.<\/p>"
             }
           }
         },
@@ -793,7 +721,7 @@
             "settings": {
               "title": "How it works",
               "description": "<p>New to Aria Free? Here&rsquo;s all you<br> need to know.<\/p>",
-              "url": "shopify:\/\/blogs\/how-it-works",
+              "url": "shopify:\/\/blogs\/how-it-works\/purchase-process",
               "image": "shopify:\/\/shop_images\/blog-how-it-works.png"
             }
           },
@@ -802,7 +730,7 @@
             "settings": {
               "title": "Current customers",
               "description": "<p>Find videos, manuals, customer<br> service, FAQ, tips, and more.<\/p>",
-              "url": "shopify:\/\/blogs\/current-customers",
+              "url": "shopify:\/\/blogs\/current-customers\/manuals",
               "image": "shopify:\/\/shop_images\/blog-current-customers.png"
             }
           },
@@ -811,7 +739,7 @@
             "settings": {
               "title": "Clinicians",
               "description": "<p>Aria Free information for<br> healthcare providers.<\/p>",
-              "url": "shopify:\/\/blogs\/clinicians",
+              "url": "shopify:\/\/blogs\/clinicians\/product-overview",
               "image": "shopify:\/\/shop_images\/blog-clinicians.png"
             }
           }
