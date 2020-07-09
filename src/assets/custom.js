@@ -52,3 +52,15 @@ function choosePayment (payment_method) {
     };
   })();
 };
+
+(function($) {
+  $('body').on('click', '.has-content-more', function() {
+    var $el = $(this).parents('.shopify-section');
+    var scrollTo = $el.offset().top + $el.height();
+    window.scrollTo({
+      top: scrollTo,
+      left: 0,
+      behavior: 'smooth',
+    });
+  });
+})(jQuery);

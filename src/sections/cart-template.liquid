@@ -81,6 +81,7 @@
 
               {%- if customer.tags contains 'QUALIFIED' -%}
 
+                {%- comment -%}
                 {% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' %}
                   <div class="pay_via_selector-container">
                     <span>Pay via</span>
@@ -88,12 +89,11 @@
                     <label><input type="radio" name="pay_via" class="pay_via_selector" onclick="choosePayment('partially')" {% if customer.tags contains 'PAY-PARTIALLY' %}checked{% endif %}> Partial.ly</label>
                   </div>
                 {% endif %}
+                {%- endcomment -%}
 
-                {% unless customer.tags contains 'PAY-PARTIALLY' %}
                 <div class="pay_via_shopify">
                   <button type="submit" name="checkout" class="Cart__Checkout Button Button--fill Button--round Button--text-normal">Check out</button>
                 </div>
-                {% endunless %}
 
               {%- endif -%}
 
@@ -101,19 +101,28 @@
           </footer>
         </form>
 
-{% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' and customer.tags contains 'PAY-PARTIALLY' %}
-<div class="partiallyButtonsContainer pay_via_partially">
-  <div id="partiallyCartButtonContainer1"></div>
-  <div id="partiallyCartButtonContainer2"></div>
-  <div id="partiallyCartButtonContainer3"></div>
+{% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' %}
+<div class="partiallyPlansContainer pay_via_partially">
+  <div class="partiallyPlanContainer">
+    <div id="partiallyCartButtonContainer1"></div>
+    <div id="partiallyWidget1"></div>
+  </div>
+  <div class="partiallyPlanContainer">
+    <div id="partiallyCartButtonContainer2"></div>
+    <div id="partiallyWidget2"></div>
+  </div>
+  <div class="partiallyPlanContainer">
+    <div id="partiallyCartButtonContainer3"></div>
+    <div id="partiallyWidget3"></div>
+  </div>
 </div>
 <script type="text/javascript">
   var btn1 = new PartiallyButton({
-    offer: 'd82327d5-d30d-4e7d-901b-a3777189b90a',
+    offer: '00f3f587-9a9b-4a2a-9eb9-c85269e8fb53',
     returnUrl: '{{shop.url}}/cart',
     returnConfirmedUrl: '{{shop.url}}/cart/clear',
     cssButton: true,
-    cssButtonText: 'Cash 100% payment',
+    cssButtonText: '6 Month Payment Plan',
     cssButtonShowLogo: true,
     cssButtonLogoType: 'glyph',
     cssButtonLogoPlacement: 'before',
@@ -122,6 +131,13 @@
     shopifyCart: {{cart | json}}
   });
   btn1.init();
+  var widget1 = new PartiallyWidget({
+    offer: '00f3f587-9a9b-4a2a-9eb9-c85269e8fb53',
+    amount: {{cart.total_price}} / 100,
+    targetSelector: '#partiallyWidget1',
+    currency: 'USD',
+  });
+  widget1.init();
 </script>
 <script type="text/javascript">
   var btn2 = new PartiallyButton({
@@ -129,7 +145,7 @@
     returnUrl: '{{shop.url}}/cart',
     returnConfirmedUrl: '{{shop.url}}/cart/clear',
     cssButton: true,
-    cssButtonText: 'Test--12 month payment plan',
+    cssButtonText: '12 month payment plan',
     cssButtonShowLogo: true,
     cssButtonLogoType: 'glyph',
     cssButtonLogoPlacement: 'before',
@@ -138,6 +154,13 @@
     shopifyCart: {{cart | json}}
   });
   btn2.init();
+  var widget2 = new PartiallyWidget({
+    offer: 'c8f8bddd-972d-4808-8171-5ad1a33e900c',
+    amount: {{cart.total_price}} / 100,
+    targetSelector: '#partiallyWidget2',
+    currency: 'USD',
+  });
+  widget2.init();
 </script>
 <script type="text/javascript">
   var btn3 = new PartiallyButton({
@@ -145,7 +168,7 @@
     returnUrl: '{{shop.url}}/cart',
     returnConfirmedUrl: '{{shop.url}}/cart/clear',
     cssButton: true,
-    cssButtonText: 'test 18 month plan',
+    cssButtonText: '18 month payment plan',
     cssButtonShowLogo: true,
     cssButtonLogoType: 'glyph',
     cssButtonLogoPlacement: 'before',
@@ -154,6 +177,13 @@
     shopifyCart: {{cart | json}}
   });
   btn3.init();
+  var widget3 = new PartiallyWidget({
+    offer: 'd08bd524-d0d3-4c1a-b99d-a262efd0e2e6',
+    amount: {{cart.total_price}} / 100,
+    targetSelector: '#partiallyWidget3',
+    currency: 'USD',
+  });
+  widget3.init();
 </script>
 {% endif %}
 

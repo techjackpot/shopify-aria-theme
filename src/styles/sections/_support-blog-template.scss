@@ -39,7 +39,13 @@
     }
   }
   .ArticleListWrapper {
+    margin-bottom: 48px;
     .ArticleList {
+      @include av-mq('phone') {
+        border-bottom: solid 1px #7ECBB7;
+        padding-bottom: 48px;
+        margin-bottom: 0;
+      }
       .ArticleItem {
         margin-bottom: 16px;
         a {
@@ -88,7 +94,7 @@
         color: #000000;
       }
 
-      h4 {
+      h4, .Collapsible__Button {
         font-family: $text-font-family;
         font-weight: 700;
         font-size: 21px;
@@ -115,6 +121,16 @@
 
       .Button {
         letter-spacing: 0;
+      }
+
+      blockquote {
+        margin-left: 0;
+        border-left: 0;
+        svg {
+          color: $primary-color;
+          margin-bottom: 8px;
+          margin-right: 24px;
+        }
       }
     }
   }

@@ -1,5 +1,5 @@
 .Section-Meet-Aria-Components {
-  background: #ffffff;
+  background: transparent linear-gradient(167deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box;
   margin: 0;
   @include av-mq('phone') {
     display: none;
@@ -34,6 +34,7 @@
         max-width: 420px;
         background-repeat: no-repeat;
         background-position: right center;
+        background-size: auto 100%;
         &:last-of-type {
           margin-bottom: 0;
         }
@@ -43,7 +44,7 @@
           font-size: 24px;
           line-height: 1;
           margin-bottom: 24px;
-          color: $primary-color;
+          color: #ffffff;
         }
         &--Steps {
         }
@@ -55,11 +56,11 @@
           font-size: 17px;
           line-height: 27px;
           margin-bottom: 11px;
-          color: $secondary-color;
+          color: #ffffff;
           display: flex;
           aling-items: flex-start;
           svg {
-            color: #7ECBB7;
+            color: #ffffff;
             display: block;
             width: 17px;
             height: 27px;

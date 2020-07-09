@@ -140,6 +140,11 @@
     }
 
     .has-content-more {
+      cursor: pointer;
+      animation-name: bounce;
+      animation-timing-function: ease;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
       @include av-mq('phone') {
         display: none;
       }

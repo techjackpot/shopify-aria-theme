@@ -1,0 +1,45 @@
+.shopify-policy__container {
+  max-width: 856px;
+}
+.shopify-policy__title {
+  font-family: $heading-font-family;
+  font-weight: 700;
+  color: #000000;
+  font-size: 36px;
+  line-height: 56px;
+  margin: 50px 0;
+  @include av-mq('tablet') {
+    font-size: 40px;
+    margin: 66px 0;
+  }
+  @include av-mq('desk') {
+    font-size: 48px;
+    margin: 82px 0;
+  }
+}
+.shopify-policy__body {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 50px;
+  @include av-mq('tablet') {
+    font-size: 17px;
+    line-height: 31px;
+    margin-bottom: 66px;
+  }
+  @include av-mq('desk') {
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 82px;
+  }
+  a {
+    color: $primary-color;
+  }
+  ul {
+    margin-left: 19px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include av-mq('tablet-and-up') {
+      margin-left: 42px;
+    }
+  }
+}

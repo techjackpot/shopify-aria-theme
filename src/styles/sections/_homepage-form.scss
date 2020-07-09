@@ -27,6 +27,12 @@
     .form-content {
       flex: 1;
       max-width: 520px;
+      @include av-mq('phone') {
+        margin-bottom: 48px;
+      }
+      @include av-mq('tablet') {
+        margin-bottom: 80px;
+      }
       @include av-mq('desk') {
         margin-right: 112px;
       }

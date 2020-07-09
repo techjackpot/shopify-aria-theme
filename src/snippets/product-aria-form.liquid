@@ -286,6 +286,18 @@ for size, we use it to display a size chart (if applicable)
         {%- endif -%}
       </button>
 
+<div id="partiallyWidget1" style="margin-top: 1rem;"></div>
+<script>
+  var widget1 = new PartiallyWidget({
+    offer: '00f3f587-9a9b-4a2a-9eb9-c85269e8fb53',
+    amount: {{product.selected_or_first_available_variant.price}} / 100,
+    targetSelector: '#partiallyWidget1',
+    currency: 'USD',
+    title: '6 Month Payment Plan',
+  });
+  widget1.init();
+</script>
+
     {%- endif -%}
 
   {% else %}

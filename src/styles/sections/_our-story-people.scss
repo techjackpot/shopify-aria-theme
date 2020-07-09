@@ -131,6 +131,7 @@
 .Modal--personContent {
   width: 712px;
   padding: 32px 25px;
+  background: #ffffff;
 
   @include av-mq('tablet-and-up') {
     padding: 40px 40px 64px;

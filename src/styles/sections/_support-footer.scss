@@ -69,6 +69,10 @@
             &:last-of-type {
               margin-bottom: 0;
             }
+            transition: all 0.25s ease;
+            &:hover {
+              color: $primary-color;
+            }
           }
         }
       }

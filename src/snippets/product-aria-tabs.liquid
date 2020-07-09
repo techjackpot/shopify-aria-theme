@@ -1,20 +1,4 @@
 <div class="Product__Tabs">
-  {%- if product.metafields.tabs['eligible-states'] -%}
-    <div class="Collapsible Collapsible--large">
-      <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
-        Eligible states <span class="Collapsible__Plus"></span>
-      </button>
-
-      <div class="Collapsible__Inner" id="product-tab-eligible-states">
-        <div class="Collapsible__Content">
-          <div class="Rte">
-            {{- product.metafields.tabs['eligible-states'] -}}
-          </div>
-        </div>
-      </div>
-    </div>
-  {%- endif -%}
-
   <div class="Collapsible Collapsible--large">
     <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
       Overview <span class="Collapsible__Plus"></span>
@@ -68,6 +52,22 @@
             {%- endif -%}
 
             {{- product.metafields.tabs.payment_options -}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if product.metafields.tabs['eligible-states'] -%}
+    <div class="Collapsible Collapsible--large">
+      <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+        Eligible states <span class="Collapsible__Plus"></span>
+      </button>
+
+      <div class="Collapsible__Inner" id="product-tab-eligible-states">
+        <div class="Collapsible__Content">
+          <div class="Rte">
+            {{- product.metafields.tabs['eligible-states'] -}}
           </div>
         </div>
       </div>

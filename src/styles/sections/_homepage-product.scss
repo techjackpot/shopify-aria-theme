@@ -56,6 +56,9 @@
       margin-bottom: 48px;
       display: flex;
       flex-wrap: wrap;
+      @include av-mq('phone') {
+        flex-direction: column;
+      }
       @include av-mq('desk') {
         flex-direction: column;
         max-width: 520px;

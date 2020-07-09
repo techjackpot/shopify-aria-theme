@@ -46,14 +46,14 @@
     "cart_show_free_shipping_threshold": false,
     "cart_free_shipping_threshold": "50",
     "share_image": "",
-    "social_facebook": "#",
-    "social_twitter": "#",
+    "social_facebook": "https:\/\/www.facebook.com\/Aria.New.Lymphedema.Solution",
+    "social_twitter": "",
     "social_pinterest": "",
-    "social_instagram": "#",
+    "social_instagram": "https:\/\/www.instagram.com\/aria_therapy\/",
     "social_vimeo": "",
     "social_tumblr": "",
     "social_youtube": "",
-    "social_linkedin": "",
+    "social_linkedin": "https:\/\/www.linkedin.com\/company\/monterey-health",
     "social_snapchat": "",
     "social_fancy": "",
     "favicon": "",
@@ -237,13 +237,6 @@
       "offers": {
         "type": "offers",
         "blocks": {
-          "1593486651718": {
-            "type": "offer",
-            "settings": {
-              "icon_class": "fa-clinic-medical",
-              "title": "Remote coaching"
-            }
-          },
           "1589814768831": {
             "type": "offer",
             "settings": {
@@ -267,7 +260,6 @@
           }
         },
         "block_order": [
-          "1593486651718",
           "1589814768831",
           "1589814875516",
           "1589815013377"
@@ -290,8 +282,8 @@
           "title": "Less machine.<br>More you.",
           "product_label": "Aria Free",
           "product_title": "A simpler, friendlier approach to therapy.",
-          "product_description": "Introducing a compression pump that’s about the size and weight of a smartphone + a streamlined garment with a modern fit and design. Now therapy is easy, with just one hose to connect—and most importantly: disconnect. So answer the door, pick up the baby, head to the bathroom. No more building your life around therapy. Just automated compression massage at the touch of a button, plus personal tracking and remote coaching to keep you moving forward.",
-          "image": "shopify:\/\/shop_images\/Product.png"
+          "product_description": "Introducing a compression pump that’s about the size and weight of a smartphone + a streamlined garment with a modern fit and design. Now therapy is easy, with just one hose to connect—and most importantly: disconnect. So answer the door, pick up the baby, head to the bathroom. No more building your life around therapy. Just automated compression massage at the touch of a button, and remote coaching to keep everything on track.",
+          "image": "shopify:\/\/shop_images\/homepage-product.png"
         }
       },
       "1589895048071": {

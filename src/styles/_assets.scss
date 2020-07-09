@@ -3,18 +3,20 @@
   transition: all 0.25s ease;
 }
 .Button--fill {
+  border: solid 2px $primary-color;
   background: $primary-color;
   color: #ffffff;
   &:hover {
     background: #7ECBB7;
-    color: #ffffff;
+    color: #ffffff !important;
   }
   &.Button--second {
     background: #ffffff;
     color: #000000;
+    border-color: #ffffff;
     &:hover {
       background: #FFFFFFBF;
-      color: #000000;
+      color: #000000 !important;
     }
   }
 }
@@ -23,14 +25,14 @@
   color: $primary-color;
   &:hover {
     background: #7ECBB7;
-    color: $primary-color;
+    color: #ffffff !important;
   }
   &.Button--second {
-    border: solid 2px #ffffff;
+    border-color: #ffffff;
     color: #ffffff;
     &:hover {
       background: #FFFFFFBF;
-      color: #000000;
+      color: #000000 !important;
     }
   }
 }
@@ -54,4 +56,11 @@
 }
 .Shadow--Left {
   box-shadow: -10px 10px 0px 0px #5253641A;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-20px); }
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
 }
