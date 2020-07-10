@@ -28,6 +28,7 @@
       flex-direction: column;
     }
     .Therapy--Content--Info {
+      max-width: 520px;
       &--Title {
         font-family: $heading-font-family;
         font-weight: 700;
@@ -88,6 +89,7 @@
             height: 72px;
             font-size: 32px;
             line-height: 40px;
+            margin-right: 40px;
           }
         }
         &--Text {
@@ -122,14 +124,15 @@
       }
     }
     .Therapy--Content--Image {
-      flex: 0 0 auto;
+      flex: 1;
+      text-align: center;
       @include av-mq('tablet-and-up') {
-        max-width: 32%;
-        margin-left: 30px;
+        // max-width: 32%;
+        // margin-left: 30px;
       }
       @include av-mq('desk') {
-        max-width: 36%;
-        margin-left: 152px;
+        // max-width: 36%;
+        // margin-left: 152px;
       }
     }
   }

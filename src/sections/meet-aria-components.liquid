@@ -2,8 +2,8 @@
   <div class="Container Container--narrow">
     <div class="Section-Meet-Aria-Components--Content">
       <div class="Components--Content--Info">
-        <div class="Components--Content--Info--List" data-aos="fade-up">
-          <div class="Components--Content--Info--Item">
+        <div class="Components--Content--Info--List">
+          <div class="Components--Content--Info--Item Components--Content--Info--Item__Garment" data-aos="fade-up">
             <div class="Components--Content--Info--Item--Title">
               <span>Comfortable slip-on garment</span>
             </div>
@@ -28,7 +28,7 @@
               </div>
             </div>
           </div>
-          <div class="Components--Content--Info--Item">
+          <div class="Components--Content--Info--Item Components--Content--Info--Item__Pump" data-aos="fade-up">
             <div class="Components--Content--Info--Item--Title">
               <span>Slim, portable pump</span>
             </div>
@@ -47,7 +47,7 @@
               </div>
             </div>
           </div>
-          <div class="Components--Content--Info--Item" style="background-image: url({{ 'component-mobile.png' | asset_url }});">
+          <div class="Components--Content--Info--Item Components--Content--Info--Item__Mobile" data-aos="fade-up">
             <div class="Components--Content--Info--Item--Title">
               <span>Mobile app</span>
             </div>
@@ -65,12 +65,10 @@
           </div>
         </div>
       </div>
+      <div class="Components--Content--Images">
+        <img src="{{ 'component-device.png' | asset_url }}" class="component-device" data-aos="fade-in" />
+        <img src="{{ 'component-mobile.png' | asset_url }}" class="component-mobile" data-aos="fade-in" />
+      </div>
     </div>
   </div>
 </section>
-
-<style type="text/css">
-  #section-{{ section.id }} .Components--Content--Info--List {
-    background-image: url("{{ 'component-device.png' | asset_url }}");
-  }
-</style>

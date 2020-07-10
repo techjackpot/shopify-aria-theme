@@ -8,6 +8,10 @@
       }
     }
   }
+
+  .Footer__PaymentList {
+    margin-left: 0;
+  }
 }
 
 .product-tab-eligible-states {
@@ -15,8 +19,8 @@
   th, td {
     border: 0 none !important;
     font-family: $text-font-family !important;
-    padding: 0 32px !important;
-    line-height: 32px !important;
+    padding: 7px 32px !important;
+    line-height: 18px !important;
     position: relative !important;
     max-width: unset !important;
   }

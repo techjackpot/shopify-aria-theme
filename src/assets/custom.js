@@ -63,4 +63,13 @@ function choosePayment (payment_method) {
       behavior: 'smooth',
     });
   });
+  $('body').on('click', '#toEligibleStates', function() {
+    var $el = $('#product-tab-eligible-states-container');
+    var scrollTo = $el.offset().top;
+    window.scrollTo({
+      top: scrollTo,
+      left: 0,
+      behavior: 'smooth',
+    });
+  });
 })(jQuery);

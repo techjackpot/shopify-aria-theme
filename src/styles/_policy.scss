@@ -42,4 +42,80 @@
       margin-left: 42px;
     }
   }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font-family;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 56px;
+    @include av-mq('tablet') {
+      font-size: 40px;
+      line-height: 56px;
+    }
+    @include av-mq('desk') {
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 48px;
+    @include av-mq('tablet') {
+      font-size: 34px;
+      line-height: 48px;
+    }
+    @include av-mq('desk') {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+  h3 {
+    font-size: 26px;
+    line-height: 40px;
+    @include av-mq('tablet') {
+      font-size: 28px;
+      line-height: 40px;
+    }
+    @include av-mq('desk') {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+  h4 {
+    font-size: 22px;
+    line-height: 32px;
+    @include av-mq('tablet') {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    @include av-mq('desk') {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 29px;
+    @include av-mq('tablet') {
+      font-size: 21px;
+      line-height: 29px;
+    }
+    @include av-mq('desk') {
+      font-size: 21px;
+      line-height: 29px;
+    }
+  }
+  h6 {
+    font-size: 18px;
+    line-height: 26px;
+    @include av-mq('tablet') {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    @include av-mq('desk') {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
 }

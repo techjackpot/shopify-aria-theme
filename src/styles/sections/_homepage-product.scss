@@ -56,11 +56,8 @@
       margin-bottom: 48px;
       display: flex;
       flex-wrap: wrap;
-      @include av-mq('phone') {
-        flex-direction: column;
-      }
+      flex-direction: column;
       @include av-mq('desk') {
-        flex-direction: column;
         max-width: 520px;
         margin-bottom: 0;
       }
@@ -72,9 +69,9 @@
           }
         }
         &-meta {
-          @include av-mq('tablet') {
-            flex: 0;
-          }
+          // @include av-mq('tablet') {
+          //   flex: 0;
+          // }
         }
       }
       .product-label {
@@ -190,9 +187,8 @@
         }
       }
       .product-actions {
-        text-align: center;
+        text-align: left;
         @include av-mq('desk') {
-          text-align: left;
         }
         .Button {
           min-width: 174px;
@@ -206,10 +202,10 @@
             margin-bottom: 0;
           }
           @include av-mq('phone') {
-            margin-right: 0px;
+            // margin-right: 20px;
           }
           @include av-mq('tablet') {
-            margin-right: 0;
+            // margin-right: 0;
           }
         }
       }

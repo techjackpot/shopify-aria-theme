@@ -349,7 +349,7 @@
         "settings": {
           "title": "Designed to be different.",
           "text": "We’ve learned that you can’t just treat problems—you have to treat people. So we created a better therapy experience. While most pneumatic compression therapy equipment can be cumbersome, the compact Aria system is portable, targeting the burden and isolation of therapy.",
-          "image": "shopify:\/\/shop_images\/aria-family-family.png"
+          "image": "shopify:\/\/shop_images\/aria-family-family-alt.jpg"
         }
       },
       "meet-aria-therapy": {
@@ -711,9 +711,9 @@
           "1593442095948": {
             "type": "blog",
             "settings": {
-              "title": "How it works",
-              "description": "<p>New to Aria Free? Here&rsquo;s all you<br> need to know.<\/p>",
-              "url": "shopify:\/\/blogs\/how-it-works\/purchase-process",
+              "title": "General information",
+              "description": "<p>New to Aria Free? Here&rsquo;s&nbsp;some<br>things you want&nbsp;to know.<\/p>",
+              "url": "shopify:\/\/blogs\/general-information\/general-and-lifestyle",
               "image": "shopify:\/\/shop_images\/blog-how-it-works.png"
             }
           },

@@ -113,6 +113,20 @@
 
         {%- assign media_count = media_count | plus: 1 -%}
       {%- endfor -%}
+
+      {%- assign media_count = media_count | plus: 1 -%}
+      <div id="Media360Free" tabindex="0" class="Product__SlideItem Product__SlideItem--image Carousel__Cell" data-media-type="image" data-media-id="360Free" data-media-position="{{ media_count }}" data-image-media-position="{% increment image_position %}">
+        <div class="AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: 1.33375 }}%; --aspect-ratio: 1.33375;">
+          {% assign image_url = 'aria-free-360.gif' | asset_img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+          <img class="Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-sizes="auto" data-expand="-100" alt="aria-free-360" data-max-width="1067" data-max-height="800" data-original-src="{{ 'aria-free-360.gif' | asset_img_url: 'master' }}">
+          <span class="Image__Loader"></span>
+
+          <noscript>
+            <img src="{{ 'aria-free-360.gif' | asset_img_url: '800x' }}" alt="aria-free-360">
+          </noscript>
+        </div>
+      </div>
     {%- endcapture -%}
 
     {%- if product.media.size > 0 -%}
@@ -157,6 +171,16 @@
                       </a>
                     {%- endif -%}
                   {%- endfor -%}
+
+                  {%- if section.settings.stack_images -%}
+                    <a href="#Media360Free" data-offset="-25" data-focus-on-click data-media-id="360Free" class="Product__SlideshowNavImage AspectRatio" style="--aspect-ratio: 1.33375">
+                      <img src="{{ 'aria-free-360.gif' | asset_img_url: '160x' }}" alt="aria-free-360">
+                    </a>
+                  {%- else -%}
+                    <a href="{{ 'aria-free-360.gif' | asset_img_url: '1024x' }}" data-media-id="360Free" class="Product__SlideshowNavImage AspectRatio" style="--aspect-ratio: 1.33375">
+                      <img src="{{ 'aria-free-360.gif' | asset_img_url: '160x' }}" alt="aria-free-360">
+                    </a>
+                  {%- endif -%}
                 </div>
               </div>
             {%- endif -%}
@@ -171,6 +195,8 @@
 
                     <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click class="Product__SlideshowNavDot {% if forloop.first %}is-selected{% endif %}"></a>
                   {%- endfor -%}
+
+                  <a href="#Media360Free" data-offset="-25" data-focus-on-click class="Product__SlideshowNavDot"></a>
                 </div>
               </div>
             {%- endif -%}

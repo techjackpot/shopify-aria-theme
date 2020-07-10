@@ -1,8 +1,9 @@
 .Section-Meet-Aria-Components {
   background: transparent linear-gradient(167deg, #7ECBB7 0%, #43AD92 100%) 0% 0% no-repeat padding-box;
   margin: 0;
+
   @include av-mq('phone') {
-    display: none;
+    padding: 64px 0;
   }
   @include av-mq('tablet') {
     padding: 80px 0;
@@ -24,6 +25,15 @@
 
 
   &--Content {
+    display: flex;
+    justify-content: center;
+    @include av-mq('phone') {
+      flex-direction: column;
+    }
+    @include av-mq('tablet') {
+      justify-content: space-evenly;
+      align-items: center;
+    }
     .Components--Content--Info {
       &--List {
         background-repeat: no-repeat;
@@ -74,6 +84,127 @@
             line-height: 28px;
             margin-bottom: 12px;
           }
+        }
+        &__Garment {
+          @include av-mq('desk') {
+            position: absolute;
+            top: 60px;
+            left: calc(50% + 250px);
+            .Components--Content--Info--Item--Title {
+              position: relative;
+              z-index: 9999;
+              &:before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: #7ECBB7;
+                border: 2px solid #fff;
+                left: -140px;
+                top: 7px;
+                position: absolute;
+              }
+              &:after {
+                content: '';
+                width: 100px;
+                height: 2px;
+                background: #ffffff;
+                position: absolute;
+                left: -125px;
+                top: 13px;
+              }
+            }
+          }
+        }
+        &__Pump {
+          @include av-mq('desk') {
+            position: absolute;
+            top: 160px;
+            right: calc(50% + 220px);
+            .Components--Content--Info--Item--Title {
+              position: relative;
+              z-index: 9999;
+              &:before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: #7ECBB7;
+                border: 2px solid #fff;
+                right: -82px;
+                top: 7px;
+                position: absolute;
+              }
+              &:after {
+                content: '';
+                width: 235px;
+                height: 2px;
+                background: #ffffff;
+                position: absolute;
+                right: -67px;
+                top: 13px;
+              }
+            }
+          }
+        }
+        &__Mobile {
+          @include av-mq('desk') {
+            position: absolute;
+            top: 430px;
+            left: calc(50% + 370px);
+            .Components--Content--Info--Item--Title {
+              position: relative;
+              z-index: 9999;
+              &:before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: #7ECBB7;
+                border: 2px solid #fff;
+                left: -140px;
+                top: 7px;
+                position: absolute;
+              }
+              &:after {
+                content: '';
+                width: 100px;
+                height: 2px;
+                background: #ffffff;
+                position: absolute;
+                left: -125px;
+                top: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .Components--Content--Images {
+      position: relative;
+      @include av-mq('phone') {
+        margin-top: 56px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        justify-content: center;
+      }
+      .component-device {
+        @include av-mq('phone') {
+          width: 242px;
+          margin-left: -30px;
+        }
+      }
+      .component-mobile {
+        @include av-mq('tablet') {
+          position: absolute;
+          bottom: -30px;
+          left: 0;
+        }
+        @include av-mq('desk') {
+          position: absolute;
+          bottom: 6rem;
+          right: -6rem;
         }
       }
     }
