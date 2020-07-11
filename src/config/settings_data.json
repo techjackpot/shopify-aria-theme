@@ -781,6 +781,124 @@
           "form_title": "We’re building a community.",
           "form_description": "Stay connected to all the Aria Health™ news. You’ll also receive updates, offers, and details about co-creation opportunities. We’re doing something different, together."
         }
+      },
+      "how-to-steps": {
+        "type": "how-to-steps",
+        "blocks": {
+          "1594412811802": {
+            "type": "step",
+            "settings": {
+              "title": "1. Take the Aria survey.",
+              "text": "Answer just a few questions to see if Aria is right for you.",
+              "image": "shopify:\/\/shop_images\/how-to-step1.png",
+              "button_text": "Get started",
+              "button_link": "shopify:\/\/pages\/get-started",
+              "position": "left"
+            }
+          },
+          "1594412892334": {
+            "type": "step",
+            "settings": {
+              "title": "2. Find your garment size.",
+              "text": "Our simple 3-measurement sizing chart will identify the right fit.",
+              "image": "shopify:\/\/shop_images\/how-to-step2.png",
+              "button_text": "Sizing chart",
+              "button_link": "shopify:\/\/pages\/size-chart",
+              "position": "right"
+            }
+          },
+          "1594412941606": {
+            "type": "step",
+            "settings": {
+              "title": "3. Upload your Rx.",
+              "text": "You’ll need a prescription for therapy. If you already have one, you can upload or fax it to us. If you need one, ask your healthcare provider.",
+              "image": "shopify:\/\/shop_images\/how-to-step3.png",
+              "button_text": "",
+              "button_link": "",
+              "position": "left"
+            }
+          },
+          "1594412964534": {
+            "type": "step",
+            "settings": {
+              "title": "4. Get free contactless delivery to your door and a 30-day money-back guarantee.",
+              "text": "Your Aria Free system comes with everything you need to get started and set up on your own. We are available by phone or online for help, and there’s no need for anyone to come to your home. That’s it!",
+              "image": "shopify:\/\/shop_images\/how-to-step4.png",
+              "button_text": "Get going",
+              "button_link": "#",
+              "position": "right"
+            }
+          }
+        },
+        "block_order": [
+          "1594412811802",
+          "1594412892334",
+          "1594412941606",
+          "1594412964534"
+        ],
+        "settings": {
+          "title": "How to get Aria",
+          "subtitle": "It’s easy: just four quick steps."
+        }
+      },
+      "how-to-purchase-options": {
+        "type": "how-to-purchase-options",
+        "settings": {}
+      },
+      "how-to-works": {
+        "type": "how-to-works",
+        "settings": {}
+      },
+      "how-to-features": {
+        "type": "how-to-features",
+        "blocks": {
+          "1594431320124": {
+            "type": "feature",
+            "settings": {
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-flexible-payments.svg?v=1594431632",
+              "title": "Flexible payment terms at 6, 12 and 18 months"
+            }
+          },
+          "1594431330886": {
+            "type": "feature",
+            "settings": {
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-no-credit-check.svg?v=1594431632",
+              "title": "No credit check required"
+            }
+          },
+          "1594431336117": {
+            "type": "feature",
+            "settings": {
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-no-interest.svg?v=1594431632",
+              "title": "No interest or additional fees"
+            }
+          },
+          "1594431340436": {
+            "type": "feature",
+            "settings": {
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-free-support.svg?v=1594431632",
+              "title": "Free service and support during rental period"
+            }
+          },
+          "1594431344972": {
+            "type": "feature",
+            "settings": {
+              "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-ownership.png?v=1594432073",
+              "title": "Own your Aria Free system after rental payment term"
+            }
+          }
+        },
+        "block_order": [
+          "1594431320124",
+          "1594431330886",
+          "1594431336117",
+          "1594431340436",
+          "1594431344972"
+        ],
+        "settings": {
+          "title": "Interest-free rent-to-own<br> payment plans.",
+          "subtitle": "Aria Free is available for purchase through an interest-free rent-to-own payment plan <a href=\"#\">in select states<\/a>."
+        }
       }
     },
     "content_for_index": [

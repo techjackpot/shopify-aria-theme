@@ -1,0 +1,88 @@
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "wrapAround": true,
+  "dragThreshold": 16,
+  "cellAlign": "left",
+  "autoPlay": 8000,
+  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
+}
+{%- endcapture -%}
+
+<section class="Section Section--spacingNormal Section-How-To-Features" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="how-to-features">
+  <div class="Container Container--narrow">
+    <div class="Section-How-To-Features--Header" data-aos="fade-up">
+      <div class="section-title">
+        <span>{{ section.settings.title }}</span>
+      </div>
+      <div class="section-subtitle">
+        <span>{{ section.settings.subtitle }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="Container Container--narrow">
+    <div class="Section-How-To-Features--Content">
+      <div class="Feature-List Carousel" data-flickity='{{ flickity_options }}'>
+        {%- for block in section.blocks -%}
+          <div id="block-{{ block.id }}" class="Feature-Item" {{ block.shopify_attributes }}>
+            <div class="Feature-Item__Container">
+              <div class="Feature-Item--Icon">
+                {%- if block.settings.image_url != blank -%}
+                  <img src="{{ block.settings.image_url }}">
+                {%- endif -%}
+              </div>
+              <div class="Feature-Item--Meta">
+                <div class="Feature-Item--Title">
+                  <span>{{ block.settings.title }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "How To - Features",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "html",
+      "id": "subtitle",
+      "label": "SubHeading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "image_url",
+          "label": "Icon (url here)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "How To",
+      "name": "Features",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

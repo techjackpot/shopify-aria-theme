@@ -1,0 +1,175 @@
+.Section-How-To-Works {
+  background: #ffffff;
+  margin: 0;
+  padding: 64px 0;
+  @include av-mq('tablet') {
+    padding: 80px 0;
+  }
+  @include av-mq('desk') {
+    padding: 96px 0;
+  }
+
+  .Container {
+    position: relative;
+    padding: 0 25px;
+    @include av-mq('tablet-and-up') {
+      padding: 0 32px;
+    }
+    @include av-mq('desk') {
+      padding: 0 68px;
+    }
+  }
+
+  &--Header {
+    text-align: center;
+    .section-title {
+      font-family: $heading-font-family;
+      font-size: 42px;
+      line-height: 50px;
+      font-weight: 700;
+      color: #000000;
+      @include av-mq('tablet-and-up') {
+        font-size: 48px;
+        line-height: 64px;
+      }
+      @include av-mq('desk') {
+        font-size: 56px;
+        line-height: 64px;
+      }
+      margin-bottom: 40px;
+    }
+    .section-subtitle {
+      font-size: 18px;
+      line-height: 32px;
+      color: $secondary-color;
+      margin-bottom: 0px;
+      a {
+        color: $primary-color;
+      }
+      max-width: 856px;
+      margin: 0 auto;
+    }
+    margin-bottom: 48px;
+    @include av-mq('tablet-and-up') {
+      margin-bottom: 56px;
+    }
+    @include av-mq('desk') {
+      margin-bottom: 80px;
+    }
+  }
+
+
+  &--Content {
+    display: flex;
+    align-items: center;
+    @include av-mq('phone') {
+      flex-direction: column;
+    }
+    .Works--Content--Info {
+      max-width: 520px;
+      &--Title {
+        font-family: $heading-font-family;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 50px;
+        margin-bottom: 32px;
+        text-align: center;
+        color: #000000;
+        @include av-mq('tablet-and-up') {
+          text-align: left;
+          font-size: 48px;
+          line-height: 56px;
+        }
+        @include av-mq('desk') {
+          font-size: 56px;
+          line-height: 88px;
+          margin-bottom: 72px;
+        }
+      }
+      .Works--Content--Info--Steps {
+
+      }
+      .Works--Content--Info--Step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 48px;
+        @include av-mq('tablet-and-up') {
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+        &--Number {
+          flex: 0 0 auto;
+          width: 56px;
+          height: 56px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #7ECBB7;
+          border: solid 2px $primary-color;
+          border-radius: 50%;
+          font-family: $heading-font-family;
+          font-size: 24px;
+          line-height: 40px;
+          color: #ffffff;
+          margin-bottom: 26px;
+          @include av-mq('tablet-and-up') {
+            margin-bottom: 0;
+            margin-right: 25px;
+          }
+          @include av-mq('desk') {
+            width: 72px;
+            height: 72px;
+            font-size: 32px;
+            line-height: 40px;
+            margin-right: 40px;
+          }
+        }
+        &--Text {
+          color: $secondary-color;
+          font-family: $heading-font-family;
+          font-size: 19px;
+          line-height: 30px;
+          text-align: center;
+          @include av-mq('tablet-and-up') {
+            text-align: left;
+          }
+          @include av-mq('desk') {
+            font-size: 21px;
+            line-height: 32px;
+          }
+          a {
+            color: $primary-color;
+          }
+        }
+        &--Image {
+          width: 160px;
+          @include av-mq('tablet-and-up') {
+            display: none;
+          }
+        }
+      }
+      .Works--Content--Info--Actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+        @include av-mq('tablet-and-up') {
+          margin-top: 0;
+          justify-content: flex-start;
+        }
+      }
+    }
+    .Works--Content--Image {
+      flex: 1;
+      text-align: center;
+      @include av-mq('tablet-and-up') {
+        // max-width: 32%;
+        // margin-left: 30px;
+      }
+      @include av-mq('desk') {
+        // max-width: 36%;
+        // margin-left: 152px;
+      }
+    }
+  }
+}

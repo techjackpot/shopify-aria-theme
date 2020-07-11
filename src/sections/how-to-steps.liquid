@@ -1,0 +1,120 @@
+<div class="Section-How-To-Steps-Wrapper">
+  <section class="Section Section--spacingNormal Section-How-To-Steps" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="how-to-stpes">
+    <div class="Container Container--narrow">
+      <div class="Section-How-To-Steps--Header" data-aos="fade-up">
+        <div class="section-title">
+          <span>{{ section.settings.title }}</span>
+        </div>
+        <div class="section-subtitle">
+          <span>{{ section.settings.subtitle }}</span>
+        </div>
+        <img src="{{ 'icon-swoop.svg' | asset_url }}">
+      </div>
+    </div>
+  </section>
+
+  {%- for block in section.blocks -%}
+  <section class="Section Section--spacingNormal Section-How-To-Steps-Block {% if block.settings.position == 'right' %}With-Image-Right{% endif %}" id="section-block-{{ block.id }}" data-section-block-id="{{ block.id }}" data-section-type="how-to-stpes-block">
+    <div class="Container Container--narrow">
+      <div class="Section-How-To-Steps-Block--Content">
+        <div class="step-content-wrapper">
+          <div class="step-content-container">
+            {%- if block.settings.image != blank -%}
+            <div class="step-image" data-aos="{% if block.settings.position == 'right' %}fade-left{% else %}fade-right{% endif %}">
+              <img class="Shadow--Left" src="{{ block.settings.image | img_url: 'master' }}">
+            </div>
+            {%- endif -%}
+            <div class="step-content" data-aos="{% if block.settings.position == 'right' %}fade-right{% else %}fade-left{% endif %}">
+              <div class="step-title">
+                <span>{{ block.settings.title }}</span>
+              </div>
+              <div class="step-text">
+                <span>{{ block.settings.text }}</span>
+              </div>
+              {%- if block.settings.button_text != blank and block.settings.button_link != blank -%}
+              <div class="step-actions">
+                <a href="{{ block.settings.button_link }}" class="Link Link--primary Button Button--fill Button--round">{{ block.settings.button_text }}</a>
+              </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "How to get Aria - Steps",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "html",
+      "id": "subtitle",
+      "label": "SubHeading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "type": "html",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Image Position",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "How to get Aria",
+      "name": "Steps",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
