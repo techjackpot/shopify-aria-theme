@@ -1,0 +1,40 @@
+.Section-How-To-States {
+  background: transparent linear-gradient(180deg, #FAFAFB 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+  min-height: 600px;
+
+  padding: 64px 0;
+  @include av-mq('desk') {
+    padding: 96px 0;
+  }
+
+  .Container {
+  }
+
+  &--Header {
+    text-align: center;
+    .section-title {
+      font-family: $heading-font-family;
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 700;
+      color: #000000;
+      max-width: 632px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    margin-bottom: 56px;
+  }
+
+  &--Content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .states-table {
+      flex: 1;
+      max-width: 520px;
+    }
+
+  }
+
+}

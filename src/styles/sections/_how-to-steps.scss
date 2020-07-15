@@ -61,7 +61,7 @@
     padding: 64px 0;
   }
   @include av-mq('desk') {
-    padding: 80px 0;
+    padding: 96px 0;
   }
 
   .Container {
@@ -134,7 +134,7 @@
       justify-content: flex-end;
       .step-content-container {
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start;
         flex-direction: column;
         width: 100%;
         padding: 64px 25px;
@@ -220,6 +220,49 @@
             }
           }
         }
+      }
+      .has-content-more {
+        cursor: pointer;
+        animation-name: bounce;
+        animation-timing-function: ease;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        @include av-mq('phone') {
+          display: none;
+        }
+        @include av-mq('tablet-and-up') {
+          position: absolute;
+          top: 100%;
+        }
+        svg {
+          font-size: 48px;
+        }
+      }
+    }
+  }
+  &:nth-of-type(odd) {
+    .has-content-more {
+      @include av-mq('tablet-and-up') {
+        right: 32px;
+      }
+      @include av-mq('desk') {
+        right: 68px;
+      }
+      svg {
+        color: #fff;
+      }
+    }
+  }
+  &:nth-of-type(even) {
+    .has-content-more {
+      @include av-mq('tablet-and-up') {
+        left: 32px;
+      }
+      @include av-mq('desk') {
+        left: 68px;
+      }
+      svg {
+        color: #9AB5C6;
       }
     }
   }

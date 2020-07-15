@@ -55,8 +55,9 @@ function choosePayment (payment_method) {
 
 (function($) {
   $('body').on('click', '.has-content-more', function() {
-    var $el = $(this).parents('.shopify-section');
-    var scrollTo = $el.offset().top + $el.height();
+    // var target = $(this).data('target') || '.shopify-section';
+    var $el = $(this).parents('.Section');
+    var scrollTo = $el.offset().top + $el.outerHeight();
     window.scrollTo({
       top: scrollTo,
       left: 0,

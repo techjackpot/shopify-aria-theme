@@ -409,11 +409,7 @@ body {
       border: solid 2px #F0EFF1;
       font-size: 16px;
       line-height: 32px;
-      color: #525364;
-      box-shadow: none;
-      -webkit-appearance: none; }
-      .wFormContainer .wForm form div.oneField .inputWrapper input[type=radio] {
-        border: 0 none; }
+      color: #525364; }
   @media screen and (min-width: 641px) {
     .wFormContainer .wForm form .section.inline.group .oneField {
       max-width: 49%; } }
@@ -3753,7 +3749,7 @@ body {
       padding: 64px 0; } }
   @media screen and (min-width: 1240px) {
     .Section-How-To-Steps-Block {
-      padding: 80px 0; } }
+      padding: 96px 0; } }
   .Section-How-To-Steps-Block .Container {
     position: relative;
     padding: 0; }
@@ -3803,7 +3799,7 @@ body {
     justify-content: flex-end; }
     .Section-How-To-Steps-Block--Content .step-content-wrapper .step-content-container {
       display: flex;
-      align-items: flex-end;
+      align-items: flex-start;
       flex-direction: column;
       width: 100%;
       padding: 64px 25px;
@@ -3881,6 +3877,41 @@ body {
         font-size: 20px; }
         .Section-How-To-Steps-Block--Content .step-content-wrapper .step-content .step-actions .Button:last-of-type {
           margin-right: 0; }
+    .Section-How-To-Steps-Block--Content .step-content-wrapper .has-content-more {
+      cursor: pointer;
+      -webkit-animation-name: bounce;
+              animation-name: bounce;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite; }
+      @media screen and (max-width: 640px) {
+        .Section-How-To-Steps-Block--Content .step-content-wrapper .has-content-more {
+          display: none; } }
+      @media screen and (min-width: 641px) {
+        .Section-How-To-Steps-Block--Content .step-content-wrapper .has-content-more {
+          position: absolute;
+          top: 100%; } }
+      .Section-How-To-Steps-Block--Content .step-content-wrapper .has-content-more svg {
+        font-size: 48px; }
+  @media screen and (min-width: 641px) {
+    .Section-How-To-Steps-Block:nth-of-type(odd) .has-content-more {
+      right: 32px; } }
+  @media screen and (min-width: 1240px) {
+    .Section-How-To-Steps-Block:nth-of-type(odd) .has-content-more {
+      right: 68px; } }
+  .Section-How-To-Steps-Block:nth-of-type(odd) .has-content-more svg {
+    color: #fff; }
+  @media screen and (min-width: 641px) {
+    .Section-How-To-Steps-Block:nth-of-type(even) .has-content-more {
+      left: 32px; } }
+  @media screen and (min-width: 1240px) {
+    .Section-How-To-Steps-Block:nth-of-type(even) .has-content-more {
+      left: 68px; } }
+  .Section-How-To-Steps-Block:nth-of-type(even) .has-content-more svg {
+    color: #9AB5C6; }
 
 .Section-Purchase-Options {
   background: #ffffff;
@@ -3923,18 +3954,18 @@ body {
     margin-bottom: 48px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
     @media screen and (min-width: 1240px) {
       .Section-Purchase-Options--Content .options-content {
         margin-bottom: 0; } }
     .Section-Purchase-Options--Content .options-content-col {
       flex: 1; }
-      @media screen and (min-width: 641px) and (max-width: 1239px) {
-        .Section-Purchase-Options--Content .options-content-col-info {
-          margin-right: 25px; } }
-      @media screen and (min-width: 1240px) {
-        .Section-Purchase-Options--Content .options-content-col-info {
-          max-width: 632px; } }
+      .Section-Purchase-Options--Content .options-content-col-info {
+        text-align: center; }
+        @media screen and (min-width: 1240px) {
+          .Section-Purchase-Options--Content .options-content-col-info {
+            max-width: 712px; } }
     .Section-Purchase-Options--Content .options-content .options-label {
       font-family: "century-gothic", sans-serif;
       margin-bottom: 24px;
@@ -4076,38 +4107,76 @@ body {
       .Section-How-To-Features .Container {
         padding: 0 48px; } }
   .Section-How-To-Features--Header {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 48px; }
-    .Section-How-To-Features--Header .section-title {
-      font-family: "century-gothic", sans-serif;
-      font-size: 42px;
-      line-height: 50px;
-      font-weight: 700;
-      color: #000000;
-      margin-bottom: 40px; }
-      @media screen and (min-width: 641px) {
-        .Section-How-To-Features--Header .section-title {
-          font-size: 48px;
-          line-height: 64px; } }
-      @media screen and (min-width: 1240px) {
-        .Section-How-To-Features--Header .section-title {
-          font-size: 56px;
-          line-height: 64px; } }
-    .Section-How-To-Features--Header .section-subtitle {
-      font-size: 18px;
-      line-height: 32px;
-      color: #525364;
-      margin-bottom: 0px;
-      max-width: 520px;
-      margin: 0 auto; }
-      .Section-How-To-Features--Header .section-subtitle a {
-        color: #43AD92; }
-    @media screen and (min-width: 641px) {
+    @media screen and (max-width: 640px) {
       .Section-How-To-Features--Header {
-        margin-bottom: 56px; } }
+        flex-direction: column; } }
+    @media screen and (min-width: 641px) and (max-width: 1239px) {
+      .Section-How-To-Features--Header {
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 64px; } }
     @media screen and (min-width: 1240px) {
       .Section-How-To-Features--Header {
-        margin-bottom: 80px; } }
+        margin-bottom: 96px; } }
+    .Section-How-To-Features--Header .Features--Header--Info {
+      flex: 1;
+      max-width: 632px; }
+      @media screen and (max-width: 640px) {
+        .Section-How-To-Features--Header .Features--Header--Info {
+          margin-bottom: 48px; } }
+      .Section-How-To-Features--Header .Features--Header--Info--Title {
+        font-family: "century-gothic", sans-serif;
+        font-size: 42px;
+        line-height: 50px;
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 32px; }
+        @media screen and (min-width: 641px) {
+          .Section-How-To-Features--Header .Features--Header--Info--Title {
+            font-size: 44px;
+            line-height: 52px; } }
+      .Section-How-To-Features--Header .Features--Header--Info--Description {
+        color: #525364;
+        margin-bottom: 40px; }
+        .Section-How-To-Features--Header .Features--Header--Info--Description a {
+          color: #43AD92; }
+      .Section-How-To-Features--Header .Features--Header--Info--Steps {
+        max-width: 440px;
+        margin-bottom: 48px; }
+      .Section-How-To-Features--Header .Features--Header--Info--Step {
+        font-size: 17px;
+        line-height: 27px;
+        margin-bottom: 11px;
+        color: #525364;
+        display: flex;
+        aling-items: flex-start; }
+        .Section-How-To-Features--Header .Features--Header--Info--Step svg {
+          color: #43AD92;
+          display: block;
+          width: 17px;
+          height: 27px;
+          line-height: 27px; }
+        .Section-How-To-Features--Header .Features--Header--Info--Step span {
+          margin-left: 23px; }
+      .Section-How-To-Features--Header .Features--Header--Info--Actions .Button {
+        min-width: 174px;
+        text-transform: none;
+        margin-right: 40px;
+        margin-bottom: 32px;
+        letter-spacing: 0;
+        font-size: 20px; }
+        .Section-How-To-Features--Header .Features--Header--Info--Actions .Button:last-of-type {
+          margin-right: 0;
+          margin-bottom: 0; }
+    .Section-How-To-Features--Header .Features--Header--Image {
+      flex: 1; }
+      .Section-How-To-Features--Header .Features--Header--Image img {
+        display: block;
+        margin: 0 auto; }
   .Section-How-To-Features--Content .Feature-List {
     margin-bottom: -40px; }
     @media screen and (min-width: 641px) {
@@ -4158,29 +4227,29 @@ body {
           max-width: 224px;
           margin: 0 auto; }
 
-.Section-How-To-Works {
+.Section-How-To-Use {
   background: #ffffff;
   margin: 0;
   padding: 64px 0; }
   @media screen and (min-width: 641px) and (max-width: 1239px) {
-    .Section-How-To-Works {
+    .Section-How-To-Use {
       padding: 80px 0; } }
   @media screen and (min-width: 1240px) {
-    .Section-How-To-Works {
+    .Section-How-To-Use {
       padding: 96px 0; } }
-  .Section-How-To-Works .Container {
+  .Section-How-To-Use .Container {
     position: relative;
     padding: 0 25px; }
     @media screen and (min-width: 641px) {
-      .Section-How-To-Works .Container {
+      .Section-How-To-Use .Container {
         padding: 0 32px; } }
     @media screen and (min-width: 1240px) {
-      .Section-How-To-Works .Container {
+      .Section-How-To-Use .Container {
         padding: 0 68px; } }
-  .Section-How-To-Works--Header {
+  .Section-How-To-Use--Header {
     text-align: center;
     margin-bottom: 48px; }
-    .Section-How-To-Works--Header .section-title {
+    .Section-How-To-Use--Header .section-title {
       font-family: "century-gothic", sans-serif;
       font-size: 42px;
       line-height: 50px;
@@ -4188,37 +4257,44 @@ body {
       color: #000000;
       margin-bottom: 40px; }
       @media screen and (min-width: 641px) {
-        .Section-How-To-Works--Header .section-title {
+        .Section-How-To-Use--Header .section-title {
           font-size: 48px;
           line-height: 64px; } }
       @media screen and (min-width: 1240px) {
-        .Section-How-To-Works--Header .section-title {
+        .Section-How-To-Use--Header .section-title {
           font-size: 56px;
           line-height: 64px; } }
-    .Section-How-To-Works--Header .section-subtitle {
+    .Section-How-To-Use--Header .section-subtitle {
       font-size: 18px;
       line-height: 32px;
       color: #525364;
       margin-bottom: 0px;
       max-width: 856px;
       margin: 0 auto; }
-      .Section-How-To-Works--Header .section-subtitle a {
+      .Section-How-To-Use--Header .section-subtitle a {
         color: #43AD92; }
     @media screen and (min-width: 641px) {
-      .Section-How-To-Works--Header {
+      .Section-How-To-Use--Header {
         margin-bottom: 56px; } }
     @media screen and (min-width: 1240px) {
-      .Section-How-To-Works--Header {
+      .Section-How-To-Use--Header {
         margin-bottom: 80px; } }
-  .Section-How-To-Works--Content {
+  .Section-How-To-Use--Content {
     display: flex;
     align-items: center; }
     @media screen and (max-width: 640px) {
-      .Section-How-To-Works--Content {
+      .Section-How-To-Use--Content {
         flex-direction: column; } }
-    .Section-How-To-Works--Content .Works--Content--Info {
+    @media screen and (min-width: 641px) and (max-width: 1239px) {
+      .Section-How-To-Use--Content {
+        flex-direction: column; } }
+    .Section-How-To-Use--Content .Use--Content--Info {
+      flex: 1;
       max-width: 520px; }
-      .Section-How-To-Works--Content .Works--Content--Info--Title {
+      @media screen and (min-width: 1240px) {
+        .Section-How-To-Use--Content .Use--Content--Info {
+          margin-right: 112px; } }
+      .Section-How-To-Use--Content .Use--Content--Info--Title {
         font-family: "century-gothic", sans-serif;
         font-weight: 700;
         font-size: 42px;
@@ -4227,25 +4303,25 @@ body {
         text-align: center;
         color: #000000; }
         @media screen and (min-width: 641px) {
-          .Section-How-To-Works--Content .Works--Content--Info--Title {
+          .Section-How-To-Use--Content .Use--Content--Info--Title {
             text-align: left;
             font-size: 48px;
             line-height: 56px; } }
         @media screen and (min-width: 1240px) {
-          .Section-How-To-Works--Content .Works--Content--Info--Title {
+          .Section-How-To-Use--Content .Use--Content--Info--Title {
             font-size: 56px;
             line-height: 88px;
             margin-bottom: 72px; } }
-      .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Step {
+      .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Step {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 48px; }
         @media screen and (min-width: 641px) {
-          .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Step {
+          .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Step {
             flex-direction: row;
             justify-content: flex-start; } }
-        .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Step--Number {
+        .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Step--Number {
           flex: 0 0 auto;
           width: 56px;
           height: 56px;
@@ -4261,47 +4337,74 @@ body {
           color: #ffffff;
           margin-bottom: 26px; }
           @media screen and (min-width: 641px) {
-            .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Step--Number {
+            .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Step--Number {
               margin-bottom: 0;
               margin-right: 25px; } }
           @media screen and (min-width: 1240px) {
-            .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Step--Number {
+            .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Step--Number {
               width: 72px;
               height: 72px;
               font-size: 32px;
               line-height: 40px;
               margin-right: 40px; } }
-        .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Step--Text {
+        .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Step--Text {
           color: #525364;
           font-family: "century-gothic", sans-serif;
           font-size: 19px;
           line-height: 30px;
           text-align: center; }
           @media screen and (min-width: 641px) {
-            .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Step--Text {
+            .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Step--Text {
               text-align: left; } }
           @media screen and (min-width: 1240px) {
-            .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Step--Text {
+            .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Step--Text {
               font-size: 21px;
               line-height: 32px; } }
-          .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Step--Text a {
+          .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Step--Text a {
             color: #43AD92; }
-        .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Step--Image {
+        .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Step--Image {
           width: 160px; }
           @media screen and (min-width: 641px) {
-            .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Step--Image {
+            .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Step--Image {
               display: none; } }
-      .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Actions {
+      .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Actions {
         display: flex;
         justify-content: center;
         margin-top: 32px; }
         @media screen and (min-width: 641px) {
-          .Section-How-To-Works--Content .Works--Content--Info .Works--Content--Info--Actions {
+          .Section-How-To-Use--Content .Use--Content--Info .Use--Content--Info--Actions {
             margin-top: 0;
             justify-content: flex-start; } }
-    .Section-How-To-Works--Content .Works--Content--Image {
+    .Section-How-To-Use--Content .Use--Content--Image {
       flex: 1;
       text-align: center; }
+
+.Section-How-To-States {
+  background: transparent linear-gradient(180deg, #FAFAFB 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+  min-height: 600px;
+  padding: 64px 0; }
+  @media screen and (min-width: 1240px) {
+    .Section-How-To-States {
+      padding: 96px 0; } }
+  .Section-How-To-States--Header {
+    text-align: center;
+    margin-bottom: 56px; }
+    .Section-How-To-States--Header .section-title {
+      font-family: "century-gothic", sans-serif;
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 700;
+      color: #000000;
+      max-width: 632px;
+      text-align: center;
+      margin: 0 auto; }
+  .Section-How-To-States--Content {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .Section-How-To-States--Content .states-table {
+      flex: 1;
+      max-width: 520px; }
 
 /* third party */
 .partiallyPlansContainer {

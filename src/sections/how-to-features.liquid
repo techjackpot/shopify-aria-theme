@@ -11,12 +11,37 @@
 
 <section class="Section Section--spacingNormal Section-How-To-Features" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="how-to-features">
   <div class="Container Container--narrow">
-    <div class="Section-How-To-Features--Header" data-aos="fade-up">
-      <div class="section-title">
-        <span>{{ section.settings.title }}</span>
+    <div class="Section-How-To-Features--Header">
+      <div class="Features--Header--Info">
+        <div class="Features--Header--Info--Title" data-aos="fade-up">
+          <span>Interest-free rent-to-own payment plans available.</span>
+        </div>
+        <div class="Features--Header--Info--Description" data-aos="fade-up">
+          <span>Aria Free is available for purchase through an interest-free rent-to-own payment plan in <a>select states</a>.</span>
+        </div>
+        <div class="Features--Header--Info--Steps" data-aos="fade-up">
+          <div class="Features--Header--Info--Step">
+            <i class="fas fa-check"></i><span>Flexible payment plan options at 6,12 and 18 months</span>
+          </div>
+          <div class="Features--Header--Info--Step">
+            <i class="fas fa-check"></i><span>No credit check required</span>
+          </div>
+          <div class="Features--Header--Info--Step">
+            <i class="fas fa-check"></i><span>No interest charged on your monthly payments or hidden fees</span>
+          </div>
+          <div class="Features--Header--Info--Step">
+            <i class="fas fa-check"></i><span>During rental period receive free service and repairs</span>
+          </div>
+          <div class="Features--Header--Info--Step">
+            <i class="fas fa-check"></i><span>Own your Aria Free system after monthly payments are completed</span>
+          </div>
+        </div>
+        <div class="Features--Header--Info--Actions" data-aos="fade-up">
+          <a href="#" class="Link Link--primary Button Button--fill Button--round">Available states</a>
+        </div>
       </div>
-      <div class="section-subtitle">
-        <span>{{ section.settings.subtitle }}</span>
+      <div class="Features--Header--Image" data-aos="fade-left">
+        <img src="{{ 'component-device.png' | asset_url }}" />
       </div>
     </div>
   </div>
@@ -47,18 +72,6 @@
 {% schema %}
 {
   "name": "How To - Features",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Title"
-    },
-    {
-      "type": "html",
-      "id": "subtitle",
-      "label": "SubHeading"
-    }
-  ],
   "blocks": [
     {
       "type": "feature",

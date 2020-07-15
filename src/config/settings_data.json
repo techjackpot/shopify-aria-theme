@@ -789,8 +789,8 @@
             "type": "step",
             "settings": {
               "title": "1. Take the Aria survey.",
-              "text": "Answer just a few questions to see if Aria is right for you.",
-              "image": "shopify:\/\/shop_images\/how-to-step1.png",
+              "text": "Answer just a few questions to see if Aria Free is right for you.",
+              "image": "shopify:\/\/shop_images\/how-to-step1_21b3e106-2fe0-4499-8de2-5d17eef3b3f1.png",
               "button_text": "Get started",
               "button_link": "shopify:\/\/pages\/get-started",
               "position": "left"
@@ -801,7 +801,7 @@
             "settings": {
               "title": "2. Find your garment size.",
               "text": "Our simple 3-measurement sizing chart will identify the right fit.",
-              "image": "shopify:\/\/shop_images\/how-to-step2.png",
+              "image": "shopify:\/\/shop_images\/how-to-step2_b14acc53-605e-4f57-bb12-bd1743116053.png",
               "button_text": "Sizing chart",
               "button_link": "shopify:\/\/pages\/size-chart",
               "position": "right"
@@ -812,7 +812,7 @@
             "settings": {
               "title": "3. Upload your Rx.",
               "text": "You’ll need a prescription for therapy. If you already have one, you can upload or fax it to us. If you need one, ask your healthcare provider.",
-              "image": "shopify:\/\/shop_images\/how-to-step3.png",
+              "image": "shopify:\/\/shop_images\/how-to-step3_8b926d38-c3c0-448a-8453-4fd7af4c38bd.png",
               "button_text": "",
               "button_link": "",
               "position": "left"
@@ -822,8 +822,8 @@
             "type": "step",
             "settings": {
               "title": "4. Get free contactless delivery to your door and a 30-day money-back guarantee.",
-              "text": "Your Aria Free system comes with everything you need to get started and set up on your own. We are available by phone or online for help, and there’s no need for anyone to come to your home. That’s it!",
-              "image": "shopify:\/\/shop_images\/how-to-step4.png",
+              "text": "Your Aria Free system comes with everything you need to get started and set up on your own. We are available by phone or online for help, and there’s no need for anyone to come to your home. <i>That’s it!<\/i>",
+              "image": "shopify:\/\/shop_images\/how-to-step4_1d335eef-abcb-4648-9e42-74c2775c68c7.png",
               "button_text": "Get going",
               "button_link": "#",
               "position": "right"
@@ -843,10 +843,6 @@
       },
       "how-to-purchase-options": {
         "type": "how-to-purchase-options",
-        "settings": {}
-      },
-      "how-to-works": {
-        "type": "how-to-works",
         "settings": {}
       },
       "how-to-features": {
@@ -895,9 +891,20 @@
           "1594431340436",
           "1594431344972"
         ],
+        "settings": {}
+      },
+      "how-to-use": {
+        "type": "how-to-use",
         "settings": {
-          "title": "Interest-free rent-to-own<br> payment plans.",
-          "subtitle": "Aria Free is available for purchase through an interest-free rent-to-own payment plan <a href=\"#\">in select states<\/a>."
+          "title": "Using your HSA or FSA.",
+          "text": "Aria Health does not contract directly with insurance companies or Medicare, but we can provide the necessary documentation to receive reimbursement if plans offer coverage. Some HSA\/FSA agreements and insurance companies can help you pay for pneumatic compression devices.",
+          "image": "shopify:\/\/shop_images\/how-to-use.png"
+        }
+      },
+      "how-to-states": {
+        "type": "how-to-states",
+        "settings": {
+          "title": "You must be in a qualified state to purchase Aria Free."
         }
       }
     },

@@ -1,0 +1,90 @@
+<section class="Section Section--spacingNormal Section-How-To-Use" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="how-to-use">
+  <div class="Container Container--narrow">
+    <div class="Section-How-To-Use--Header" data-aos="fade-up">
+      <div class="section-title">
+        <span>{{ section.settings.title }}</span>
+      </div>
+      <div class="section-subtitle">
+        <span>{{ section.settings.text }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="Container Container--narrow">
+    <div class="Section-How-To-Use--Content">
+      <div class="Use--Content--Info">
+        <div class="Use--Content--Info--Title" data-aos="fade-up">
+          <span>How to use:</span>
+        </div>
+        <div class="Use--Content--Info--Steps">
+          <div class="Use--Content--Info--Step" data-aos="fade-up">
+            <div class="Use--Content--Info--Step--Number">
+              <span>1</span>
+            </div>
+            <div class="Use--Content--Info--Step--Text">
+              <span>Verify that your insurance benefits cover out-of-network pneumatic compression devices or that your HSA/FSA covers pneumatic compression devices.</span>
+            </div>
+          </div>
+          <div class="Use--Content--Info--Step" data-aos="fade-up">
+            <div class="Use--Content--Info--Step--Number">
+              <span>2</span>
+            </div>
+            <div class="Use--Content--Info--Step--Text">
+              <span>Purchase the Aria Free system at our <a href="/products/aria-free">online store</a>.</span>
+            </div>
+          </div>
+          <div class="Use--Content--Info--Step" data-aos="fade-up">
+            <div class="Use--Content--Info--Step--Number">
+              <span>3</span>
+            </div>
+            <div class="Use--Content--Info--Step--Text">
+              <span>Receive your personalized receipt.</span>
+            </div>
+          </div>
+          <div class="Use--Content--Info--Step" data-aos="fade-up">
+            <div class="Use--Content--Info--Step--Number">
+              <span>4</span>
+            </div>
+            <div class="Use--Content--Info--Step--Text">
+              <span>To receive your reimbursement, simply upload you receipt to your HAS/FSA account or submit the receipt as required by your employer or insurance company.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Use--Content--Image" data-aos="fade-left">
+        {%- if section.settings.image != blank -%}
+        <img class="Shadow--Left" src="{{ section.settings.image | img_url: 'master' }}" />
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "How to get Aria - Use",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "html",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "category": "How to get Aria",
+      "name": "How to Use",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

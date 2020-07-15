@@ -1,4 +1,4 @@
-.Section-How-To-Works {
+.Section-How-To-Use {
   background: #ffffff;
   margin: 0;
   padding: 64px 0;
@@ -65,8 +65,15 @@
     @include av-mq('phone') {
       flex-direction: column;
     }
-    .Works--Content--Info {
+    @include av-mq('tablet') {
+      flex-direction: column;
+    }
+    .Use--Content--Info {
+      flex: 1;
       max-width: 520px;
+      @include av-mq('desk') {
+        margin-right: 112px;
+      }
       &--Title {
         font-family: $heading-font-family;
         font-weight: 700;
@@ -86,10 +93,10 @@
           margin-bottom: 72px;
         }
       }
-      .Works--Content--Info--Steps {
+      .Use--Content--Info--Steps {
 
       }
-      .Works--Content--Info--Step {
+      .Use--Content--Info--Step {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -149,7 +156,7 @@
           }
         }
       }
-      .Works--Content--Info--Actions {
+      .Use--Content--Info--Actions {
         display: flex;
         justify-content: center;
         margin-top: 32px;
@@ -159,7 +166,7 @@
         }
       }
     }
-    .Works--Content--Image {
+    .Use--Content--Image {
       flex: 1;
       text-align: center;
       @include av-mq('tablet-and-up') {

@@ -50,17 +50,19 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+      align-items: center;
       @include av-mq('desk') {
         margin-bottom: 0;
       }
       &-col {
         flex: 1;
         &-info {
+          text-align: center;
           @include av-mq('tablet') {
-            margin-right: 25px;
+            // margin-right: 25px;
           }
           @include av-mq('desk') {
-            max-width: 632px;
+            max-width: 712px;
           }
         }
         &-meta {

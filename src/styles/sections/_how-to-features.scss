@@ -24,40 +24,95 @@
   }
 
   &--Header {
-    text-align: center;
-    .section-title {
-      font-family: $heading-font-family;
-      font-size: 42px;
-      line-height: 50px;
-      font-weight: 700;
-      color: #000000;
-      @include av-mq('tablet-and-up') {
-        font-size: 48px;
-        line-height: 64px;
-      }
-      @include av-mq('desk') {
-        font-size: 56px;
-        line-height: 64px;
-      }
-      margin-bottom: 40px;
-    }
-    .section-subtitle {
-      font-size: 18px;
-      line-height: 32px;
-      color: $secondary-color;
-      margin-bottom: 0px;
-      a {
-        color: $primary-color;
-      }
-      max-width: 520px;
-      margin: 0 auto;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 48px;
-    @include av-mq('tablet-and-up') {
-      margin-bottom: 56px;
+    @include av-mq('phone') {
+      flex-direction: column;
+    }
+    @include av-mq('tablet') {
+      justify-content: space-evenly;
+      align-items: center;
+      margin-bottom: 64px;
     }
     @include av-mq('desk') {
-      margin-bottom: 80px;
+      margin-bottom: 96px;
+    }
+    .Features--Header--Info {
+      flex: 1;
+      max-width: 632px;
+      @include av-mq('phone') {
+        margin-bottom: 48px;
+      }
+      &--Title {
+        font-family: $heading-font-family;
+        font-size: 42px;
+        line-height: 50px;
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 32px;
+        @include av-mq('tablet-and-up') {
+          font-size: 44px;
+          line-height: 52px;
+        }
+      }
+      &--Description {
+        color: $secondary-color;
+        margin-bottom: 40px;
+        a {
+          color: $primary-color;
+        }
+      }
+      &--Steps {
+        max-width: 440px;
+        margin-bottom: 48px;
+      }
+      &--Step {
+        font-size: 17px;
+        line-height: 27px;
+        margin-bottom: 11px;
+        color: $secondary-color;
+        display: flex;
+        aling-items: flex-start;
+        svg {
+          color: $primary-color;
+          display: block;
+          width: 17px;
+          height: 27px;
+          line-height: 27px;
+        }
+        span {
+          margin-left: 23px;
+        }
+      }
+      &--Actions {
+        .Button {
+          min-width: 174px;
+          text-transform: none;
+          margin-right: 40px;
+          margin-bottom: 32px;
+          letter-spacing: 0;
+          font-size: 20px;
+          &:last-of-type {
+            margin-right: 0;
+            margin-bottom: 0;
+          }
+          @include av-mq('phone') {
+            // margin-right: 20px;
+          }
+          @include av-mq('tablet') {
+            // margin-right: 0;
+          }
+        }
+      }
+    }
+    .Features--Header--Image {
+      flex: 1;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
     }
   }
 
