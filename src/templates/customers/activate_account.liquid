@@ -2,6 +2,9 @@
   <div class="Container">
     <div class="PageContent PageContent--fitScreen PageContent--extraNarrow">
       {%- form 'activate_customer_password', name: 'activate', class: 'Form Form--spacingTight', id: 'activate_customer_password' -%}
+
+        <input type="hidden" name="return_to" value="/products/aria-free">
+
         <header class="Form__Header">
           <h1 class="Form__Title Heading u-h1">{{ 'customer.activate_account.title' | t }}</h1>
           <p class="Form__Legend">{{ 'customer.activate_account.description' | t }}</p>

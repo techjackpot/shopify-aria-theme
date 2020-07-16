@@ -20,8 +20,11 @@
         <div class="step-content-wrapper">
           <div class="step-content-container">
             {%- if block.settings.image != blank -%}
-            <div class="step-image" data-aos="{% if block.settings.position == 'right' %}fade-left{% else %}fade-right{% endif %}">
-              <img class="Shadow--Left" src="{{ block.settings.image | img_url: 'master' }}">
+            <div class="step-image {% if block.settings.image_label != blank %}image-with-label{% endif %}" data-aos="{% if block.settings.position == 'right' %}fade-left{% else %}fade-right{% endif %}">
+              <img class="Shadow--Left {% if block.settings.image_label != blank %}with-label{% endif %}" src="{{ block.settings.image | img_url: 'master' }}">
+              {%- if block.settings.image_label != blank -%}
+                <span class="image-label">{{ block.settings.image_label }}</span>
+              {%- endif -%}
             </div>
             {%- endif -%}
             <div class="step-content" data-aos="{% if block.settings.position == 'right' %}fade-right{% else %}fade-left{% endif %}">
@@ -82,6 +85,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "image_label",
+          "label": "Image Label"
         },
         {
           "type": "text",
