@@ -22,6 +22,9 @@
       {%- endif -%}
 
       {%- form 'customer_login', name: 'login', class: 'Form Form--spacingTight', id: 'customer_login', style: login_default_visibility -%}
+
+        <input type="hidden" name="checkout_url" value="/products/aria-free">
+
         <header class="Form__Header">
           <h1 class="Form__Title Heading u-h1">{{ 'customer.login.title' | t }}</h1>
           <p class="Form__Legend">{{ 'customer.login.description' | t }}</p>
