@@ -45,6 +45,13 @@
       {%- endif -%}
     {%- endif -%}
 
+    {%- if template.suffix == 'thank-you' -%}
+      <!-- Event snippet for Lead (Complete Survey) conversion page -->
+      <script>
+        gtag('event', 'conversion', {'send_to': 'AW-751383741/NXJACLuHjtgBEL3ppOYC'});
+      </script>
+    {%- endif -%}
+
     {%- if template.name == 'cart' -%}
       <script type="text/javascript" src="https://partial.ly/js/partially-checkout-button.js"></script>
       <script type="text/javascript" src="https://partial.ly/js/partially-widget.js"></script>
