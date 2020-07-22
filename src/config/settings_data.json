@@ -128,7 +128,7 @@
           "1589768115620": {
             "type": "logo",
             "settings": {
-              "content": "<p>&copy; 2020 by <strong>Aria Health<\/strong>&trade; a ResMed Company.<\/p>",
+              "content": "<p>&copy; 2020 by <strong>Aria Health<\/strong>&trade; a ResMed company.<\/p>",
               "privacy_policy_url": "shopify:\/\/policies\/privacy-policy",
               "terms_of_use_url": "shopify:\/\/policies\/terms-of-service"
             }
@@ -856,7 +856,7 @@
             "type": "feature",
             "settings": {
               "image_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/icon-flexible-payments.svg?v=1594431632",
-              "title": "Flexible payment terms at 6, 12 and 18 months"
+              "title": "Flexible rental payment plan options at 6, 12 and 18 months"
             }
           },
           "1594431330886": {

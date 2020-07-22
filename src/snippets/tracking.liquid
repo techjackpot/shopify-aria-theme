@@ -1,0 +1,120 @@
+<script type="text/javascript">
+
+  function parseGET(param) {
+    var searchStr = document.location.search;
+    try {
+      var match = searchStr.match('[?&]' + param + '=([^&]+)');
+      if (match) {
+        var result = match[1];
+        result = result.replace(/\+/g, '%20');
+        result = decodeURIComponent(result);
+        return result;
+      } else {
+        return '';
+      }
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function startTracking() {
+    if (!parseGET('utm_source')) return;
+
+    console.log('start tracking...');
+
+    const trackings = (() => {
+      try {
+        return JSON.parse(localStorage.getItem('trackings')) || [];
+      } catch(e) {
+        return [];
+      }
+    })();
+
+    console.log(trackings);
+
+    const newRecord = {
+      'utm_campaign': '',
+      'utm_medium': '',
+      'utm_source': '',
+      'utm_term': '',
+      'utm_content': '',
+      'ad_id': '',
+      'adset_id': '',
+      'campaign_id': '',
+      'ad_name': '',
+      'adset_name': '',
+      'campaign_name': '',
+      'placement': '',
+      'network': '',
+      'keyword': '',
+      'matchtype': '',
+      'device': '',
+      'gclid': '',
+      'devicemodel': '',
+      // 'placement': '',
+      'campaignid': '',
+      'adgroupid': '',
+    };
+
+    Object.keys(newRecord).forEach(key => {
+      if (parseGET(key)) {
+        newRecord[key] = parseGET(key);
+      } else {
+        delete newRecord[key];
+      }
+    });
+
+    let newRecordString = JSON.stringify(newRecord);
+    
+    const duplicateFound = trackings.find(r => r == newRecordString);
+    if (duplicateFound) {
+      console.log('Duplicate found - ignore tracking');
+    } else {
+      console.log('New tracking record - add to localStorage');
+      trackings.push(newRecordString);
+      localStorage.setItem('trackings', JSON.stringify(trackings));
+    }
+  }
+
+  function pushTrackings() {
+    if (!customer || !customer.available) return;
+
+    console.log('Gonna push to SF');
+
+    const trackings = (() => {
+      try {
+        return JSON.parse(localStorage.getItem('trackings')) || [];
+      } catch(e) {
+        return [];
+      }
+    })();
+
+    if (trackings.length == 0) return;
+
+    (async () => {
+      try {
+        const rawResponse = await fetch(theme.ARIA_API_URL + '/shopify/push_trackings', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            customer_id: customer.available && customer.id || '',
+            trackings,
+          }),
+        });
+        const response = await rawResponse.json();
+        if (response.success) {
+          localStorage.removeItem('trackings');
+        }
+      } catch(e) {
+        console.log(e);
+      }
+    })();
+  }
+
+  startTracking();
+  pushTrackings();
+
+</script>

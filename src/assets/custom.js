@@ -66,6 +66,23 @@ function choosePayment (payment_method) {
   });
   $('body').on('click', '#toEligibleStates', function() {
     var $el = $('#product-tab-eligible-states-container');
+    var $elButton = $el.find('button');
+    if ($elButton.attr('aria-expanded') == 'false') {
+      $elButton.click();
+    }
+    var scrollTo = $el.offset().top;
+    window.scrollTo({
+      top: scrollTo,
+      left: 0,
+      behavior: 'smooth',
+    });
+  });
+  $('body').on('click', '#toRentalPaymentPlans', function() {
+    var $el = $('#product-tab-payment-options');
+    var $elButton = $el.find('button');
+    if ($elButton.attr('aria-expanded') == 'false') {
+      $elButton.click();
+    }
     var scrollTo = $el.offset().top;
     window.scrollTo({
       top: scrollTo,
