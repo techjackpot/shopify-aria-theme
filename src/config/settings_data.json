@@ -237,6 +237,13 @@
       "offers": {
         "type": "offers",
         "blocks": {
+          "1598034972026": {
+            "type": "offer",
+            "settings": {
+              "icon_class": "fa-stopwatch",
+              "title": "Coming soon"
+            }
+          },
           "1589814768831": {
             "type": "offer",
             "settings": {
@@ -260,6 +267,7 @@
           }
         },
         "block_order": [
+          "1598034972026",
           "1589814768831",
           "1589814875516",
           "1589815013377"
@@ -413,7 +421,7 @@
         "settings": {
           "form_label": "Aria Free is for you",
           "form_title": "We’re building a community.",
-          "form_description": "Stay connected to all the Aria Health™ news. You’ll get news, updates, offers, and details about co-creation opportunities. We’re doing something different, together."
+          "form_description": "Stay connected to all the Aria Health™ news. You’ll get news, updates, offers, and opportunities. We’re doing something different, together."
         }
       },
       "our-story-hero": {
@@ -713,7 +721,7 @@
             "settings": {
               "title": "General information",
               "description": "<p>New to Aria Free? Here&rsquo;s&nbsp;some<br>things you want&nbsp;to know.<\/p>",
-              "url": "shopify:\/\/blogs\/general-information\/general-and-lifestyle",
+              "url": "shopify:\/\/blogs\/general-information\/lifestyle",
               "image": "shopify:\/\/shop_images\/blog-how-it-works.png"
             }
           },
