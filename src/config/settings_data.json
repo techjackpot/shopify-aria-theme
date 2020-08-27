@@ -83,12 +83,12 @@
       "announcement": {
         "type": "announcement",
         "settings": {
-          "enable_bar": false,
+          "enable_bar": true,
           "home_page_only": false,
           "background": "#43ad92",
           "text_color": "#ffffff",
-          "content": "The Aria Free introductionary offer is here.",
-          "link": "#"
+          "content": "Aria Free is coming soon. Qualify now!",
+          "link": "shopify:\/\/pages\/get-started"
         }
       },
       "header": {
@@ -237,13 +237,6 @@
       "offers": {
         "type": "offers",
         "blocks": {
-          "1598034972026": {
-            "type": "offer",
-            "settings": {
-              "icon_class": "fa-stopwatch",
-              "title": "Coming soon"
-            }
-          },
           "1589814768831": {
             "type": "offer",
             "settings": {
@@ -267,7 +260,6 @@
           }
         },
         "block_order": [
-          "1598034972026",
           "1589814768831",
           "1589814875516",
           "1589815013377"
@@ -787,7 +779,7 @@
         "settings": {
           "form_label": "Aria Free is for you",
           "form_title": "We’re building a community.",
-          "form_description": "Stay connected to all the Aria Health™ news. You’ll also receive updates, offers, and details about co-creation opportunities. We’re doing something different, together."
+          "form_description": "Stay connected to all the Aria Health™ news. You’ll also receive updates, offers, and details about feedback opportunities. We’re doing something different, together."
         }
       },
       "how-to-steps": {
@@ -836,8 +828,8 @@
               "text": "Your Aria Free system comes with everything you need to get started and set up on your own. We are available by phone or online for help, and there’s no need for anyone to come to your home. <i>That’s it!<\/i>",
               "image": "shopify:\/\/shop_images\/how-to-step4_1d335eef-abcb-4648-9e42-74c2775c68c7.png",
               "image_label": "",
-              "button_text": "Get going",
-              "button_link": "#",
+              "button_text": "Take the survey",
+              "button_link": "shopify:\/\/pages\/get-started",
               "position": "right"
             }
           }

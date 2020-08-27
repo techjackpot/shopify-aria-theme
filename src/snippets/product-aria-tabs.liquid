@@ -29,6 +29,7 @@
     </div>
   {%- endif -%}
 
+  {%- comment -%}
   {%- if product.metafields.tabs.payment_options -%}
     <div class="Collapsible Collapsible--large" id="product-tab-payment-options">
       <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
@@ -57,6 +58,7 @@
       </div>
     </div>
   {%- endif -%}
+  {%- endcomment -%}
 
   {%- if product.metafields.tabs['eligible-states'] -%}
     <div class="Collapsible Collapsible--large" id="product-tab-eligible-states-container">
