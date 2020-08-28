@@ -14,7 +14,10 @@
         {%- if show_welcome -%}
           Good news!
         {%- else -%}
+          {%- comment -%}
           We're sorry.
+          {%- endcomment -%}
+          Thank you for taking the survey, and for your interest in the Aria Free system.
         {%- endif -%}
       </h1>
     </div>
@@ -22,10 +25,17 @@
 
   <div class="PageContent Rte">
     {%- if show_welcome -%}
+      {%- comment -%}
       <p><strong>You’re eligible to purchase the Aria Free system.</strong><br/><br/> Simply click the link in your email to set up your Aria Health account and complete your purchase.<br/><br/></p>
+      {%- endcomment -%}
+      <p><strong>Based on the information you provided, you qualify for purchase when Aria Free becomes available.</strong><br/>We’re excited that our pocket-sized pump can offer a new approach to therapy, and we thank you for your interest in the Aria Free system.<br/>We have your information and will keep you up-to-date with Aria Health news and as we get closer to launch.<br/><br/></p>
     {%- else -%}
+      {%- comment -%}
       <p>On the basis of your location or garment needs, we are unable to offer the Aria Free system to you at this time. We currently ship to select states and offer the leg garment exclusively. As we continue to expand our shipping destinations and make additional garments available, we’ll let you know.</p>
       <p>Stay connected with us and we’ll let you know when we’re able to offer the Aria Free system to you.</p>
+      {%- endcomment -%}
+      <p>Unfortunately, based on the information you provided, we won’t be able to service you when Aria Free becomes available. It may be that we’re not yet shipping to your state, or that we don’t yet offer the appropriate garment for your needs.<br/></p>
+      <p>The good news is that we will continue to add new states and development new garments. We have your information and will keep you up-to-date with Aria Health news and notify you via email if you become eligible.<br/><br/></p>
     {%- endif -%}
 
     <a href="/" class="Button Button--fill Button--round Button--text-normal">Return home</a>
