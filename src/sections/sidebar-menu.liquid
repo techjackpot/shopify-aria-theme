@@ -9,10 +9,12 @@
       <img class="Header__LogoImage Header__LogoImage--primary"
            src="{{ 'aria-logo.svg' | asset_url }}"
            alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
+      {%- comment -%}
       <a href="{{ routes.cart_url }}" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable Drawer__CartIcon">
         <span>{%- render 'icon' with 'cart' -%}</span>
         <span class="Header__CartDot {% if cart.item_count > 0 %}is-visible{% endif %}"></span>
       </a>
+      {%- endcomment -%}
     </header>
 
     <div class="Drawer__Content">
@@ -81,7 +83,7 @@
               {%- endcomment -%}
 
               <li class="Linklist__Item">
-                <a href="#" class="Heading Link Link--primary u-h6">Get started</a>
+                <a href="/pages/get-started" class="Heading Link Link--primary u-h6">Qualify now</a>
               </li>
             </ul>
           </nav>
