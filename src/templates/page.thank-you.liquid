@@ -1,43 +1,28 @@
-{% capture qs_qualified %}{%- render 'fn.querystring', param: "e" -%}{% endcapture %}
-{% capture qs_state %}{%- render 'fn.querystring', param: "state" -%}{% endcapture %}
-{% assign qs_state = qs_state | replace: '+', ' ' %}
-{% assign states = 'California, Texas, Colorado, Delaware, New York, Pennsylvania, Ohio, Maine, Georgia, Washington, Minnesota, Massachusetts, Missouri, New Jersey, Maryland, Oregon, New Mexico, Oklahoma, Nebraska, Hawaii, Rhode Island, South Dakota, Alaska, District of Columbia, Vermont, West Virginia, Wisconsin, Wyoming' | split: ', ' %}
-{% assign show_welcome = false %}
-{% if qs_qualified == 'true' or states contains qs_state %}
-  {% assign show_welcome = true %}
-{% endif %}
-
 <div class="Container Page-Thank-You-Container">
   <header class="PageHeader">
     <div class="SectionHeader SectionHeader--center">
-      <h1 class="SectionHeader__Heading Heading u-h1">
-        {%- if show_welcome -%}
-          Good news!
-        {%- else -%}
-          {%- comment -%}
-          We're sorry.
-          {%- endcomment -%}
-          Thank you for taking the survey, and for your interest in the Aria Free system.
-        {%- endif -%}
-      </h1>
+      <h1 class="SectionHeader__Heading Heading u-h1 MessageTitle"></h1>
     </div>
   </header>
 
   <div class="PageContent Rte">
-    {%- if show_welcome -%}
-      {%- comment -%}
-      <p><strong>You’re eligible to purchase the Aria Free system.</strong><br/><br/> Simply click the link in your email to set up your Aria Health account and complete your purchase.<br/><br/></p>
-      {%- endcomment -%}
-      <p><strong>Based on the information you provided, you qualify for purchase when Aria Free becomes available.</strong><br/>We’re excited that our pocket-sized pump can offer a new approach to therapy, and we thank you for your interest in the Aria Free system.<br/>We have your information and will keep you up-to-date with Aria Health news and as we get closer to launch.<br/><br/></p>
-    {%- else -%}
-      {%- comment -%}
-      <p>On the basis of your location or garment needs, we are unable to offer the Aria Free system to you at this time. We currently ship to select states and offer the leg garment exclusively. As we continue to expand our shipping destinations and make additional garments available, we’ll let you know.</p>
-      <p>Stay connected with us and we’ll let you know when we’re able to offer the Aria Free system to you.</p>
-      {%- endcomment -%}
-      <p>Unfortunately, based on the information you provided, we won’t be able to service you when Aria Free becomes available. It may be that we’re not yet shipping to your state, or that we don’t yet offer the appropriate garment for your needs.<br/></p>
-      <p>The good news is that we will continue to add new states and development new garments. We have your information and will keep you up-to-date with Aria Health news and notify you via email if you become eligible.<br/><br/></p>
-    {%- endif -%}
-
+    <div class="MessageContent"></div>
     <a href="/" class="Button Button--fill Button--round Button--text-normal">Return home</a>
   </div>
 </div>
+
+<script type="text/javascript">
+  const urlParams = new URLSearchParams(window.location.search);
+  const qs_qualified = urlParams.get('e');
+  const qs_state = urlParams.get('state');
+
+  const states = 'California, Texas, Colorado, Delaware, New York, Pennsylvania, Ohio, Maine, Georgia, Washington, Minnesota, Massachusetts, Missouri, New Jersey, Maryland, Oregon, New Mexico, Oklahoma, Nebraska, Hawaii, Rhode Island, South Dakota, Alaska, District of Columbia, Vermont, West Virginia, Wisconsin, Wyoming'.split(', ');
+
+  if (qs_qualified == 'true' || states.includes(qs_state)) {
+    document.querySelector('.MessageTitle').innerHTML = 'Good news!';
+    document.querySelector('.MessageContent').innerHTML = '<p><strong>Based on the information you provided, you qualify for purchase when Aria Free becomes available.</strong><br/>We’re excited that our pocket-sized pump can offer a new approach to therapy, and we thank you for your interest in the Aria Free system.<br/>We have your information and will keep you up-to-date with Aria Health news and as we get closer to launch.<br/><br/></p>';
+  } else {
+    document.querySelector('.MessageTitle').innerHTML = 'Thank you for taking the survey, and for your interest in the Aria Free system.';
+    document.querySelector('.MessageContent').innerHTML = '<p>Unfortunately, based on the information you provided, we won’t be able to service you when Aria Free becomes available. It may be that we’re not yet shipping to your state, or that we don’t yet offer the appropriate garment for your needs.<br/></p><p>The good news is that we will continue to add new states and development new garments. We have your information and will keep you up-to-date with Aria Health news and notify you via email if you become eligible.<br/><br/></p>';
+  }
+</script>

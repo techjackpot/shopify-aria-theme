@@ -171,7 +171,7 @@
       "email": "Email",
       "password": "Password",
       "forgot": "Forgot password?",
-      "submit": "Login",
+      "submit": "Log in",
       "register_label": "Don't have an account?",
       "register_link": "Create one"
     },
