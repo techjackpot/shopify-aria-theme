@@ -14,7 +14,7 @@
         <div class="form-contacts">
           <p><a href="mailto:hello@aria-therapy.com"><i class="fal fa-envelope"></i> hello@aria-therapy.com</a></p>
           <p><a href="tel:8666470691"><i class="fal fa-comments"></i> (866) 647-0691</a></p>
-          <p><i class="fal fa-share"></i> <a href="https://www.facebook.com/Aria.New.Lymphedema.Solution" target="_blank">facebook</a> | <a href="https://www.instagram.com/aria_therapy" target="_blank">instagram</a> | <a href="https://www.linkedin.com/company/monterey-health" target="_blank">linkedin</a></p>
+          <p><i class="fal fa-share"></i> <a href="{{ settings.social_facebook | replace_first: 'https://', '' | replace_first: 'http://', '' | prepend: 'https://' }}" target="_blank">facebook</a> | <a href="{{ settings.social_instagram | replace_first: 'https://', '' | replace_first: 'http://', '' | prepend: 'https://' }}" target="_blank">instagram</a> | <a href="{{ settings.social_linkedin | replace_first: 'https://', '' | replace_first: 'http://', '' | prepend: 'https://' }}" target="_blank">linkedin</a></p>
         </div>
       </div>
       <div class="form-container">
