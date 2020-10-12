@@ -33,33 +33,6 @@
 
     {{ content_for_header }}
 
-    {%- if template.name == 'index' or template.suffix == 'meet-aria' or template.suffix == 'subscribe' -%}
-      {% render 'web-form-newsletter-head' %}
-    {%- endif -%}
-    {%- if template.suffix == 'get-started' -%}
-      {% capture qs_step %}{%- render 'fn.querystring', param: "step" -%}{% endcapture %}
-      {%- if qs_step == 'final' -%}
-        {% render 'web-form-get-started-part2-head' %}
-      {%- else -%}
-        {% render 'web-form-get-started-part1-head' %}
-      {%- endif -%}
-    {%- endif -%}
-
-    {%- if template.suffix == 'thank-you' -%}
-      <!-- Event snippet for Lead (Complete Survey) conversion page -->
-      <script>
-        gtag('event', 'conversion', {'send_to': 'AW-751383741/NXJACLuHjtgBEL3ppOYC'});
-      </script>
-    {%- endif -%}
-
-    {%- if template.name == 'cart' -%}
-      <script type="text/javascript" src="https://partial.ly/js/partially-checkout-button.js"></script>
-      <script type="text/javascript" src="https://partial.ly/js/partially-widget.js"></script>
-    {%- endif -%}
-    {%- if template.name == 'product' -%}
-      <script type="text/javascript" src="https://partial.ly/js/partially-widget.js"></script>
-    {%- endif -%}
-    
     <script src="https://kit.fontawesome.com/bf86609f7f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/qcj6mmw.css">
 
@@ -137,6 +110,33 @@
       <script src="//cdn.shopify.com/s/javascripts/currencies.js" defer></script>
     {% endif %}
 
+    {%- if template.name == 'index' or template.suffix == 'meet-aria' or template.suffix == 'subscribe' -%}
+      {% render 'web-form-newsletter-head' %}
+    {%- endif -%}
+    {%- if template.suffix == 'get-started' -%}
+      {% capture page_url %}{{ request.path }}{% endcapture %}
+      {%- if page_url == '/pages/get-started-part-2' -%}
+        {% render 'web-form-get-started-part2-head' %}
+      {%- else -%}
+        {% render 'web-form-get-started-part1-head' %}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if template.suffix == 'thank-you' -%}
+      <!-- Event snippet for Lead (Complete Survey) conversion page -->
+      <script>
+        gtag('event', 'conversion', {'send_to': 'AW-751383741/NXJACLuHjtgBEL3ppOYC'});
+      </script>
+    {%- endif -%}
+
+    {%- if template.name == 'cart' -%}
+      <script type="text/javascript" src="https://partial.ly/js/partially-checkout-button.js"></script>
+      <script type="text/javascript" src="https://partial.ly/js/partially-widget.js"></script>
+    {%- endif -%}
+    {%- if template.name == 'product' -%}
+      <script type="text/javascript" src="https://partial.ly/js/partially-widget.js"></script>
+    {%- endif -%}
+    
     {%- if template == 'customers/addresses' -%}
       <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
       <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>

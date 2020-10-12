@@ -1,6 +1,7 @@
 <!-- FORM: HEAD SECTION (part2) -->
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="referrer" content="no-referrer-when-downgrade">
             <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function(){
             const FORM_TIME_START = Math.floor((new Date).getTime()/1000);
@@ -37,12 +38,27 @@
         });
     </script>
 
-    <link href="https://ariatherapy.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=b270ede14defcb4ed1a9e1c364d99681775f21f3" rel="stylesheet" type="text/css" />
+    <link href="https://ariatherapy.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=37d303e071ef5f151618389372bb6bfbf3512400" rel="stylesheet" type="text/css" />
 
     <link href="https://ariatherapy.tfaforms.net/uploads/themes/theme-404.css" rel="stylesheet" type="text/css" />
-    <link href="https://ariatherapy.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=b270ede14defcb4ed1a9e1c364d99681775f21f3" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
-    <script type="text/javascript" src="https://ariatherapy.tfaforms.net/wForms/3.11/js/wforms.js?v=b270ede14defcb4ed1a9e1c364d99681775f21f3"></script>
+    <link href="https://ariatherapy.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=37d303e071ef5f151618389372bb6bfbf3512400" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+    <script type="text/javascript" src="https://ariatherapy.tfaforms.net/wForms/3.11/js/wforms.js?v=37d303e071ef5f151618389372bb6bfbf3512400"></script>
     <script type="text/javascript">
         wFORMS.behaviors.prefill.skip = false;
     </script>
-        <script type="text/javascript" src="https://ariatherapy.tfaforms.net/wForms/3.11/js/localization-en_US.js?v=b270ede14defcb4ed1a9e1c364d99681775f21f3"></script>
+        <script type="text/javascript" src="https://ariatherapy.tfaforms.net/wForms/3.11/js/localization-en_US.js?v=37d303e071ef5f151618389372bb6bfbf3512400"></script>
+
+<!-- custom -->
+<script type="text/javascript">
+    const urlParams = new URLSearchParams(window.location.search);
+    const email = urlParams.get('tfa_92');
+
+    fetch(theme.ARIA_API_URL + '/salesforce/get_lead_by_email?email=' + email)
+    .then(data => {return data.json()})
+    .then(res => {
+        if (!res.valid) {
+            location.href = "/products/aria-free";
+        }
+    })
+    .catch(error => console.error(error));
+</script>

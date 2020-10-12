@@ -2,8 +2,8 @@
   <div class="Container Container--narrow">
     <div class="Section-Get-Started-Form--Content">
       <div class="form-container">
-        {% capture qs_step %}{%- render 'fn.querystring', param: "step" -%}{% endcapture %}
-        {%- if qs_step == 'final' -%}
+        {% capture page_url %}{{ request.path }}{% endcapture %}
+        {%- if page_url == '/pages/get-started-part-2' -%}
           {% render 'web-form-get-started-part2-body' %}
         {%- else -%}
           {% render 'web-form-get-started-part1-body' %}
