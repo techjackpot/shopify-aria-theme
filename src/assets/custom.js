@@ -90,4 +90,14 @@ function choosePayment (payment_method) {
       behavior: 'smooth',
     });
   });
+  $('body').on('click', '.Button-Toggle-States', function() {
+    $(this).parents('.states-table').find('.product-tab-eligible-states').toggle();
+    $(this).toggleClass('.Button-Toggle-States-Hidden');
+    if ($(this).hasClass('.Button-Toggle-States-Hidden')) {
+      $(this).text('Hide eligible states');
+    } else {
+      $(this).text('Show eligible states');
+    }
+    return false;
+  });
 })(jQuery);

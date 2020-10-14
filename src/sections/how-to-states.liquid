@@ -8,7 +8,11 @@
     <div class="Section-How-To-States--Content">
       <div class="states-table">
         {%- render 'table-eligible-states' -%}
+        <a href="javascript: void(0)" class="Link Link--primary Button Button--fill Button--round Button-Toggle-States Button-Toggle-States-Hidden">Show eligible states</a>
       </div>
+      <script type="text/javascript">
+        document.querySelector('.product-tab-eligible-states').style.display = 'none';
+      </script>
     </div>
   </div>
 </section>

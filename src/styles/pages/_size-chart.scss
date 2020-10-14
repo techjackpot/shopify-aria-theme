@@ -54,10 +54,15 @@
       }
     }
     .size-chart-table {
-      margin-top: 3rem;
+      margin: 3rem auto 0;
+      max-width: 620px;
       table {
         font-size: 14px;
         border-collapse: collapse;
+        margin-bottom: 0.5rem;
+        th {
+          letter-spacing: 0;
+        }
         thead, tbody {
           border: solid 1px #777;
           td, th {
@@ -66,6 +71,7 @@
             font-family: $text-font-family;
             padding: 2px 12px;
             white-space: nowrap;
+            color: #666;
             &.text-center {
               text-align: center;
             }
@@ -75,8 +81,20 @@
           }
         }
         thead th:first-child {
+          font-size: 15px;
           color: $primary-color;
         }
+        tbody td {
+          font-size: 13px;
+          font-weight: 600;
+        }
+        tbody th:first-child {
+          color: inherit;
+        }
+      }
+      p {
+        font-size: 12px;
+        color: #666;
       }
     }
   }
