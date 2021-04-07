@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@shopify/themekit": "^1.1.3"
+    "@shopify/themekit": "^1.1.6"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
@@ -21,8 +21,11 @@
     "download": "node -r dotenv/config scripts/download",
     "download:prod": "SHOPIFY_ENV=production node -r dotenv/config scripts/download",
     "start": "node -r dotenv/config scripts/watch",
-    "dev": "nodemon -r dotenv/config scripts/watch",
+    "start:prod": "SHOPIFY_ENV=production node -r dotenv/config scripts/watch",
     "deploy": "node -r dotenv/config scripts/deploy",
+    "deploy:prod": "SHOPIFY_ENV=production node -r dotenv/config scripts/deploy",
+    "deploy-settings": "node -r dotenv/config scripts/deploy-settings",
+    "deploy-settings:prod": "SHOPIFY_ENV=production node -r dotenv/config scripts/deploy-settings",
     "gulp": "gulp"
   },
   "repository": {

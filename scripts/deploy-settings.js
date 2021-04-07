@@ -1,8 +1,10 @@
 const themeKit = require('@shopify/themekit');
 
-themeKit.command('watch', {
+themeKit.command('deploy', {
   env: process.env.SHOPIFY_ENV || 'development',
   config: 'src/config.yml',
-  ignores: 'src/themekit_ignores',
+  files: [
+    'config/settings_data.json',
+  ],
   "allow-live": true,
 });

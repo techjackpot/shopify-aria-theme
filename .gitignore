@@ -60,8 +60,10 @@ typings/
 # next.js build output
 .next
 
-package-lock.json
-yarn.lock
+# package-lock.json
+# yarn.lock
 
 # source maps
 *.map
+
+.DS_Store
