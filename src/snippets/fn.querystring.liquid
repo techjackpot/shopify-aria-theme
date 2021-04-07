@@ -1,5 +1,5 @@
 {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
-{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'aria-therapy.com' | last |
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'ariahealth.com' | last |
    replace:'\/','/' | 
    replace:'%20',' ' | 
    replace:'\u0026','&'

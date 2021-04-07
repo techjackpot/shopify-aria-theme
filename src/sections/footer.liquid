@@ -35,6 +35,10 @@
                      src="{{ 'aria-logo-reverse.svg' | asset_url }}"
                      alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
 
+                <div class="Footer__Content Rte">
+                  7581 Convoy Court, San Diego, CA 92111
+                </div>
+
                 {%- if block.settings.content != blank -%}
                   <div class="Footer__Content Rte">
                     {{ block.settings.content }}
