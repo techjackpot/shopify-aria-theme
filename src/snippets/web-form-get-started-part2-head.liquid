@@ -38,27 +38,12 @@
         });
     </script>
 
-    <link href="https://ariatherapy.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=37d303e071ef5f151618389372bb6bfbf3512400" rel="stylesheet" type="text/css" />
+    <link href="https://ariatherapy.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=6b79fc1368ac84b0f32ea0bd07d7b4dde1e63e35" rel="stylesheet" type="text/css" />
 
     <link href="https://ariatherapy.tfaforms.net/uploads/themes/theme-404.css" rel="stylesheet" type="text/css" />
-    <link href="https://ariatherapy.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=37d303e071ef5f151618389372bb6bfbf3512400" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
-    <script type="text/javascript" src="https://ariatherapy.tfaforms.net/wForms/3.11/js/wforms.js?v=37d303e071ef5f151618389372bb6bfbf3512400"></script>
+    <link href="https://ariatherapy.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=6b79fc1368ac84b0f32ea0bd07d7b4dde1e63e35" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+    <script type="text/javascript" src="https://ariatherapy.tfaforms.net/wForms/3.11/js/wforms.js?v=6b79fc1368ac84b0f32ea0bd07d7b4dde1e63e35"></script>
     <script type="text/javascript">
         wFORMS.behaviors.prefill.skip = false;
     </script>
-        <script type="text/javascript" src="https://ariatherapy.tfaforms.net/wForms/3.11/js/localization-en_US.js?v=37d303e071ef5f151618389372bb6bfbf3512400"></script>
-
-<!-- custom -->
-<script type="text/javascript">
-    const urlParams = new URLSearchParams(window.location.search);
-    const email = urlParams.get('tfa_92');
-
-    fetch(theme.ARIA_API_URL + '/salesforce/get_lead_by_email?email=' + email)
-    .then(data => {return data.json()})
-    .then(res => {
-        if (!res.valid) {
-            location.href = "/products/aria-free";
-        }
-    })
-    .catch(error => console.error(error));
-</script>
+        <script type="text/javascript" src="https://ariatherapy.tfaforms.net/wForms/3.11/js/localization-en_US.js?v=6b79fc1368ac84b0f32ea0bd07d7b4dde1e63e35"></script>
