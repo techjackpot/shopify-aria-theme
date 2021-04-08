@@ -87,7 +87,7 @@
           "home_page_only": false,
           "background": "#43ad92",
           "text_color": "#ffffff",
-          "content": "Aria Free is coming soon. Qualify now!",
+          "content": "Aria Free™ is coming soon. Qualify now!",
           "link": "shopify:\/\/pages\/get-started"
         }
       },
@@ -95,7 +95,6 @@
         "type": "header",
         "settings": {
           "use_sticky_header": true,
-          "logo": "",
           "logo_max_width": 140,
           "mobile_logo_max_width": 90,
           "navigation_menu": "header-menu",
@@ -104,8 +103,7 @@
           "enable_transparent_header": false,
           "enable_transparent_header_collection": false,
           "show_transparent_header_border": false,
-          "transparent_text_color": "#ffffff",
-          "transparent_logo": ""
+          "transparent_text_color": "#ffffff"
         }
       },
       "footer": {
@@ -271,7 +269,7 @@
       "1589889522892": {
         "type": "homepage-hero",
         "settings": {
-          "title": "Aria Health<small><sup>™<\/sup><\/small>",
+          "title": "Aria Health",
           "text": "Compression therapy that<br> fits your life, and a device<br> that fits in your pocket.",
           "image": "shopify:\/\/shop_images\/aria-free-therapy.jpg"
         }
@@ -341,7 +339,7 @@
         "settings": {
           "form_label": "Aria Free is for you",
           "form_title": "We’re building a community.",
-          "form_description": "Stay connected to all the Aria Health™ news. You’ll also receive updates, offers, and details about feedback opportunities. We’re doing something different, together."
+          "form_description": "Stay connected to all the Aria Health news. You’ll also receive updates, offers, and details about feedback opportunities. We’re doing something different, together."
         }
       },
       "meet-aria-header": {
@@ -459,9 +457,9 @@
             "type": "person",
             "settings": {
               "title": "Dinesh Ramanan",
-              "position": "<p>Product and Clinical<\/p>",
+              "position": "<p>Product Development<\/p>",
               "image": "shopify:\/\/shop_images\/dinesh-ramanan.jpg",
-              "bio": "<p>Dinesh is responsible for the product development and clinical innovation behind Aria Health. Prior to his work with Aria Health, Dinesh was a key member of the clinical science and innovation team within ResMed, and he combines over ten years of&nbsp;medical device experience with his master&rsquo;s degree in biomedical engineering to elevate our team&rsquo;s capabilities. The innovator behind the product, Dinesh credits a family member living with venous disease as his inspiration. His passion for helping people is also evident in the six years he managed fundraising efforts for a nonprofit focused on developing better healthcare solutions for those living in rural India.<\/p>"
+              "bio": "<p>Dinesh is responsible for the product development and clinical innovation behind Aria Health. Prior to his work with Aria Health, Dinesh was a key member of the clinical science and innovation team within ResMed, and he combines over ten years of medical device experience with his master’s degree in biomedical engineering to elevate our team’s capabilities. The innovator behind the product, Dinesh credits a family member living with venous disease as his inspiration. His passion for helping people is also evident in the six years he managed fundraising efforts for a nonprofit focused on developing better healthcare solutions for those living in rural India.<\/p>"
             }
           },
           "1591278114942": {
@@ -471,6 +469,15 @@
               "position": "<p>Commercial<\/p>",
               "image": "shopify:\/\/shop_images\/jeannine-mar.jpg",
               "bio": "<p>With over thirteen years of experience in the health tech industry, Jeannine leads the commercial efforts for Aria Health. Since 2012, she&rsquo;s worked in marketing and strategy roles across ResMed&rsquo;s portfolio of medical&nbsp;devices and out-of-hospital software. She also brings a scientific perspective to her position at Aria Health, with both an MBA and a bachelor of science in molecular biology. Jeannine is eager to apply her knowledge, and hopeful that Aria Health will positively impact people&rsquo;s lives by transforming the treatment of lymphedema and other chronic edema conditions.<\/p>"
+            }
+          },
+          "8869f4ee-5b9b-4d6b-9f8a-3883a11e45c2": {
+            "type": "person",
+            "settings": {
+              "title": "Gordon Malouf",
+              "position": "<p>Clinical<\/p>",
+              "image": "shopify:\/\/shop_images\/gordon-malouf.jpg",
+              "bio": "<p>Gordon is the project manager for Aria Health product development. He brings to the position over twenty years of experience in inventing and releasing innovative medical devices to market. Gordon’s career has spanned multiple roles and continents, having worked in technology development, clinical engineering research, system engineering, product marketing, and medical affairs across Sweden, Australia, Japan, and Singapore. He holds bachelor&#x27;s degrees in computer science and mechatronics engineering, and is passionate about applying his education and expertise to help improve healthcare and quality of life. Gordon is excited to see the impact Aria can have on the world of lymphedema.<\/p>"
             }
           },
           "1591278153305": {
@@ -506,6 +513,7 @@
           "1591278036608",
           "1591278085748",
           "1591278114942",
+          "8869f4ee-5b9b-4d6b-9f8a-3883a11e45c2",
           "1591278153305",
           "1591278169742",
           "1591278190802"
@@ -816,8 +824,8 @@
               "text": "You’ll need a prescription for therapy. If you already have one, you can upload or fax it to us. If you need one, ask your healthcare provider.",
               "image": "shopify:\/\/shop_images\/how-to-step3_8b926d38-c3c0-448a-8453-4fd7af4c38bd.png",
               "image_label": "",
-              "button_text": "",
-              "button_link": "",
+              "button_text": "Information for your provider",
+              "button_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/4060\/9373\/files\/aria-free-specification-sheet_cd835dc0-704b-4143-8118-b5a0b0a818cb.pdf?v=1617040371",
               "position": "left"
             }
           },
