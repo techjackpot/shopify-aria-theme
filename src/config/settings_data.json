@@ -87,7 +87,7 @@
           "home_page_only": false,
           "background": "#43ad92",
           "text_color": "#ffffff",
-          "content": "Aria Free™ is coming soon. Qualify now!",
+          "content": "Aria Free is coming soon. Qualify now!",
           "link": "shopify:\/\/pages\/get-started"
         }
       },
@@ -411,7 +411,7 @@
         "settings": {
           "form_label": "Aria Free is for you",
           "form_title": "We’re building a community.",
-          "form_description": "Stay connected to all the Aria Health™ news. You'll hear about updates, offers, and opportunities. We’re doing something different, together."
+          "form_description": "Stay connected to all the Aria Health news. You'll hear about updates, offers, and opportunities. We’re doing something different, together."
         }
       },
       "our-story-hero": {
@@ -787,7 +787,7 @@
         "settings": {
           "form_label": "Aria Free is for you",
           "form_title": "We’re building a community.",
-          "form_description": "Stay connected to all the Aria Health™ news. You’ll also receive updates, offers, and details about feedback opportunities. We’re doing something different, together."
+          "form_description": "Stay connected to all the Aria Health news. You’ll also receive updates, offers, and details about feedback opportunities. We’re doing something different, together."
         }
       },
       "how-to-steps": {
