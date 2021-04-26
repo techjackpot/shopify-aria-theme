@@ -82,6 +82,9 @@
     }
     .ArticleContent {
       flex: 1;
+      @include av-mq('phone') {
+        max-width: 100%;
+      }
 
       color: #525364;
       h1 {
