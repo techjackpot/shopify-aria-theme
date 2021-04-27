@@ -1,9 +1,9 @@
 .wFormContainer {
   .wForm {
     form {
-      padding: 48px 25px;
+      padding: 48px 25px !important;
       @include av-mq('tablet-and-up') {
-        padding: 80px 40px;
+        padding: 80px 40px !important;
       }
       div.oneField {
         margin-top: 0;
