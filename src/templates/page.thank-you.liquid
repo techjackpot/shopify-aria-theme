@@ -16,7 +16,37 @@
   const qs_qualified = urlParams.get('e');
   const qs_state = urlParams.get('state');
 
-  const states = 'California, Texas, Colorado, Delaware, New York, Pennsylvania, Ohio, Maine, Georgia, Washington, Minnesota, Massachusetts, Missouri, New Jersey, Maryland, Oregon, New Mexico, Oklahoma, Nebraska, Hawaii, Rhode Island, South Dakota, Alaska, District of Columbia, Vermont, West Virginia, Wisconsin, Wyoming'.split(', ');
+  // const states = 'California, Texas, Colorado, Delaware, New York, Pennsylvania, Ohio, Maine, Georgia, Washington, Minnesota, Massachusetts, Missouri, New Jersey, Maryland, Oregon, New Mexico, Oklahoma, Nebraska, Hawaii, Rhode Island, South Dakota, Alaska, District of Columbia, Vermont, West Virginia, Wisconsin, Wyoming'.split(', ');
+  const states = [
+    'Alaska',
+    'California',
+    'Colorado',
+    'Delaware',
+    'Georgia',
+    'Hawaii',
+    'Maine',
+    'Maryland',
+    'Massachusetts',
+    'Minnesota',
+    'Missouri',
+    'Nebraska',
+    'New Jersey',
+    'New Mexico',
+    'New York',
+    'Ohio',
+    'Oklahoma',
+    'Oregon',
+    'Pennsylvania',
+    'Rhode Island',
+    'South Dakota',
+    'Texas',
+    'Vermont',
+    'Washington',
+    'District of Columbia',
+    'West Virginia',
+    'Wisconsin',
+    'Wyoming',
+  ];
 
   if (qs_qualified == 'true' || states.includes(qs_state)) {
     document.querySelector('.MessageTitle').innerHTML = 'Good news!';
