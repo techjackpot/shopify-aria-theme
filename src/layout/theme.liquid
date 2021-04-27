@@ -125,9 +125,9 @@
         {% render 'web-form-get-started-part2-head' %}
       {%- else -%}
         {% render 'web-form-get-started-part1-head' %}
-        <script src="{{ 'fa_validation.js' | asset_url }}" defer></script>
       {%- endif -%}
     {%- endif -%}
+    <script src="{{ 'fa_validation.js' | asset_url }}" defer></script>
 
     {%- if template.suffix == 'thank-you' -%}
       <!-- Event snippet for Lead (Complete Survey) conversion page -->
