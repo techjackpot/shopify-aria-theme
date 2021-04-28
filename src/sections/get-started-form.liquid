@@ -4,7 +4,60 @@
       <div class="form-container">
         {% capture page_url %}{{ request.path }}{% endcapture %}
         {%- if page_url == '/pages/get-started-part-2' -%}
+          {% comment %}
           {% render 'web-form-get-started-part2-body' %}
+          {% endcomment %}
+          <script>
+            var cur_url = new URL(location.href);
+
+            var url = 'https://ariatherapy.tfaforms.net/rest/forms/view/9' + cur_url.search;
+
+            function loadScript(url) {
+              return new Promise(async (resolve, reject) => {
+                var script = document.createElement("script")
+                script.type = "text/javascript";
+
+                if (script.readyState) { //IE
+                    script.onreadystatechange = function () {
+                        if (script.readyState == "loaded" || script.readyState == "complete") {
+                            script.onreadystatechange = null;
+                            resolve();
+                        }
+                    };
+                } else { //Others
+                    script.onload = function () {
+                        resolve();
+                    };
+                }
+
+                script.src = url;
+                document.getElementsByTagName("head")[0].appendChild(script);
+              });
+            }
+
+            fetch(theme.ARIA_API_URL + '/load?url=' + encodeURIComponent(url))
+            .then(data => {return data.json()})
+            .then(async (res) => {
+              document.querySelector('.form-container').innerHTML = res.data;
+
+              var arr = document.querySelectorAll('.form-container script');
+
+              let loadPromise = Promise.resolve();
+              arr.forEach(s => {
+                loadPromise = loadPromise.then(() => {
+                  if (s.src) {
+                    return loadScript(s.src);
+                  } else {
+                    eval(s.innerHTML);
+                    return Promise.resolve();
+                  }
+                });
+              })
+              await loadPromise;
+            })
+            .catch(error => console.error(error));
+
+          </script>
         {%- else -%}
           {% render 'web-form-get-started-part1-body' %}
         {%- endif -%}

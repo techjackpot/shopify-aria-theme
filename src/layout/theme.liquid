@@ -122,7 +122,9 @@
     {%- if template.suffix == 'get-started' -%}
       {% capture page_url %}{{ request.path }}{% endcapture %}
       {%- if page_url == '/pages/get-started-part-2' -%}
+        {% comment %}
         {% render 'web-form-get-started-part2-head' %}
+        {% endcomment %}
       {%- else -%}
         {% render 'web-form-get-started-part1-head' %}
         <script src="{{ 'fa_validation.js' | asset_url }}" defer></script>
