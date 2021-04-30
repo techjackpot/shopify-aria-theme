@@ -389,7 +389,6 @@ HEADER CONTENT
             </li>
             {%- endcomment -%}
 
-            {%- comment -%}
             <li class="HorizontalList__Item" style="margin-right: 0;">
               <a href="{{ routes.account_url }}" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable">
                 <span>{%- render 'icon' with 'account' -%}</span>
@@ -404,7 +403,6 @@ HEADER CONTENT
             </li>
 
             <li class="HorizontalList__Item hidden-phone Separator--Left">
-            {%- endcomment -%}
 
             <li class="HorizontalList__Item hidden-phone">
               {% assign get_started_link = '/pages/get-started' %}
@@ -412,7 +410,7 @@ HEADER CONTENT
                 {% assign get_started_link = '/products/aria-free' %}
               {% endif %}
               <a href="{{ get_started_link }}" class="Heading u-h8">
-                Qualify now
+                Get started
               </a>
             </li>
           </ul>

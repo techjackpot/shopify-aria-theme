@@ -91,9 +91,15 @@
                 {% endif %}
                 {%- endcomment -%}
 
+                {%- comment -%}
+                 unless customer.tags contains 'PAY-PARTIALLY'
+                {%- endcomment -%}
                 <div class="pay_via_shopify">
                   <button type="submit" name="checkout" class="Cart__Checkout Button Button--fill Button--round Button--text-normal">Check out</button>
                 </div>
+                {%- comment -%}
+                 endunless
+                {%- endcomment -%}
 
               {%- endif -%}
 
@@ -101,7 +107,7 @@
           </footer>
         </form>
 
-{% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' %}
+{% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' %} {%- comment -%} and customer.tags contains 'PAY-PARTIALLY' {%- endcomment -%}
 <div class="partiallyPlansContainer pay_via_partially">
   <div class="partiallyPlanContainer">
     <div id="partiallyCartButtonContainer1"></div>
