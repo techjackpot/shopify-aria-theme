@@ -23,6 +23,7 @@
           </div>
         </div>
         <div class="product-content-col product-content-col-meta">
+          {% comment %}
           {%- if customer.tags contains 'QUALIFIED' -%}
           <div class="product-price">
             <div class="product-price-col">
@@ -38,6 +39,7 @@
             </div>
           </div>
           {%- endif -%}
+          {% endcomment %}
           <div class="product-actions">
             <a href="/pages/get-started" class="Link Link--primary Button Button--fill Button--round">Qualify now</a>
             <a href="/products/aria-free" class="Link Link--primary Button Button--outline Button--round">Preview our shop</a> 
