@@ -1,0 +1,106 @@
+<section class="Section Section--spacingNormal Section-Our-Story-Board" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="our-story-Board">
+  <div class="Container Container--narrow">
+    <div class="Section-Our-Story-Board--Header" data-aos="fade-up">
+      <div class="section-title">
+        <span>{{ section.settings.title }}</span>
+      </div>
+    </div>
+    <div class="Section-Our-Story-Board--Content">
+      <div class="Person-List">
+        {%- assign block_delay = 0 -%}
+        {%- for block in section.blocks -%}
+          {%- capture block_delay -%}{{ block_delay | plus: 150 }}{%- endcapture -%}
+          <div id="block-{{ block.id }}" class="Person-Item" {{ block.shopify_attributes }} data-aos="fade" data-aos-delay="{{ block_delay }}">
+            <div class="Person-Item__Container" data-action="open-modal" aria-controls="modal-{{ section.id }}-{{ block.id }}">
+              <div class="Person-Item--Photo">
+                {%- if block.settings.image != blank -%}
+                  <img src="{{ block.settings.image | img_url: 'master' }}">
+                {%- endif -%}
+              </div>
+              <div class="Person-Item--Meta">
+                <div class="Person-Item--Name">
+                  <span>{{ block.settings.title }}</span>
+                </div>
+                <div class="Person-Item--Position">
+                  <span>{{ block.settings.position }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="modal-{{ section.id }}-{{ block.id }}" class="Modal Modal--personContent" aria-hidden="true" role="dialog" data-scrollable>
+            <div class="Modal__Content">
+              <div class="Container Container--narrow">
+                <div class="Person-Item--Photo">
+                  {%- if block.settings.image != blank -%}
+                    <img src="{{ block.settings.image | img_url: 'master' }}">
+                  {%- endif -%}
+                </div>
+                <div class="Person-Item--Name">
+                  <span>{{ block.settings.title }}</span>
+                </div>
+                <div class="Person-Item--Position">
+                  <span>{{ block.settings.position }}</span>
+                </div>
+                <div class="Person-Item--Bio">
+                  <span>{{ block.settings.bio }}</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="Modal__Close Modal__Close--outside" data-animate-bottom data-action="close-modal">{% render 'icon' with 'close' %}</button>
+          </div>
+
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Our Story - Board Members",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "person",
+      "name": "Person",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name"
+        },
+        {
+          "type": "richtext",
+          "id": "position",
+          "label": "Position"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo"
+        },
+        {
+          "type": "richtext",
+          "id": "bio",
+          "label": "Bio"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Our Story",
+      "name": "Board Members",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

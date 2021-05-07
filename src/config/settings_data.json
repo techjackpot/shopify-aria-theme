@@ -908,6 +908,56 @@
         "settings": {
           "title": "You must be in a qualified state to purchase Aria Free."
         }
+      },
+      "our-story-board": {
+        "type": "our-story-board",
+        "blocks": {
+          "52c0d8e8-8f5b-4818-a40e-59e7103e82bf": {
+            "type": "person",
+            "settings": {
+              "title": "Kathleen H. Lisson",
+              "position": "",
+              "image": "shopify:\/\/shop_images\/Picture1.png",
+              "bio": "<p>Kathleen Lisson isboard certified in therapeutic massage and bodywork and is a CertifiedLymphedema Therapist. From her practice in San Diego, Kathleen providesher patients manual lymphatic drainage for post-surgical swelling and fibrosisas well as lymphedema and lipedema massage. Kathleen is also theauthor of multiple books on manual lymphatic drainage and the management ofswelling.<\/p>"
+            }
+          },
+          "ded1e7f1-e426-4426-91cc-5071b0d8fa30": {
+            "type": "person",
+            "settings": {
+              "title": "Dr. Harvey N. Mayrovitz",
+              "position": "",
+              "image": "shopify:\/\/shop_images\/Picture2.png",
+              "bio": "<p>Dr.Harvey N. Mayrovitz isa professor in the Department of Medical Educationat the Dr.Kiran C. Patel College of Allopathic Medicine atNova Southeastern University in Davie, Florida. His over150 peer-reviewed publications include areas in skin physiology, lymphedema,wound healing, and the investigation of techniques for diagnosis andmonitoring.<\/p>"
+            }
+          },
+          "68ff96e2-fc6e-4ede-bce5-f6205275929a": {
+            "type": "person",
+            "settings": {
+              "title": "Emilia Dewi",
+              "position": "",
+              "image": "shopify:\/\/shop_images\/Picture3.png",
+              "bio": "<p>Emilia Dewi is an occupationaltherapist and lymphedema and cancer rehabilitation specialist at a leadingrehabilitation hospital in Houston, Texas. As a Doctorate of OccupationalTherapy and a Certified Lymphedema Therapist, Emilia works with clients whohave neurological conditions, cancer, lymphedema, and multi-trauma injuries.Emilia&#x27;s personalized treatment approach includes lifestyle adaptation toenable her clients manage their lymphedema.<\/p>"
+            }
+          },
+          "22472c73-60dc-46cb-895c-437dc3c367f9": {
+            "type": "person",
+            "settings": {
+              "title": "Dr. Emily Iker",
+              "position": "",
+              "image": "shopify:\/\/shop_images\/Picture4.png",
+              "bio": "<p>Dr.Emily Iker is the former President of the American Society of Lymphology andthe Director of The Lymphedema Center in Santa Monica. As a Physical Medicineand Rehabilitation Specialist, Dr.Iker brings her personal experience of lymphedema and over 20 years of practiceto the care of her patients through individualized treatment plans, manual lymphatic drainage, self-massage, andcompression therapy. <\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "52c0d8e8-8f5b-4818-a40e-59e7103e82bf",
+          "ded1e7f1-e426-4426-91cc-5071b0d8fa30",
+          "68ff96e2-fc6e-4ede-bce5-f6205275929a",
+          "22472c73-60dc-46cb-895c-437dc3c367f9"
+        ],
+        "settings": {
+          "title": "Our scientific advisory board members"
+        }
       }
     },
     "content_for_index": [
