@@ -497,15 +497,6 @@
               "image": "shopify:\/\/shop_images\/amy-cook.jpg",
               "bio": "<p>Amy is responsible for Aria Health digital solutions. She joined Aria Health after seven years working with ResMed&rsquo;s connected medical devices. She brings a science and business education to the team, with over ten years designing software to&nbsp;deliver exceptional patient experiences. She&rsquo;s passionate about problem solving, and is excited to put her efforts and expertise with digital tools and support toward enabling successful therapy. If you engage with the Aria app, you will see Amy&rsquo;s work firsthand. Her favorite part of working with digital solutions is that they can always be changed if you don&rsquo;t get it right the first time&mdash;so she wants to hear from the community so we can keep making improvements!<\/p>"
             }
-          },
-          "1591278190802": {
-            "type": "person",
-            "settings": {
-              "title": "Tommy Yu",
-              "position": "<p>Supply Chain<\/p>",
-              "image": "shopify:\/\/shop_images\/tommy-broski.jpg",
-              "bio": "<p>In the eight years prior to role managing the supply chain across Aria Health, Tommy worked in product development across ResMed&rsquo;s sleep and respiratory care portfolio, successfully taking a number of products from concept&nbsp;through to launch. With a degree in biomedical engineering, Tommy brings a &ldquo;can-be-built&rdquo; attitude to the team and strives to deliver users the ultimate product experience. He&rsquo;s most excited by the freedom Aria will provide its users, and loves to receive product feedback from the everyone in the lymphedema community.<\/p>"
-            }
           }
         },
         "block_order": [
@@ -515,8 +506,7 @@
           "1591278114942",
           "8869f4ee-5b9b-4d6b-9f8a-3883a11e45c2",
           "1591278153305",
-          "1591278169742",
-          "1591278190802"
+          "1591278169742"
         ],
         "settings": {
           "title": "The people behind the pump."
