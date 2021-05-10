@@ -116,18 +116,29 @@ function choosePayment (payment_method) {
   }
   var queryStringArr = getUrlVars();
 
-  $('#tfa_107').val(queryStringArr['utm_medium'] || '');
-  $('#tfa_109').val(queryStringArr['utm_source'] || '');
-  $('#tfa_111').val(queryStringArr['utm_campaign'] || '');
-  $('#tfa_116').val(queryStringArr['utm_term'] || '');
-  $('#tfa_117').val(queryStringArr['utm_content'] || '');
-  $('#tfa_118').val(window.location.href);
+  var utmData = JSON.parse(sessionStorage.getItem('utmData') || '{}');
 
-  $('#tfa_96').val(queryStringArr['utm_medium'] || '');
-  $('#tfa_97').val(queryStringArr['utm_source'] || '');
-  $('#tfa_98').val(queryStringArr['utm_campaign'] || '');
-  $('#tfa_99').val(queryStringArr['utm_term'] || '');
-  $('#tfa_100').val(queryStringArr['utm_content'] || '');
-  $('#tfa_101').val(window.location.href);
+  $('#tfa_107').val(utmData['utm_medium'] || queryStringArr['utm_medium'] || '');
+  $('#tfa_109').val(utmData['utm_source'] || queryStringArr['utm_source'] || '');
+  $('#tfa_111').val(utmData['utm_campaign'] || queryStringArr['utm_campaign'] || '');
+  $('#tfa_116').val(utmData['utm_term'] || queryStringArr['utm_term'] || '');
+  $('#tfa_117').val(utmData['utm_content'] || queryStringArr['utm_content'] || '');
+  $('#tfa_118').val(utmData['url'] || window.location.href);
+
+  $('#tfa_96').val(utmData['utm_medium'] || queryStringArr['utm_medium'] || '');
+  $('#tfa_97').val(utmData['utm_source'] || queryStringArr['utm_source'] || '');
+  $('#tfa_98').val(utmData['utm_campaign'] || queryStringArr['utm_campaign'] || '');
+  $('#tfa_99').val(utmData['utm_term'] || queryStringArr['utm_term'] || '');
+  $('#tfa_100').val(utmData['utm_content'] || queryStringArr['utm_content'] || '');
+  $('#tfa_101').val(utmData['url'] || window.location.href);
+
+  utmData['utm_medium'] = utmData['utm_medium'] || queryStringArr['utm_medium'] || '';
+  utmData['utm_source'] = utmData['utm_source'] || queryStringArr['utm_source'] || '';
+  utmData['utm_campaign'] = utmData['utm_campaign'] || queryStringArr['utm_campaign'] || '';
+  utmData['utm_term'] = utmData['utm_term'] || queryStringArr['utm_term'] || '';
+  utmData['utm_content'] = utmData['utm_content'] || queryStringArr['utm_content'] || '';
+  utmData['url'] = utmData['url'] || window.location.href;
+
+  sessionStorage.setItem('utmData', JSON.stringify(utmData));
 
 })(jQuery);
