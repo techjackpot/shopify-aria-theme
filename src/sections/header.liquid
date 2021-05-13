@@ -389,16 +389,25 @@ HEADER CONTENT
             </li>
             {%- endcomment -%}
 
+            {% assign accountLabel = 'Sign in' %}
+            {% if customer %}
+              {% assign accountLabel = 'My account' %}
+            {% endif %}
+
             <li class="HorizontalList__Item" style="margin-right: 0;">
-              <a href="{{ routes.account_url }}" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable">
-                <span>{%- render 'icon' with 'account' -%}</span>
+              <a href="{{ routes.account_url }}" class="Heading u-h8">
+                <span class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable">{%- render 'icon' with 'account' -%}</span>
+                &nbsp;{{ accountLabel }}
               </a>
             </li>
 
             <li class="HorizontalList__Item">
-              <a href="{{ routes.cart_url }}" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable {% unless section.settings.show_icons or use_sidebar_menu %}{% endunless %}" {% if settings.cart_type == 'drawer' %}data-action="open-drawer" data-drawer-id="sidebar-cart" aria-expanded="false" aria-label="{{ 'header.navigation.open_cart' | t }}"{% endif %}>
-                <span>{%- render 'icon' with 'cart' -%}</span>
-                <span class="Header__CartDot {% if cart.item_count > 0 %}is-visible{% endif %}"></span>
+              <a href="{{ routes.cart_url }}" class="Heading u-h8" {% if settings.cart_type == 'drawer' %}data-action="open-drawer" data-drawer-id="sidebar-cart" aria-expanded="false" aria-label="{{ 'header.navigation.open_cart' | t }}"{% endif %}>
+                <span class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable">
+                  {%- render 'icon' with 'cart' -%}
+                  <span class="Header__CartDot {% if cart.item_count > 0 %}is-visible{% endif %}"></span>
+                </span>
+                &nbsp;Cart
               </a>
             </li>
 
