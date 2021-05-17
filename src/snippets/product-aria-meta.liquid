@@ -29,7 +29,6 @@
   {%- endif -%}
 
   {%- if product.template_suffix != 'coming-soon' -%}
-    {%- if customer.tags contains 'QUALIFIED' -%}
     <div class="ProductMeta__PriceList Heading">
       {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
         <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
@@ -38,7 +37,6 @@
         <span class="ProductMeta__Price Price Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
       {%- endif -%}
     </div>
-    {%- endif -%}
   {%- endif -%}
 
   {%- if show_description and section.settings.description_below_add_to_cart == false -%}
