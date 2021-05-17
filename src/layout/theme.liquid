@@ -127,8 +127,8 @@
         {% endcomment %}
       {%- else -%}
         {% render 'web-form-get-started-part1-head' %}
-        <script src="{{ 'fa_validation.js' | asset_url }}" defer></script>
       {%- endif -%}
+      <script src="{{ 'fa_validation.js' | asset_url }}" defer></script>
     {%- endif -%}
 
     {%- if template.suffix == 'thank-you' -%}
