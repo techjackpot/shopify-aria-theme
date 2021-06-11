@@ -106,8 +106,8 @@
             </div>
           </footer>
         </form>
-
-{% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' %} {%- comment -%} and customer.tags contains 'PAY-PARTIALLY' {%- endcomment -%}
+{%- comment -%}
+{% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' %} {- comment -} and customer.tags contains 'PAY-PARTIALLY' {- endcomment -}
 <div class="partiallyPlansContainer pay_via_partially">
   <div class="partiallyPlanContainer">
     <div id="partiallyCartButtonContainer1"></div>
@@ -192,6 +192,7 @@
   widget3.init();
 </script>
 {% endif %}
+{%- endcomment -%}
 
         {%- if section.settings.show_shipping_estimator -%}
           <div class="Section Section--spacingExtraLarge">
