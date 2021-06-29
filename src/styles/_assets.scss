@@ -25,7 +25,7 @@
 .Button--outline {
   border: solid 2px $primary-color;
   color: $primary-color;
-  &:hover {
+  &:not(.Button--no-hover):hover {
     background: #7ECBB7;
     color: #ffffff !important;
   }
