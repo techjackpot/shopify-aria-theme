@@ -106,3 +106,23 @@
   .image-label {
   }
 }
+
+.label-rx-prescription-required {
+  text-align: center;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 0;
+  .label-prefix {
+    background: $primary-color;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+  }
+}
