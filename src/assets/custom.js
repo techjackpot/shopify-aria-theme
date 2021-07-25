@@ -142,3 +142,13 @@ function choosePayment (payment_method) {
   sessionStorage.setItem('utmData', JSON.stringify(utmData));
 
 })(jQuery);
+
+(function($) {
+  $('body').on('click', '.unit-choice-area .unit-choice', function() {
+    var table_id = $(this).data('table');
+    $('.unit-choice').removeClass('unit-selected');
+    $(this).addClass('unit-selected');
+    $('.table-with-unit').hide();
+    $('#' + table_id).show();
+  });
+})(jQuery);

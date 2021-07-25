@@ -56,6 +56,17 @@
     .size-chart-table {
       margin: 3rem auto 0;
       max-width: 620px;
+      .unit-choice-area {
+        text-align: right;
+        margin-bottom: 0.5rem;
+        font-size: 11px;
+        .unit-choice {
+          text-decoration: none;
+          &.unit-selected {
+            text-decoration: underline;
+          }
+        }
+      }
       table {
         font-size: 14px;
         border-collapse: collapse;
