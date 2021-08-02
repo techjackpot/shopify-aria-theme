@@ -26,6 +26,8 @@
       justify-content: space-evenly;
       align-items: flex-end;
       .size-chart-position {
+        margin: 0 1rem;
+        max-width: 140px;
         img {
           display: block;
           width: 100%;
