@@ -821,6 +821,7 @@
           },
           "1594412964534": {
             "type": "step",
+            "disabled": true,
             "settings": {
               "title": "4. Get free contactless delivery to your door and a 30-day money-back guarantee.",
               "text": "Your Aria Free system comes with everything you need to get started and set up on your own. We are available by phone or online for help, and there’s no need for anyone to come to your home. <i>That’s it!<\/i>",
@@ -899,7 +900,7 @@
         "type": "how-to-use",
         "settings": {
           "title": "Using your HSA or FSA.",
-          "text": "Some HSA/FSA agreements and insurance companies can help pay for pneumatic compression devices.",
+          "text": "Some HSA\/FSA agreements and insurance companies can help pay for pneumatic compression devices.",
           "image": "shopify:\/\/shop_images\/how-to-use.png"
         }
       },
