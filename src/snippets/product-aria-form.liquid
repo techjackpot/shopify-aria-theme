@@ -14,7 +14,7 @@ for size, we use it to display a size chart (if applicable)
 {%- if customer and customer.tags contains 'QUALIFIED' -%}
   {%- assign qualified = true -%}
 {%- endif -%}
-
+{%- assign qualified = true -%}
 {%- assign phone_support = false -%}
 
 {%- assign selected_variant = product.selected_or_first_available_variant -%}

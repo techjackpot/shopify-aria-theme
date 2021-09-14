@@ -7,6 +7,27 @@
 }
 {%- endcapture -%}
 
+{%- assign qualified = false -%}
+{%- if customer and customer.tags contains 'QUALIFIED' -%}
+  {%- assign qualified = true -%}
+{%- endif -%}
+
+{%- assign has_RTO = false -%}
+{%- if customer.tags contains 'PLAN-RTO' -%}
+  {%- assign has_RTO = true -%}
+{%- endif -%}
+
+{%- assign has_PARTIALLY = false -%}
+{%- if customer.tags contains 'PAY-PARTIALLY' -%}
+  {%- assign has_PARTIALLY = true -%}
+{%- endif -%}
+
+{%- unless customer -%}
+  {%- assign has_RTO = true -%}
+  {%- assign qualified = true -%}
+  {%- assign has_PARTIALLY = true -%}
+{%- endunless -%}
+
 <section class="Section-Cart" data-section-id="{{ section.id }}" data-section-type="cart" data-section-settings='{{ section_settings }}'>
   {%- if cart.item_count == 0 -%}
     <div class="EmptyState">
@@ -79,7 +100,7 @@
                 <!-- <p class="Cart__Taxes Text--subdued">{{ shipping_and_taxes_notice }}</p> -->
               {%- endif -%}
 
-              {%- if customer.tags contains 'QUALIFIED' -%}
+              {%- if qualified -%}
 
                 {%- comment -%}
                 {% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' %}
