@@ -652,7 +652,11 @@
         "type": "cart-template",
         "settings": {
           "show_shipping_estimator": false,
-          "shipping_estimator_default_country": "United States"
+          "shipping_estimator_default_country": "United States",
+          "enable_tc_checkbox": true,
+          "tc_text": "I agree with the",
+          "tc_link_text": "Terms & Conditions",
+          "tc_link": "shopify:\/\/policies\/terms-of-service"
         }
       },
       "product-features": {
@@ -790,7 +794,7 @@
               "text": "Answer just a few questions to see if Aria Free is right for you.",
               "image": "shopify:\/\/shop_images\/how-to-step1_21b3e106-2fe0-4499-8de2-5d17eef3b3f1.png",
               "image_label": "Lourienne, primary lymphedema and Atara, secondary lymphedema",
-              "button_text": "Qualify now",
+              "button_text": "Do I qualify",
               "button_link": "shopify:\/\/pages\/get-started",
               "position": "left"
             }
@@ -958,6 +962,32 @@
         ],
         "settings": {
           "title": "Our scientific advisory board members"
+        }
+      },
+      "product-aria-options-template": {
+        "type": "product-aria-options-template",
+        "settings": {
+          "show_share_buttons": false,
+          "show_vendor": false,
+          "show_sku": false,
+          "description_below_add_to_cart": true,
+          "selector_mode": "dropdown",
+          "show_color_swatch": false,
+          "show_color_carousel": false,
+          "show_quantity_selector": false,
+          "show_inventory_quantity": false,
+          "inventory_quantity_threshold": 0,
+          "show_price_in_button": false,
+          "show_payment_button": true,
+          "image_size": "large",
+          "stack_images": false,
+          "show_thumbnails": true,
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "tab_page_1_handle": "",
+          "tab_page_2_handle": "",
+          "reviews_enabled": false,
+          "featured_image_size": "large"
         }
       }
     },

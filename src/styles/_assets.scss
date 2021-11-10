@@ -130,3 +130,13 @@
 .text-primary {
   color: $primary-color;
 }
+
+.button-rows {
+  margin-top: 1rem;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  .label-rx-prescription-required {
+    margin-top: 0;
+  }
+}

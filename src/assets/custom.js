@@ -25,7 +25,7 @@
 
 
 function choosePayment (payment_method) {
-  if (customer.tags.includes('PAY-' + payment_method.toUpperCase())) return;
+  // if (customer.tags.includes('PAY-' + payment_method.toUpperCase())) return;
   document.querySelectorAll('.pay_via_selector').forEach(el => {
     el.disabled = true;
   });
@@ -152,3 +152,22 @@ function choosePayment (payment_method) {
     $('#' + table_id).show();
   });
 })(jQuery);
+
+// Terms & Conditions checkbox at the cart
+ 
+$(document).ready(function () {
+  $("body").on(
+    "click",
+    '[name="checkout"], [name="goto_pp"], [name="goto_gc"]',
+    function () {
+      if ($("#agree").is(":checked")) {
+        $(this).submit();
+      } else {
+        alert(
+          "You must agree with the terms and conditions of sales to check out."
+        );
+        return false;
+      }
+    }
+  );
+});

@@ -15,6 +15,8 @@
   const urlParams = new URLSearchParams(window.location.search);
   const qs_qualified = urlParams.get('e');
   const qs_state = urlParams.get('state');
+  const sf_lead_id = urlParams.get('tfa_65');
+  const is_insurance = urlParams.get('insurance');
 
   // const states = 'California, Texas, Colorado, Delaware, New York, Pennsylvania, Ohio, Maine, Georgia, Washington, Minnesota, Massachusetts, Missouri, New Jersey, Maryland, Oregon, New Mexico, Oklahoma, Nebraska, Hawaii, Rhode Island, South Dakota, Alaska, District of Columbia, Vermont, West Virginia, Wisconsin, Wyoming'.split(', ');
   const states = [
@@ -50,8 +52,86 @@
 
   if (qs_qualified == 'true' || states.includes(qs_state)) {
     document.querySelector('.MessageTitle').innerHTML = 'Good news!';
-    // document.querySelector('.MessageContent').innerHTML = '<p>Based on the information you provided, it looks like you’re eligible to purchase the Aria Free system.</p><p>Please check your email now for your account activation message. Once you’ve clicked through you’ll be free to make a secure purchase through the Aria Free shop. The current list price for the complete Aria Free system is $1,999.</p><p>One quick reminder: As a medical device, Aria Free requires a prescription. After you make your purchase we will send you an email to collect it. If you already have one you can upload or fax it to us, and if you don’t, we’ll help you get your prescription from your healthcare provider.</p><p>We’re excited for you to experience the Aria Free system and a whole new approach to therapy.</p><p> </p>';
-    document.querySelector('.MessageContent').innerHTML = '<p>Based on the information you provided, it looks like you’re eligible to purchase the Aria Free system.</p><p>To purchase out of pocket or with HSA/FSA, head over to the <a href="/products/aria-free">Aria Free</a> shop page and make a secure purchase!</p><p>To use your insurance, please contact us at <a href="tel:8666470691">(866) 647-0691</a> and we can check your insurance coverage.</p><p>We’re excited for you to experience the Aria Free system and a whole new approach to therapy.</p><p> </p>';
+    if (sf_lead_id) {
+      // document.querySelector('.MessageContent').innerHTML = '<p>Based on the information you provided, it looks like you’re eligible to purchase the Aria Free system.</p><p>Please check your email now for your account activation message. Once you’ve clicked through you’ll be free to make a secure purchase through the Aria Free shop. The current list price for the complete Aria Free system is $1,999.</p><p>If you would like to use your insurance to get Aria Free, we’re happy to check with your health insurance provider to determine your coverage. Please complete the short insurance intake form below or give us a call today at 1-866-647-0691 and we can get started!</p><div class="intake_form_container"></div><p>One quick reminder: As a medical device, Aria Free requires a prescription. After you make your purchase we will send you an email to collect it. If you already have one you can upload or fax it to us, and if you don’t, we’ll help you get your prescription from your healthcare provider.</p><p>We’re excited for you to experience the Aria Free system and a whole new approach to therapy.</p><p> </p>';
+
+      if (is_insurance == 'true') {
+        document.querySelector('.MessageContent').innerHTML = '<p>If you’d like to use your insurance, please complete the form below. We’ll check your coverage and provide you with an estimate.</p><p> </p><div class="intake_form_container"></div>';
+      } else {
+        location.href = '/products/aria-free-options';
+        // document.querySelector('.MessageContent').innerHTML = '<p>Based on the information you provided, it looks like you’re eligible to purchase the Aria Free system.</p><p>To purchase out of pocket or with HSA/FSA, head over to the <a href="/products/aria-free">Aria Free</a> shop page and make a secure purchase!</p><p>To use your <span style="color:#43ad92;">insurance</span>, please provide your insurance information using the form below. We will check your insurance coverage and provide you an estimate.</p><p>We’re excited for you to experience the Aria Free system and a whole new approach to therapy.</p><p> </p><div class="intake_form_container"></div>';
+      }
+
+      var cur_url = new URL(location.href);
+
+      var url = 'https://ariatherapy.tfaforms.net/rest/forms/view/94' + cur_url.search;
+
+      document.querySelector('.intake_form_container').innerHTML = '<iframe src="https://ariatherapy.tfaforms.net/94' + cur_url.search + '" width="100%" frameborder="0" id="intake_form1"></iframe>';
+
+
+      // setTimeout(() => {
+
+      //       var formFrame = document.querySelector('.intake_form_container #intake_form1');
+      //       var formFrameDocument = formFrame.contentWindow || formFrame.contentDocument
+      //       if (formFrameDocument.document) formFrameDocument = formFrameDocument.document;
+
+
+      // formFrameDocument.body.style.backgroundColor = "red";
+      //       console.log(formFrameDocument.body);
+      //       console.log(formFrameDocument.body.innerHTML);
+
+      // }, 3000);
+
+      loadScript('https://ariatherapy.tfaforms.net/js/iframe_resize_helper.js');
+
+      function loadScript(url, d = document) {
+        return new Promise(async (resolve, reject) => {
+          var script = d.createElement("script")
+          script.type = "text/javascript";
+
+          if (script.readyState) { //IE
+              script.onreadystatechange = function () {
+                  if (script.readyState == "loaded" || script.readyState == "complete") {
+                      script.onreadystatechange = null;
+                      resolve();
+                  }
+              };
+          } else { //Others
+              script.onload = function () {
+                  resolve();
+              };
+          }
+
+          script.src = url;
+          d.getElementsByTagName("head")[0].appendChild(script);
+        });
+      }
+
+      // fetch(theme.ARIA_API_URL + '/load?url=' + encodeURIComponent(url))
+      // .then(data => {return data.json()})
+      // .then(async (res) => {
+      //   formFrameDocument.body.innerHTML = res.data;
+
+      //   var arr = formFrameDocument.querySelectorAll('.intake_form_container script');
+
+      //   let loadPromise = Promise.resolve();
+      //   arr.forEach(s => {
+      //     loadPromise = loadPromise.then(() => {
+      //       if (s.src) {
+      //         return loadScript(s.src, formFrameDocument);
+      //       } else {
+      //         eval(s.innerHTML);
+      //         return Promise.resolve();
+      //       }
+      //     });
+      //   })
+      //   await loadPromise;
+      // })
+      // .catch(error => console.error(error));
+
+    } else {
+      document.querySelector('.MessageContent').innerHTML = '<p>Based on the information you provided, it looks like you’re eligible to purchase the Aria Free system.</p><p>Please check your email now for your account activation message. Once you’ve clicked through you’ll be free to make a secure purchase through the Aria Free shop. The current list price for the complete Aria Free system is $1,999.</p><p>One quick reminder: As a medical device, Aria Free requires a prescription. After you make your purchase we will send you an email to collect it. If you already have one you can upload or fax it to us, and if you don’t, we’ll help you get your prescription from your healthcare provider.</p><p>We’re excited for you to experience the Aria Free system and a whole new approach to therapy.</p><p> </p>';
+    }
   } else {
     document.querySelector('.MessageTitle').innerHTML = 'Thank you for taking the survey, and for your interest in the Aria Free system.';
     document.querySelector('.MessageContent').innerHTML = '<p>Unfortunately, based on the information you provided, we won’t be able to service you when Aria Free becomes available. It may be that we’re not yet shipping to your state, or that we don’t yet offer the appropriate garment for your needs.<br/></p><p>The good news is that we will continue to add new states and development new garments. We have your information and will keep you up-to-date with Aria Health news and notify you via email if you become eligible.<br/><br/></p>';

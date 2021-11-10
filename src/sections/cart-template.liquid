@@ -41,7 +41,7 @@
           <p class="Text--subdued">{{- 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount -}}</p>
         {%- endif -%}
 
-        <a href="/products/aria-free" class="EmptyState__Action Button Button--fill Button--round Button--text-normal">Shop Aria Free</a>
+        <a href="/products/aria-free-options" class="EmptyState__Action Button Button--fill Button--round Button--text-normal">Shop Aria Free</a>
       </div>
     </div>
   {%- else -%}
@@ -100,27 +100,33 @@
                 <!-- <p class="Cart__Taxes Text--subdued">{{ shipping_and_taxes_notice }}</p> -->
               {%- endif -%}
 
+              {% comment %} terms and conditions checkbox {% endcomment %}
+                {% if section.settings.enable_tc_checkbox %}
+                <p style="font-size: 11px; text-align: left; margin-left: 70px;">Notice to Medicare Beneficiaries. Medicare will pay for medical equipment and supplies only if a supplier has a Medicare supplier number. We do not have a Medicare supplier number. Medicare will not pay for any medical equipment and supplies we sell or rent to you. You will be personally and fully responsible for payment.</p>
+                <p style="width:100%; text-align: right; display:block;  margin: 10px 0;">
+                  <input style="float:none; vertical-align: middle;" type="checkbox" id="agree" />
+                  <label style="display:inline; float:none" for="agree">
+                    {{ section.settings.tc_text }} <a style="text-decoration:underline" href="{{ section.settings.tc_link }}" target="_blank">{{ section.settings.tc_link_text }}</a>.
+                  </label>
+                </p>
+                {% endif %}
+              {% comment %} end terms and conditions checkbox {% endcomment %}
+
               {%- if qualified -%}
 
-                {%- comment -%}
-                {% if customer.tags contains 'QUALIFIED' and customer.tags contains 'PLAN-RTO' %}
+                {% if customer and qualified and has_RTO %}
                   <div class="pay_via_selector-container">
                     <span>Pay via</span>
-                    <label><input type="radio" name="pay_via" class="pay_via_selector" onclick="choosePayment('shopify')" {% unless customer.tags contains 'PAY-PARTIALLY' %}checked{% endunless %}> Shopify</label>
-                    <label><input type="radio" name="pay_via" class="pay_via_selector" onclick="choosePayment('partially')" {% if customer.tags contains 'PAY-PARTIALLY' %}checked{% endif %}> Partial.ly</label>
+                    <label><input type="radio" name="pay_via" class="pay_via_selector" onclick="choosePayment('shopify')" {% unless has_PARTIALLY %}checked{% endunless %}> Pay in Full</label>
+                    <label><input type="radio" name="pay_via" class="pay_via_selector" onclick="choosePayment('partially')" {% if has_PARTIALLY %}checked{% endif %}> Payment Plan</label>
                   </div>
                 {% endif %}
-                {%- endcomment -%}
 
-                {%- comment -%}
-                 unless customer.tags contains 'PAY-PARTIALLY'
-                {%- endcomment -%}
-                <div class="pay_via_shopify">
-                  <button type="submit" name="checkout" class="Cart__Checkout Button Button--fill Button--round Button--text-normal">Check out</button>
-                </div>
-                {%- comment -%}
-                 endunless
-                {%- endcomment -%}
+                {% unless customer and has_PARTIALLY %}
+                  <div class="pay_via_shopify">
+                    <button type="submit" name="checkout" class="Cart__Checkout Button Button--fill Button--round Button--text-normal">Check out</button>
+                  </div>
+                {% endunless %}
 
               {%- endif -%}
 
@@ -269,6 +275,33 @@
       "label": "Default country to use",
       "info": "If your customer is logged-in, the country in his default shipping address will be selected.",
       "default": "United States"
+    },
+    {
+      "type": "header",
+      "content": "Terms & Conditions"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_tc_checkbox",
+      "label": "Enable Terms & Conditions checkbox",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "tc_text",
+      "label": "Text after checkbox",
+      "default": "I agree with the "
+    },
+    {
+      "type": "text",
+      "id": "tc_link_text",
+      "label": "Link text",
+      "default": "Terms & Conditions"
+    },
+    {
+      "type": "url",
+      "id": "tc_link",
+      "label": "Link URL"
     }
   ]
 }
