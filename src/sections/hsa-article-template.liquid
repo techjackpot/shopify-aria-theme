@@ -1,0 +1,22 @@
+<div id="section-{{ section.id }}" class="Section Section-Blog-Posts" data-section-id="{{ section.id }}" data-section-type="article-list">
+  <div class="Blog">
+    <div class="Container Container--narrow">
+      <header class="PageHeader">
+        <div class="SectionHeader SectionHeader--center">
+          <p class="ArticleHeader" data-aos="fade-right">{{ article.title }}</p>
+        </div>
+      </header>
+      <div class="ArticleContainer">
+        <div class="ArticleContent Rte" data-aos="fade-up">
+          {{ article.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Support - Article page"
+}
+{% endschema %}
